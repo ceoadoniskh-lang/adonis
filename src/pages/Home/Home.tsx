@@ -50,15 +50,6 @@ const HeroContent = styled.div`
   color: white;
   max-width: 800px;
   padding: 0 20px;
-  &::after {
-    content: "";
-    display: block;
-    width: 80px;
-    height: 3px;
-    margin: 24px auto 0;
-    background: #e60076;
-    opacity: 0.9;
-  }
 `;
 
 const HeroTitle = styled.h1`

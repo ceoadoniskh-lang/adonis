@@ -342,8 +342,7 @@ const Contacts: React.FC = () => {
 
               {isOffHours && (
                 <OffHoursNotice>
-                  Задайте своє питання і наш менеджер звʼяжеться з вами в
-                  робочий час.
+                  {t("common.offHoursNotice")}
                 </OffHoursNotice>
               )}
 

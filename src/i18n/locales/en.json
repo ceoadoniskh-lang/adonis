@@ -129,6 +129,7 @@
     "loading": "Loading...",
     "error": "Error",
     "success": "Success",
-    "companyLocation": "Kharkiv, Ukraine"
+    "companyLocation": "Kharkiv, Ukraine",
+    "offHoursNotice": "Ask your question and our manager will contact you during business hours"
   }
 }
