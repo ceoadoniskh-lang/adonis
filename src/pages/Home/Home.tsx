@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import ProductionVideo from "../../img/video/LTVN.mp4";
 
 const HomeContainer = styled.div`
   padding-top: 65px;
@@ -241,8 +242,7 @@ const Home: React.FC = () => {
       <HeroSection>
         <VideoContainer>
           <video autoPlay muted loop playsInline>
-            <source src="/videos/production.mp4" type="video/mp4" />
-            {/* Fallback image if video doesn't load */}
+            <source src={ProductionVideo} type="video/mp4" />
           </video>
         </VideoContainer>
         <VideoOverlay />
