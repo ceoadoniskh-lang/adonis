@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
@@ -59,6 +59,32 @@ const ContactInfo = styled.div`
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 30px;
+  }
+`;
+
+const ContactActions = styled.div`
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 16px;
+`;
+
+const ActionButton = styled.a`
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #000;
+  color: #fff;
+  padding: 10px 16px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  transition: background 0.2s ease, transform 0.2s ease;
+
+  &:hover {
+    background: #333;
+    transform: translateY(-1px);
   }
 `;
 
@@ -171,21 +197,17 @@ const ErrorMessage = styled.div`
   border: 1px solid #f5c6cb;
 `;
 
-const MapSection = styled.section`
-  padding: 80px 0;
-  background: #f8f9fa;
+const OffHoursNotice = styled.div`
+  background: #fff3cd;
+  color: #856404;
+  padding: 12px 16px;
+  border: 1px solid #ffeeba;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  font-size: 0.95rem;
 `;
 
-const MapContainer = styled.div`
-  height: 400px;
-  background: #e9ecef;
-  border-radius: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #6c757d;
-  font-size: 1.1rem;
-`;
+// Map section removed per client request
 
 const Contacts: React.FC = () => {
   const { t } = useTranslation();
@@ -216,12 +238,17 @@ const Contacts: React.FC = () => {
     setSubmitStatus("idle");
 
     try {
-      // Simulate API call
-      await new Promise((resolve) => setTimeout(resolve, 2000));
+      // Send via mailto for now (no backend). For production, we can add Email API.
+      const to = "adonisinfo8@gmail.com";
+      const subject = encodeURIComponent(
+        `Повідомлення з сайту від ${formData.name}`
+      );
+      const body = encodeURIComponent(
+        `Ім'я: ${formData.name}\nEmail: ${formData.email}\nТелефон: ${formData.phone}\n\nПовідомлення:\n${formData.message}`
+      );
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
 
-      // Here you would typically send the data to your backend
-      console.log("Form data:", formData);
-
+      await new Promise((resolve) => setTimeout(resolve, 300));
       setSubmitStatus("success");
       setFormData({ name: "", email: "", phone: "", message: "" });
     } catch (error) {
@@ -230,6 +257,16 @@ const Contacts: React.FC = () => {
       setIsSubmitting(false);
     }
   };
+
+  // Off-hours logic: 17:00-09:00 and Sat/Sun
+  const isOffHours = useMemo(() => {
+    const now = new Date();
+    const day = now.getDay(); // 0=Sun,6=Sat
+    const hour = now.getHours();
+    const weekend = day === 0 || day === 6;
+    const outside = hour < 9 || hour >= 17;
+    return weekend || outside;
+  }, []);
 
   return (
     <ContactsContainer>
@@ -247,45 +284,66 @@ const Contacts: React.FC = () => {
               <h2>{t("contacts.info.address")}</h2>
               <InfoItem>
                 <h3>Адреса</h3>
-                <p>
-                  вул. Прикладна, 123
-                  <br />
-                  Київ, Україна, 01001
-                </p>
+                <p>м. Харків</p>
               </InfoItem>
 
               <InfoItem>
                 <h3>{t("contacts.info.phone")}</h3>
-                <p>
-                  +380 (44) 123-45-67
-                  <br />
-                  +380 (67) 123-45-67
-                </p>
+                <p>+38 099 222 55 29</p>
+                <ContactActions>
+                  <ActionButton
+                    href="tel:+380992225529"
+                    aria-label="Подзвонити"
+                  >
+                    <span>📞</span>
+                    <span>Подзвонити</span>
+                  </ActionButton>
+                </ContactActions>
               </InfoItem>
 
               <InfoItem>
                 <h3>{t("contacts.info.email")}</h3>
                 <p>
-                  info@adonis-sewing.com
-                  <br />
-                  orders@adonis-sewing.com
+                  <a href="mailto:adonisinfo8@gmail.com">
+                    adonisinfo8@gmail.com
+                  </a>
                 </p>
               </InfoItem>
 
               <InfoItem>
-                <h3>{t("contacts.info.workingHours")}</h3>
-                <p>
-                  Пн-Пт: 9:00 - 18:00
-                  <br />
-                  Сб: 10:00 - 16:00
-                  <br />
-                  Нд: Вихідний
-                </p>
+                <h3>Соціальні мережі</h3>
+                <ContactActions>
+                  <ActionButton
+                    href="https://t.me/AdonisBrandUa"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Telegram"
+                  >
+                    <span>📨</span>
+                    <span>Telegram</span>
+                  </ActionButton>
+                  <ActionButton
+                    href="https://instagram.com/adonis_market"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="Instagram"
+                  >
+                    <span>📸</span>
+                    <span>Instagram</span>
+                  </ActionButton>
+                </ContactActions>
               </InfoItem>
             </ContactInfo>
 
             <ContactForm onSubmit={handleSubmit}>
               <h2>Написати нам</h2>
+
+              {isOffHours && (
+                <OffHoursNotice>
+                  Задайте своє питання і наш менеджер звʼяжеться з вами в
+                  робочий час.
+                </OffHoursNotice>
+              )}
 
               {submitStatus === "success" && (
                 <SuccessMessage>{t("contacts.form.success")}</SuccessMessage>
@@ -348,12 +406,6 @@ const Contacts: React.FC = () => {
           </ContentGrid>
         </Container>
       </ContentSection>
-
-      <MapSection>
-        <Container>
-          <MapContainer>[Карта з розташуванням виробництва]</MapContainer>
-        </Container>
-      </MapSection>
     </ContactsContainer>
   );
 };
