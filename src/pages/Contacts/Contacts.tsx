@@ -134,7 +134,8 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
-    border-color: #000;
+    border-color: #e60076;
+    box-shadow: 0 0 0 3px rgba(230, 0, 118, 0.15);
   }
 `;
 
@@ -150,7 +151,8 @@ const TextArea = styled.textarea`
 
   &:focus {
     outline: none;
-    border-color: #000;
+    border-color: #e60076;
+    box-shadow: 0 0 0 3px rgba(230, 0, 118, 0.15);
   }
 `;
 

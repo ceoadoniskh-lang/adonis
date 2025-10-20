@@ -106,12 +106,13 @@ export const NavLink = styled(Link)<{ isActive: boolean }>`
     left: 0;
     width: ${(props) => (props.isActive ? "100%" : "0")};
     height: 2px;
-    background: #000;
+    background: ${(props) => (props.isActive ? "#e60076" : "#000")};
     transition: width 0.3s ease;
   }
 
   &:hover::after {
     width: 100%;
+    background: #e60076;
   }
 `;
 

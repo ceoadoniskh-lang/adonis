@@ -85,7 +85,7 @@ export const SocialLink = styled.a`
   transition: all 0.3s ease;
 
   &:hover {
-    background: #555;
+    background: #e60076;
     transform: translateY(-2px);
   }
 `;
