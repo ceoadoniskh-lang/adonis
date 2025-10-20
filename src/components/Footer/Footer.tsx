@@ -2,6 +2,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import LogoWhite from "../../img/Logo/White/PNG/5.png";
 
 const FooterContainer = styled.footer`
   background: #000;
@@ -61,6 +62,12 @@ const FooterSection = styled.div`
       color: white;
     }
   }
+`;
+
+const LogoImage = styled.img`
+  height: 36px;
+  width: auto;
+  display: block;
 `;
 
 const SocialLinks = styled.div`
@@ -145,7 +152,7 @@ const Footer: React.FC = () => {
       <FooterContent>
         <FooterGrid>
           <FooterSection>
-            <h3>{t("footer.company")}</h3>
+            <LogoImage src={LogoWhite} alt={t("footer.company") as string} />
             <p>{t("footer.description")}</p>
             <SocialLinks>
               <SocialLink
@@ -238,6 +245,9 @@ const Footer: React.FC = () => {
           <FooterLinks>
             <a href="/public-offer">Публічна оферта</a>
             <a href="/privacy-policy">Політика конфіденційності</a>
+            <a href="https://www.linkedin.com/in/yevhen-romanenko-271163168/" target="_blank" rel="noopener noreferrer">
+              Site by yevhen_romanenko
+            </a>
           </FooterLinks>
         </FooterBottom>
       </FooterContent>
