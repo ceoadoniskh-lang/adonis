@@ -14,6 +14,9 @@ const HeaderContainer = styled.header`
   z-index: 1000;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  @media (max-width: 1024px) {
+    backdrop-filter: blur(8px);
+  }
 `;
 
 const HeaderContent = styled.div`
@@ -24,6 +27,14 @@ const HeaderContent = styled.div`
   align-items: center;
   justify-content: space-between;
   height: 80px;
+  @media (max-width: 1024px) {
+    height: 72px;
+    padding: 0 16px;
+  }
+  @media (max-width: 768px) {
+    height: 64px;
+    padding: 0 14px;
+  }
 `;
 
 const Logo = styled(Link)`
@@ -36,16 +47,25 @@ const LogoImage = styled.img`
   height: 44px;
   width: auto;
   display: block;
+  @media (max-width: 1024px) {
+    height: 36px;
+  }
+  @media (max-width: 768px) {
+    height: 32px;
+  }
 `;
 
 const Nav = styled.nav<{ isOpen: boolean }>`
   display: flex;
   align-items: center;
   gap: 40px;
+  @media (max-width: 1200px) {
+    gap: 28px;
+  }
 
   @media (max-width: 768px) {
     position: fixed;
-    top: 80px;
+    top: 64px;
     left: 0;
     right: 0;
     background: white;
@@ -66,6 +86,12 @@ const NavLink = styled(Link)<{ isActive: boolean }>`
   font-size: 16px;
   transition: color 0.3s ease;
   position: relative;
+  @media (max-width: 1200px) {
+    font-size: 15px;
+  }
+  @media (max-width: 900px) {
+    font-size: 14px;
+  }
 
   &:hover {
     color: #000;
@@ -104,6 +130,13 @@ const LanguageButton = styled.button`
   border-radius: 4px;
   transition: all 0.3s ease;
   outline: none;
+  @media (max-width: 1024px) {
+    font-size: 13px;
+    padding: 4px 8px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
 
   &:hover {
     background: #f5f5f5;
