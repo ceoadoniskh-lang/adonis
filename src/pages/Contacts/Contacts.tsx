@@ -284,7 +284,7 @@ const Contacts: React.FC = () => {
               <h2>{t("contacts.info.address")}</h2>
               <InfoItem>
                 <h3>Адреса</h3>
-                <p>м. Харків</p>
+                <p>{t("common.companyLocation")}</p>
               </InfoItem>
 
               <InfoItem>

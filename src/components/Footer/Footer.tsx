@@ -148,17 +148,27 @@ const Footer: React.FC = () => {
             <h3>{t("footer.company")}</h3>
             <p>{t("footer.description")}</p>
             <SocialLinks>
-              <SocialLink href="https://t.me/AdonisBrandUa" target="_blank" rel="noopener noreferrer" aria-label="Telegram">
+              <SocialLink
+                href="https://t.me/AdonisBrandUa"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Telegram"
+              >
                 <svg
                   width="20"
                   height="20"
                   viewBox="0 0 24 24"
                   fill="currentColor"
                 >
-                  <path d="M9.035 15.448l-.373 5.263c.534 0 .765-.229 1.041-.503l2.5-2.4 5.182 3.796c.949.523 1.624.249 1.887-.879l3.418-16.004h.001c.304-1.42-.513-1.972-1.435-1.625L1.397 9.34C.016 9.875.037 10.66 1.158 11.02l5.21 1.627L19.5 5.931c.704-.46 1.346-.206.817.254"/>
+                  <path d="M9.035 15.448l-.373 5.263c.534 0 .765-.229 1.041-.503l2.5-2.4 5.182 3.796c.949.523 1.624.249 1.887-.879l3.418-16.004h.001c.304-1.42-.513-1.972-1.435-1.625L1.397 9.34C.016 9.875.037 10.66 1.158 11.02l5.21 1.627L19.5 5.931c.704-.46 1.346-.206.817.254" />
                 </svg>
               </SocialLink>
-              <SocialLink href="https://instagram.com/adonis_market" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <SocialLink
+                href="https://instagram.com/adonis_market"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+              >
                 <svg
                   width="20"
                   height="20"
@@ -176,7 +186,7 @@ const Footer: React.FC = () => {
             <p>
               <strong>{t("footer.address")}:</strong>
               <br />
-              м. Харків
+              {t("common.companyLocation")}
             </p>
             <p>
               <strong>{t("footer.phone")}:</strong>
