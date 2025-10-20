@@ -245,8 +245,12 @@ const Footer: React.FC = () => {
           <FooterLinks>
             <a href="/public-offer">Публічна оферта</a>
             <a href="/privacy-policy">Політика конфіденційності</a>
-            <a href="https://www.linkedin.com/in/yevhen-romanenko-271163168/" target="_blank" rel="noopener noreferrer">
-              Site by yevhen_romanenko
+            <a
+              href="https://www.linkedin.com/in/yevhen-romanenko-271163168/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              created by yevhen_romanenko
             </a>
           </FooterLinks>
         </FooterBottom>
