@@ -19,7 +19,9 @@
     "phone": "Phone",
     "email": "Email",
     "social": "Social Networks",
-    "copyright": "All rights reserved"
+    "copyright": "All rights reserved",
+    "publicOffer": "Public Offer",
+    "privacyPolicy": "Privacy Policy"
   },
   "home": {
     "title": "Professional Sewing Production",

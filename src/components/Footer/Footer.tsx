@@ -251,8 +251,8 @@ const Footer: React.FC = () => {
             </a>
           </Copyright>
           <FooterLinks>
-            <a href="/public-offer">Публічна оферта</a>
-            <a href="/privacy-policy">Політика конфіденційності</a>
+            <a href="/public-offer">{t("footer.publicOffer")}</a>
+            <a href="/privacy-policy">{t("footer.privacyPolicy")}</a>
           </FooterLinks>
         </FooterBottom>
       </FooterContent>
