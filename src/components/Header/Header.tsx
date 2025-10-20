@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useTranslation } from "react-i18next";
 import { Link, useLocation } from "react-router-dom";
 import styled from "styled-components";
+import LogoImg from "../../img/Logo/Black/PNG/5.png";
 
 const HeaderContainer = styled.header`
   position: fixed;
@@ -26,11 +27,15 @@ const HeaderContent = styled.div`
 `;
 
 const Logo = styled(Link)`
-  font-size: 24px;
-  font-weight: 700;
-  color: #000;
+  display: inline-flex;
+  align-items: center;
   text-decoration: none;
-  letter-spacing: -0.5px;
+`;
+
+const LogoImage = styled.img`
+  height: 44px;
+  width: auto;
+  display: block;
 `;
 
 const Nav = styled.nav<{ isOpen: boolean }>`
@@ -190,7 +195,9 @@ const Header: React.FC = () => {
   return (
     <HeaderContainer>
       <HeaderContent>
-        <Logo to="/">{t("header.logo")}</Logo>
+        <Logo to="/" aria-label={t("header.logo")}>
+          <LogoImage src={LogoImg} alt={t("header.logo")} />
+        </Logo>
 
         <Nav isOpen={isMenuOpen}>
           {navItems.map((item) => (
