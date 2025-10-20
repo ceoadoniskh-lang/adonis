@@ -32,7 +32,7 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.p`
   font-size: 1.2rem;
-  color: #666;
+  color: #333;
   max-width: 600px;
   margin: 0 auto;
 `;
@@ -99,7 +99,7 @@ const InfoItem = styled.div`
   }
 
   p {
-    color: #666;
+    color: #333;
     line-height: 1.6;
     font-size: 1.1rem;
   }
@@ -341,9 +341,7 @@ const Contacts: React.FC = () => {
               <h2>Написати нам</h2>
 
               {isOffHours && (
-                <OffHoursNotice>
-                  {t("common.offHoursNotice")}
-                </OffHoursNotice>
+                <OffHoursNotice>{t("common.offHoursNotice")}</OffHoursNotice>
               )}
 
               {submitStatus === "success" && (

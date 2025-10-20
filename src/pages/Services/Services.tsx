@@ -33,7 +33,7 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.p`
   font-size: 1.2rem;
-  color: #666;
+  color: #333;
   max-width: 600px;
   margin: 0 auto;
 `;
@@ -84,7 +84,7 @@ const ServiceContent = styled.div`
   }
 
   p {
-    color: #666;
+    color: #333;
     line-height: 1.6;
     margin-bottom: 20px;
   }
@@ -97,7 +97,7 @@ const ServiceFeatures = styled.ul`
 
   li {
     padding: 5px 0;
-    color: #666;
+    color: #333;
     position: relative;
     padding-left: 20px;
 
@@ -168,7 +168,7 @@ const ProcessStep = styled.div`
   }
 
   p {
-    color: #666;
+    color: #333;
     line-height: 1.6;
   }
 `;
@@ -355,7 +355,7 @@ const Services: React.FC = () => {
             style={{
               textAlign: "center",
               fontSize: "1.2rem",
-              color: "#666",
+              color: "#333",
               marginBottom: "60px",
             }}
           >

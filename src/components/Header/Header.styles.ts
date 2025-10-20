@@ -82,7 +82,7 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
 `;
 
 export const NavLink = styled(Link)<{ isActive: boolean }>`
-  color: ${(props) => (props.isActive ? "#000" : "#666")};
+  color: ${(props) => (props.isActive ? "#000" : "#333")};
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -126,7 +126,7 @@ export const LanguageSelector = styled.div`
 export const LanguageButton = styled.button`
   background: none;
   border: none;
-  color: #666;
+  color: #333;
   font-size: 14px;
   cursor: pointer;
   padding: 5px 10px;

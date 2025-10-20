@@ -32,7 +32,7 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.p`
   font-size: 1.2rem;
-  color: #666;
+  color: #333;
   max-width: 600px;
   margin: 0 auto;
 `;
@@ -155,7 +155,7 @@ const TimelineContent = styled.div<{ isEven: boolean }>`
   }
 
   p {
-    color: #666;
+    color: #333;
     line-height: 1.7;
     font-size: 1.1rem;
   }
@@ -209,7 +209,7 @@ const StatItem = styled.div`
 
   p {
     font-size: 1.1rem;
-    color: #666;
+    color: #333;
     font-weight: 500;
   }
 `;
@@ -249,7 +249,7 @@ const TeamMember = styled.div`
   }
 
   p {
-    color: #666;
+    color: #333;
     font-size: 1rem;
   }
 `;
@@ -348,7 +348,7 @@ const History: React.FC = () => {
             style={{
               textAlign: "center",
               fontSize: "1.2rem",
-              color: "#666",
+              color: "#333",
               marginBottom: "60px",
             }}
           >

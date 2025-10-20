@@ -122,7 +122,7 @@ const SectionTitle = styled.h2`
 const SectionSubtitle = styled.p`
   font-size: 1.2rem;
   text-align: center;
-  color: #666;
+  color: #333;
   margin-bottom: 60px;
   max-width: 600px;
   margin-left: auto;
@@ -152,7 +152,7 @@ const AboutText = styled.div`
   p {
     font-size: 1.1rem;
     line-height: 1.7;
-    color: #666;
+    color: #333;
     margin-bottom: 20px;
   }
 `;
@@ -193,7 +193,7 @@ const ServiceCard = styled.div`
   }
 
   p {
-    color: #666;
+    color: #333;
     line-height: 1.6;
   }
 `;

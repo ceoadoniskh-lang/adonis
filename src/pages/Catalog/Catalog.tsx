@@ -32,7 +32,7 @@ const HeroTitle = styled.h1`
 
 const HeroSubtitle = styled.p`
   font-size: 1.2rem;
-  color: #666;
+  color: #333;
   max-width: 600px;
   margin: 0 auto;
 `;
@@ -56,7 +56,7 @@ const CategoryTabs = styled.div`
 
 const CategoryTab = styled.button<{ isActive: boolean }>`
   background: ${(props) => (props.isActive ? "#000" : "transparent")};
-  color: ${(props) => (props.isActive ? "white" : "#666")};
+  color: ${(props) => (props.isActive ? "white" : "#333")};
   border: 1px solid #ddd;
   padding: 12px 24px;
   border-radius: 0;
@@ -160,7 +160,7 @@ const ItemContent = styled.div`
   }
 
   p {
-    color: #666;
+    color: #333;
     line-height: 1.5;
     margin-bottom: 15px;
   }
@@ -175,7 +175,7 @@ const ItemTags = styled.div`
 
 const Tag = styled.span`
   background: #f5f5f5;
-  color: #666;
+  color: #333;
   padding: 4px 8px;
   border-radius: 4px;
   font-size: 12px;
@@ -225,7 +225,7 @@ const StatItem = styled.div`
 
   p {
     font-size: 1.1rem;
-    color: #666;
+    color: #333;
     font-weight: 500;
   }
 `;
