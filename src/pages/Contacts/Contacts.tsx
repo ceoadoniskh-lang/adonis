@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 
 const ContactsContainer = styled.div`
-  padding-top: 80px;
+  padding-top: 65px;
   min-height: 100vh;
 `;
 

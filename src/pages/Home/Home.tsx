@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const HomeContainer = styled.div`
-  padding-top: 80px;
+  padding-top: 65px;
 `;
 
 const HeroSection = styled.section`

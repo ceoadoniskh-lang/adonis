@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const ServicesContainer = styled.div`
-  padding-top: 80px;
+  padding-top: 65px;
   min-height: 100vh;
 `;
 
