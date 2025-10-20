@@ -255,7 +255,9 @@ const Home: React.FC = () => {
               <p>{t("home.qualityText1")}</p>
               <p>{t("home.qualityText2")}</p>
             </AboutText>
-            <AboutImage>[Зображення виробництва]</AboutImage>
+            <AboutImage>
+              <img src="/src/img/imgs/manufacture/LDV_0265.jpg" alt="Виробництво" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '8px' }} />
+            </AboutImage>
           </AboutGrid>
 
           <SectionTitle>{t("home.services")}</SectionTitle>
