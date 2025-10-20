@@ -192,7 +192,7 @@ const MenuLine = styled.span<{ isOpen: boolean; index: number }>`
     props.isOpen &&
     props.index === 0 &&
     `
-    transform: rotate(45deg) translate(6px, 6px);
+    transform: translateY(6px) rotate(45deg);
   `}
 
   ${(props) =>
@@ -206,7 +206,7 @@ const MenuLine = styled.span<{ isOpen: boolean; index: number }>`
     props.isOpen &&
     props.index === 2 &&
     `
-    transform: rotate(-45deg) translate(6px, -6px);
+    transform: translateY(-6px) rotate(-45deg);
   `}
 `;
 
