@@ -240,18 +240,19 @@ const Footer: React.FC = () => {
 
         <FooterBottom>
           <Copyright>
-            © 2025 {t("footer.company")}. {t("footer.copyright")}
-          </Copyright>
-          <FooterLinks>
-            <a href="/public-offer">Публічна оферта</a>
-            <a href="/privacy-policy">Політика конфіденційності</a>
+            © 2025 {t("footer.company")}. {t("footer.copyright")} |
             <a
               href="https://www.linkedin.com/in/yevhen-romanenko-271163168/"
               target="_blank"
               rel="noopener noreferrer"
+              style={{ color: "#999", marginLeft: 6 }}
             >
               created by yevhen_romanenko
             </a>
+          </Copyright>
+          <FooterLinks>
+            <a href="/public-offer">Публічна оферта</a>
+            <a href="/privacy-policy">Політика конфіденційності</a>
           </FooterLinks>
         </FooterBottom>
       </FooterContent>
