@@ -1,46 +1,146 @@
-# Getting Started with Create React App
+# ADONIS - Сайт-визитка
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Професійний сайт-визитка для швейного виробництва ADONIS з адаптивним дизайном та підтримкою трьох мов.
 
-## Available Scripts
+## 🚀 Особливості
 
-In the project directory, you can run:
+- **Многоязычность**: Українська, Російська, Англійська
+- **Адаптивний дизайн**: Оптимізовано для мобільних, планшетів та десктопів
+- **SEO оптимізація**: Мета-теги, структуровані дані, sitemap.xml
+- **Аналітика**: Google Analytics, Facebook Pixel
+- **Сучасний дизайн**: В стилі сайту VOVK з мінімалістичним підходом
+- **PWA підтримка**: Прогресивний веб-додаток
 
-### `npm start`
+## 📱 Структура сайту
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+1. **Головна** - Відео-презентація та основна інформація
+2. **Контакти** - Форма зворотного зв'язку та контактна інформація
+3. **Історія** - Розповідь про виробництво з таймлайном
+4. **Послуги** - Детальний опис послуг з картинками
+5. **Каталог** - Приклади робіт з фільтрацією по категоріях
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 🛠 Технології
 
-### `npm test`
+- **React 18** з TypeScript
+- **React Router** для навігації
+- **Styled Components** для стилізації
+- **React i18next** для інтернаціоналізації
+- **React Helmet** для SEO
+- **Аналітика**: Google Analytics, Facebook Pixel
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 📦 Встановлення
 
-### `npm run build`
+1. Клонуйте репозиторій:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+git clone <repository-url>
+cd sewing-production-website
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+2. Встановіть залежності:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```bash
+npm install
+```
 
-### `npm run eject`
+3. Запустіть проект в режимі розробки:
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+```bash
+npm start
+```
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+4. Відкрийте [http://localhost:3000](http://localhost:3000) в браузері
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## 🏗 Збірка для продакшену
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+```bash
+npm run build
+```
 
-## Learn More
+Це створить оптимізовану збірку в папці `build/`.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## 🌐 Налаштування аналітики
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Для налаштування аналітики відредагуйте файл `src/utils/analytics.ts`:
+
+```typescript
+export const GA_TRACKING_ID = "G-XXXXXXXXXX"; // Ваш Google Analytics ID
+export const FB_PIXEL_ID = "XXXXXXXXXXXXXXX"; // Ваш Facebook Pixel ID
+```
+
+## 🎨 Кастомізація
+
+### Кольори та стилі
+
+Основні кольори та стилі налаштовані в `src/App.css` та компонентах з styled-components.
+
+### Контент
+
+Всі тексти знаходяться в файлах локалізації:
+
+- `src/i18n/locales/ua.json` - Українська
+- `src/i18n/locales/ru.json` - Російська
+- `src/i18n/locales/en.json` - Англійська
+
+### Зображення
+
+Додайте свої зображення в папку `public/images/` та оновіть посилання в компонентах.
+
+## 📱 Адаптивність
+
+Сайт оптимізований для:
+
+- **Мобільні**: 320px - 768px
+- **Планшети**: 768px - 1024px
+- **Десктопи**: 1024px+
+
+## 🔍 SEO оптимізація
+
+- Мета-теги для кожної сторінки
+- Структуровані дані (JSON-LD)
+- Sitemap.xml
+- Robots.txt
+- Open Graph теги
+- Twitter Card теги
+- Canonical URLs
+- Hreflang для багатомовності
+
+## 📊 Аналітика
+
+Налаштовано відстеження:
+
+- Переглядів сторінок
+- Кліків по кнопках
+- Відправки форм
+- Зміни мови
+- Фільтрації каталогу
+
+## 🚀 Деплой
+
+### Netlify
+
+1. Підключіть репозиторій до Netlify
+2. Налаштуйте build команду: `npm run build`
+3. Вкажіть папку: `build`
+
+### Vercel
+
+1. Підключіть репозиторій до Vercel
+2. Vercel автоматично визначить налаштування React
+
+### Хостинг
+
+1. Виконайте `npm run build`
+2. Завантажте вміст папки `build/` на сервер
+
+## 📝 Ліцензія
+
+Цей проект створено для швейного виробництва. Всі права захищені.
+
+## 🤝 Підтримка
+
+Для питань та підтримки звертайтесь до розробника.
+
+---
+
+**Розроблено з ❤️ для ADONIS**

@@ -1,0 +1,131 @@
+{
+  "nav": {
+    "home": "Home",
+    "contacts": "Contacts",
+    "history": "History",
+    "services": "Services",
+    "catalog": "Catalog"
+  },
+  "header": {
+    "logo": "ADONIS",
+    "menu": "Menu",
+    "language": "Language"
+  },
+  "footer": {
+    "company": "ADONIS",
+    "description": "Professional clothing and textile manufacturing",
+    "contacts": "Contacts",
+    "address": "Address",
+    "phone": "Phone",
+    "email": "Email",
+    "social": "Social Networks",
+    "copyright": "All rights reserved"
+  },
+  "home": {
+    "title": "Professional Sewing Production",
+    "subtitle": "Quality clothing and textile products made to order",
+    "videoTitle": "Our Production",
+    "about": "About Us",
+    "aboutText": "We are a professional sewing production with many years of experience. We specialize in manufacturing quality clothing and textile products for various areas of life.",
+    "services": "Our Services",
+    "catalog": "Our Works",
+    "qualityTitle": "Quality and Professionalism",
+    "qualityText1": "Our production is equipped with modern equipment and works with experienced craftsmen. We guarantee high quality execution and adherence to production deadlines.",
+    "qualityText2": "Each product undergoes quality control at all stages of production, ensuring excellent results for our clients."
+  },
+  "contacts": {
+    "title": "Contacts",
+    "subtitle": "Get in touch with us",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "phone": "Phone",
+      "message": "Message",
+      "send": "Send",
+      "success": "Message sent successfully!",
+      "error": "Error sending message"
+    },
+    "info": {
+      "address": "Address",
+      "phone": "Phone",
+      "email": "Email",
+      "workingHours": "Working Hours"
+    }
+  },
+  "history": {
+    "title": "Our History",
+    "subtitle": "The development path of our production",
+    "timeline": {
+      "founded": {
+        "year": "2010",
+        "title": "Foundation",
+        "description": "Foundation of our sewing production with a small team of craftsmen"
+      },
+      "expansion": {
+        "year": "2015",
+        "title": "Expansion",
+        "description": "Expansion of production capacity and team of specialists"
+      },
+      "modernization": {
+        "year": "2020",
+        "title": "Modernization",
+        "description": "Implementation of modern equipment and technologies"
+      },
+      "present": {
+        "year": "2025",
+        "title": "Present",
+        "description": "Leading production in the region with a wide range of services"
+      }
+    }
+  },
+  "services": {
+    "title": "Our Services",
+    "subtitle": "Full range of sewing services",
+    "list": {
+      "clothing": {
+        "title": "Clothing Production",
+        "description": "Custom tailoring of men's, women's and children's clothing"
+      },
+      "uniforms": {
+        "title": "Corporate Clothing",
+        "description": "Production of uniform and corporate clothing"
+      },
+      "textiles": {
+        "title": "Textile Products",
+        "description": "Manufacturing of home textiles, curtains, bedding"
+      },
+      "repair": {
+        "title": "Clothing Repair",
+        "description": "Professional clothing repair and alteration"
+      },
+      "design": {
+        "title": "Clothing Design",
+        "description": "Development of clothing design and patterns"
+      },
+      "consultation": {
+        "title": "Consultations",
+        "description": "Professional consultations on material and style selection"
+      }
+    }
+  },
+  "catalog": {
+    "title": "Our Catalog",
+    "subtitle": "Examples of our work",
+    "categories": {
+      "women": "Women's Clothing",
+      "men": "Men's Clothing",
+      "children": "Children's Clothing",
+      "uniforms": "Uniform Clothing",
+      "textiles": "Textile Products"
+    },
+    "viewAll": "View All"
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "backToTop": "Back to Top",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success"
+  }
+}

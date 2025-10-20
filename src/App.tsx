@@ -1,26 +1,53 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
+import { useTranslation } from "react-i18next";
 
-function App() {
+import "./i18n";
+import Header from "./components/Header/Header";
+import Footer from "./components/Footer/Footer";
+import SEO from "./components/SEO/SEO";
+
+// Pages
+import Home from "./pages/Home/Home";
+import Contacts from "./pages/Contacts/Contacts";
+import History from "./pages/History/History";
+import Services from "./pages/Services/Services";
+import Catalog from "./pages/Catalog/Catalog";
+
+// Global Styles
+import "./App.css";
+
+const App: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <SEO
+            title={t("home.title")}
+            description={t("home.aboutText")}
+            keywords="швейне виробництво, пошив одягу, корпоративний одяг, ремонт одягу, дизайн одягу"
+          />
+
+          <Header />
+
+          <main>
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/contacts" element={<Contacts />} />
+              <Route path="/history" element={<History />} />
+              <Route path="/services" element={<Services />} />
+              <Route path="/catalog" element={<Catalog />} />
+            </Routes>
+          </main>
+
+          <Footer />
+        </div>
+      </Router>
+    </HelmetProvider>
   );
-}
+};
 
 export default App;
