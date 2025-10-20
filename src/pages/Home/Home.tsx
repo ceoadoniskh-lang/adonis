@@ -49,6 +49,15 @@ const HeroContent = styled.div`
   color: white;
   max-width: 800px;
   padding: 0 20px;
+  &::after {
+    content: "";
+    display: block;
+    width: 80px;
+    height: 3px;
+    margin: 24px auto 0;
+    background: #e60076;
+    opacity: 0.9;
+  }
 `;
 
 const HeroTitle = styled.h1`
@@ -86,9 +95,11 @@ const CTAButton = styled(Link)`
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: 2px solid transparent;
 
   &:hover {
     background: #333;
+    border-color: #e60076;
     transform: translateY(-2px);
   }
 `;

@@ -123,9 +123,11 @@ const ServiceButton = styled(Link)`
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: 2px solid transparent;
 
   &:hover {
     background: #333;
+    border-color: #e60076;
     transform: translateY(-2px);
   }
 `;
@@ -206,9 +208,11 @@ const CtaButton = styled(Link)`
   transition: all 0.3s ease;
   text-transform: uppercase;
   letter-spacing: 1px;
+  border: 2px solid transparent;
 
   &:hover {
     background: #f0f0f0;
+    border-color: #e60076;
     transform: translateY(-2px);
   }
 `;
