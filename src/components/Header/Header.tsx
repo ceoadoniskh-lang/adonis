@@ -41,6 +41,8 @@ const Logo = styled(Link)`
   display: inline-flex;
   align-items: center;
   text-decoration: none;
+  position: relative;
+  z-index: 1001; /* поверх мобильного меню */
 `;
 
 const LogoImage = styled.img`
@@ -72,10 +74,13 @@ const Nav = styled.nav<{ isOpen: boolean }>`
     flex-direction: column;
     padding: 20px;
     transform: ${(props) =>
-      props.isOpen ? "translateY(0)" : "translateY(-100%)"};
+      props.isOpen ? "translateY(0)" : "translateY(-120%)"};
+    visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
+    pointer-events: ${(props) => (props.isOpen ? "auto" : "none")};
     transition: transform 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     gap: 20px;
+    z-index: 900; /* ниже, чем сам header */
   }
 `;
 
@@ -163,6 +168,8 @@ const MobileMenuButton = styled.button`
   flex-direction: column;
   gap: 4px;
   outline: none;
+  position: relative;
+  z-index: 1001; /* всегда поверх раскрывающегося меню */
 
   &:focus {
     outline: none;
