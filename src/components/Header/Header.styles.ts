@@ -54,7 +54,7 @@ export const LogoImage = styled.img`
   }
 `;
 
-export const Nav = styled.nav<{ isOpen: boolean }>`
+export const Nav = styled.nav<{ $isOpen: boolean }>`
   display: flex;
   align-items: center;
   gap: 40px;
@@ -71,9 +71,9 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
     flex-direction: column;
     padding: 20px;
     transform: ${(props) =>
-      props.isOpen ? "translateY(0)" : "translateY(-120%)"};
-    visibility: ${(props) => (props.isOpen ? "visible" : "hidden")};
-    pointer-events: ${(props) => (props.isOpen ? "auto" : "none")};
+      props.$isOpen ? "translateY(0)" : "translateY(-120%)"};
+    visibility: ${(props) => (props.$isOpen ? "visible" : "hidden")};
+    pointer-events: ${(props) => (props.$isOpen ? "auto" : "none")};
     transition: transform 0.3s ease;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     gap: 20px;
@@ -81,8 +81,8 @@ export const Nav = styled.nav<{ isOpen: boolean }>`
   }
 `;
 
-export const NavLink = styled(Link)<{ isActive: boolean }>`
-  color: ${(props) => (props.isActive ? "#000" : "#333")};
+export const NavLink = styled(Link)<{ $isActive: boolean }>`
+  color: ${(props) => (props.$isActive ? "#000" : "#333")};
   text-decoration: none;
   font-weight: 500;
   font-size: 16px;
@@ -104,9 +104,9 @@ export const NavLink = styled(Link)<{ isActive: boolean }>`
     position: absolute;
     bottom: -5px;
     left: 0;
-    width: ${(props) => (props.isActive ? "100%" : "0")};
+    width: ${(props) => (props.$isActive ? "100%" : "0")};
     height: 2px;
-    background: ${(props) => (props.isActive ? "#e60076" : "#000")};
+    background: ${(props) => (props.$isActive ? "#e60076" : "#000")};
     transition: width 0.3s ease;
   }
 
@@ -179,7 +179,7 @@ export const MobileMenuButton = styled.button`
   }
 `;
 
-export const MenuLine = styled.span<{ isOpen: boolean; index: number }>`
+export const MenuLine = styled.span<{ $isOpen: boolean; $index: number }>`
   width: 25px;
   height: 2px;
   background: #000;
@@ -187,22 +187,22 @@ export const MenuLine = styled.span<{ isOpen: boolean; index: number }>`
   transform-origin: center;
 
   ${(props) =>
-    props.isOpen &&
-    props.index === 0 &&
+    props.$isOpen &&
+    props.$index === 0 &&
     `
     transform: translateY(6px) rotate(45deg);
   `}
 
   ${(props) =>
-    props.isOpen &&
-    props.index === 1 &&
+    props.$isOpen &&
+    props.$index === 1 &&
     `
     opacity: 0;
   `}
 
   ${(props) =>
-    props.isOpen &&
-    props.index === 2 &&
+    props.$isOpen &&
+    props.$index === 2 &&
     `
     transform: translateY(-6px) rotate(-45deg);
   `}

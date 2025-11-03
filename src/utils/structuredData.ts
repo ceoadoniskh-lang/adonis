@@ -1,4 +1,3 @@
-// Structured Data for SEO
 export const generateOrganizationSchema = () => {
   return {
     "@context": "https://schema.org",

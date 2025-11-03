@@ -34,13 +34,10 @@ i18n
       lookupLocalStorage: "i18nextLng",
       lookupFromPathIndex: 0,
       lookupFromSubdomainIndex: 0,
-      // Определение языка по локации
       convertDetectedLanguage: (lng: string) => {
-        // Если язык не определен, пытаемся определить по локации
         if (!lng || lng === "und") {
           const timezone = Intl.DateTimeFormat().resolvedOptions().timeZone;
 
-          // Определяем язык по часовому поясу
           if (
             timezone.includes("Europe/Kiev") ||
             timezone.includes("Europe/Kyiv")
@@ -56,7 +53,6 @@ i18n
           }
         }
 
-        // Маппинг языков браузера на наши языки
         if (lng.startsWith("uk") || lng.startsWith("ua")) {
           return "ua";
         } else if (lng.startsWith("ru")) {
@@ -65,7 +61,7 @@ i18n
           return "en";
         }
 
-        return "ua"; // По умолчанию украинский
+        return "ua";
       },
     },
   });

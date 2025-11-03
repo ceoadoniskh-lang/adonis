@@ -1,16 +1,12 @@
-// Google Analytics 4 Configuration
-export const GA_TRACKING_ID = "G-XXXXXXXXXX"; // Replace with your actual GA4 tracking ID
+export const GA_TRACKING_ID = "G-XXXXXXXXXX";
 
-// Initialize Google Analytics
 export const initGA = () => {
   if (typeof window !== "undefined" && GA_TRACKING_ID) {
-    // Load Google Analytics script
     const script = document.createElement("script");
     script.async = true;
     script.src = `https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`;
     document.head.appendChild(script);
 
-    // Initialize gtag
     window.dataLayer = window.dataLayer || [];
     const gtag = (...args: any[]) => {
       window.dataLayer.push(args);
@@ -25,7 +21,6 @@ export const initGA = () => {
   }
 };
 
-// Track page views
 export const trackPageView = (url: string, title?: string) => {
   if (typeof window !== "undefined" && window.gtag) {
     window.gtag("config", GA_TRACKING_ID, {
@@ -35,7 +30,6 @@ export const trackPageView = (url: string, title?: string) => {
   }
 };
 
-// Track custom events
 export const trackEvent = (
   action: string,
   category: string,
@@ -51,12 +45,10 @@ export const trackEvent = (
   }
 };
 
-// Track form submissions
 export const trackFormSubmission = (formName: string) => {
   trackEvent("form_submit", "engagement", formName);
 };
 
-// Track button clicks
 export const trackButtonClick = (buttonName: string, location?: string) => {
   trackEvent(
     "click",
@@ -65,22 +57,18 @@ export const trackButtonClick = (buttonName: string, location?: string) => {
   );
 };
 
-// Track language changes
 export const trackLanguageChange = (language: string) => {
   trackEvent("language_change", "user_interaction", language);
 };
 
-// Track catalog category changes
 export const trackCatalogCategory = (category: string) => {
   trackEvent("catalog_filter", "engagement", category);
 };
 
-// Track contact form interactions
 export const trackContactForm = (action: "start" | "complete" | "error") => {
   trackEvent("contact_form", "engagement", action);
 };
 
-// Declare global gtag function
 declare global {
   interface Window {
     dataLayer: any[];
@@ -88,12 +76,15 @@ declare global {
   }
 }
 
-// Facebook Pixel Configuration
-export const FB_PIXEL_ID = "XXXXXXXXXXXXXXX"; // Replace with your actual Facebook Pixel ID
+export const FB_PIXEL_ID = process.env.REACT_APP_FB_PIXEL_ID || "";
 
 export const initFacebookPixel = () => {
-  if (typeof window !== "undefined" && FB_PIXEL_ID) {
-    // Load Facebook Pixel script
+  if (
+    typeof window !== "undefined" &&
+    FB_PIXEL_ID &&
+    FB_PIXEL_ID !== "" &&
+    FB_PIXEL_ID !== "XXXXXXXXXXXXXXX"
+  ) {
     const script = document.createElement("script");
     script.innerHTML = `
       !function(f,b,e,v,n,t,s)
@@ -111,7 +102,6 @@ export const initFacebookPixel = () => {
   }
 };
 
-// Track Facebook Pixel events
 export const trackFacebookEvent = (eventName: string, parameters?: any) => {
   if (typeof window !== "undefined" && window.fbq) {
     window.fbq("track", eventName, parameters);
@@ -124,7 +114,6 @@ declare global {
   }
 }
 
-// Initialize all analytics
 export const initAnalytics = () => {
   initGA();
   initFacebookPixel();

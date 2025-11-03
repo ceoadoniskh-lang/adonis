@@ -33,7 +33,22 @@
     "catalog": "Our Works",
     "qualityTitle": "Quality and Professionalism",
     "qualityText1": "Our production is equipped with modern equipment and works with experienced craftsmen. We guarantee high quality execution and adherence to production deadlines.",
-    "qualityText2": "Each product undergoes quality control at all stages of production, ensuring excellent results for our clients."
+    "qualityText2": "Each product undergoes quality control at all stages of production, ensuring excellent results for our clients.",
+    "service1Title": "ADONIS Own Collection",
+    "service1Description": "Every season we develop new collections of women's outerwear that meet global trends and comfort requirements.",
+    "service2Title": "Production Under Your Brand",
+    "service2Description": "We create custom collections — from concept development, patterns and size grading to finished products with your logo and packaging.",
+    "service3Title": "Automated Cutting on Gerber Complex",
+    "service3Description": "We provide industrial fabric cutting services on automated Gerber system — with maximum precision, speed and material savings.",
+    "service4Title": "Fabric Quilting",
+    "service4Description": "We perform artistic and technological quilting on modern equipment. We develop individual patterns and textures.",
+    "service5Title": "Embroidery",
+    "service5Description": "We create embroidery that emphasizes your brand's individuality: logos, names, brand details and even designer elements.",
+    "cta": {
+      "title": "Ready to Start Cooperation?",
+      "subtitle": "Contact us to discuss your project and get a personalized offer"
+    },
+    "productionImage": "Production"
   },
   "contacts": {
     "title": "Contacts",
@@ -45,38 +60,50 @@
       "message": "Message",
       "send": "Send",
       "success": "Message sent successfully!",
-      "error": "Error sending message"
+      "error": "Error sending message",
+      "title": "Write to us"
     },
     "info": {
       "address": "Address",
       "phone": "Phone",
       "email": "Email",
-      "workingHours": "Working Hours"
+      "workingHours": "Working Hours",
+      "addressLabel": "Address",
+      "socialNetworks": "Social Networks"
     }
   },
   "history": {
     "title": "Our History",
     "subtitle": "The development path of our production",
+    "introTitle": "About Our Enterprise",
+    "introText": "Adonis is a Ukrainian sewing factory that since 2002 has been creating women's outerwear that combines comfort, elegance and impeccable fit. We know how important it is for every woman — regardless of size — to feel confident and beautiful. That's why our collections cover a wide size range — from 42 to 80. Our main qualification is the production of women's outerwear. At the same time, we have experience in developing men's collections and children's models, which allows us to flexibly implement various partner requests. For rational use of resources and minimization of production waste, we give fabrics a second life. We use leftover materials after sewing main Adonis collections to create stylish and practical accessories — bags, cosmetic cases and protective cases for beauty master tools. This approach allows us not only to care for the environment, but also to create useful products with unique design. We work with love for details: from cutting to finishing, from fabric selection to hardware. Our jackets, coats and vests are the result of experience, craftsmanship and modern technologies, including our own embroidery and quilting services. Adonis is more than just production. It's a team that understands that every product is a story that combines style, quality and care.",
+    "cooperationText": "TM Adonis invites wholesale buyers to cooperate and offers them to replenish their assortment with goods that invariably enjoy increased demand from customers!",
+    "stats": {
+      "experience": "years of experience",
+      "clients": "satisfied clients",
+      "specialists": "specialists",
+      "orders": "completed orders"
+    },
     "timeline": {
       "founded": {
-        "year": "2010",
+        "year": "2002",
         "title": "Foundation",
-        "description": "Foundation of our sewing production with a small team of craftsmen"
+        "description": "Foundation of TM Adonis and start of work in the field of sewing production"
       },
       "expansion": {
-        "year": "2015",
-        "title": "Expansion",
-        "description": "Expansion of production capacity and team of specialists"
+        "year": "2005",
+        "title": "Development",
+        "description": "Expansion of production capacities and entry into the international market"
       },
       "modernization": {
-        "year": "2020",
+        "year": "2015",
         "title": "Modernization",
-        "description": "Implementation of modern equipment and technologies"
+        "description": "Implementation of modern equipment and production technologies"
       },
       "present": {
         "year": "2025",
         "title": "Present",
-        "description": "Leading production in the region with a wide range of services"
+        "description": "Leading production in the region with a wide range of services and export"
       }
     }
   },
@@ -84,30 +111,92 @@
     "title": "Our Services",
     "subtitle": "Full range of sewing services",
     "list": {
-      "clothing": {
-        "title": "Clothing Production",
-        "description": "Custom tailoring of men's, women's and children's clothing"
+      "adonisCollection": {
+        "title": "ADONIS Own Collection",
+        "description": "Every season we develop new collections of women's outerwear that meet global trends and comfort requirements. We offer wholesale sales of ADONIS collections for stores, showrooms and online platforms.",
+        "features": [
+          "Seasonal women's clothing collections",
+          "Compliance with global trends",
+          "Wholesale sales for stores",
+          "Online platforms and showrooms"
+        ]
       },
-      "uniforms": {
-        "title": "Corporate Clothing",
-        "description": "Production of uniform and corporate clothing"
+      "brandProduction": {
+        "title": "Production Under Your Brand",
+        "description": "We create custom collections — from concept development, patterns and size grading to finished products with your logo and packaging. We have extensive experience in outsourcing and provide a complete production cycle, modern equipment, quality control at every stage, confidentiality and strict adherence to deadlines.",
+        "features": [
+          "Concept and pattern development",
+          "Size grading",
+          "Complete production cycle",
+          "Quality control at every stage",
+          "Confidentiality",
+          "Strict adherence to deadlines"
+        ]
       },
-      "textiles": {
-        "title": "Textile Products",
-        "description": "Manufacturing of home textiles, curtains, bedding"
+      "gerberCutting": {
+        "title": "Automated Cutting on Gerber Complex",
+        "description": "We provide industrial fabric cutting services on automated Gerber system — with maximum precision, speed and material savings. Perfect solution for brands and manufacturers who need quality cutting without waste.",
+        "features": [
+          "Maximum cutting precision",
+          "High processing speed",
+          "Material savings",
+          "Industrial fabric cutting",
+          "Perfect solution for brands"
+        ]
       },
-      "repair": {
-        "title": "Clothing Repair",
-        "description": "Professional clothing repair and alteration"
+      "quilting": {
+        "title": "Fabric Quilting",
+        "description": "We perform artistic and technological quilting on modern equipment. We develop individual patterns and textures, creating spectacular solutions for outerwear collections, accessories and interior textiles. We work with different types of fabrics and fillers.",
+        "features": [
+          "Artistic and technological quilting",
+          "Individual patterns and textures",
+          "Outerwear collections",
+          "Accessories and interior textiles",
+          "Different types of fabrics and fillers"
+        ]
       },
-      "design": {
-        "title": "Clothing Design",
-        "description": "Development of clothing design and patterns"
-      },
-      "consultation": {
-        "title": "Consultations",
-        "description": "Professional consultations on material and style selection"
+      "embroidery": {
+        "title": "Embroidery on Any Types of Fabrics",
+        "description": "We create embroidery that emphasizes your brand's individuality: logos, names, brand details and even designer or artistic elements. Modern German equipment ensures perfect accuracy. Maximum working field 60×70 cm. We embroider on any types of fabrics with impeccable quality and attention to every detail.",
+        "features": [
+          "Brand logos and names",
+          "Designer and artistic elements",
+          "Modern German equipment",
+          "Maximum working field 60×70 cm",
+          "Impeccable quality execution",
+          "Any types of fabrics"
+        ]
       }
+    },
+    "process": {
+      "title": "How We Work",
+      "subtitle": "How we work with our clients",
+      "steps": {
+        "consultation": {
+          "title": "Consultation",
+          "description": "We discuss your needs, select materials and calculate costs"
+        },
+        "measurement": {
+          "title": "Taking Measurements",
+          "description": "Precise measurements and creation of individual patterns"
+        },
+        "production": {
+          "title": "Production",
+          "description": "Sewing with adherence to all technologies and standards"
+        },
+        "fitting": {
+          "title": "Fitting",
+          "description": "We check the finished product and perform final adjustments"
+        },
+        "delivery": {
+          "title": "Delivery",
+          "description": "We deliver finished clothing or organize pickup"
+        }
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Cooperation?",
+      "subtitle": "Contact us to discuss your project"
     }
   },
   "catalog": {
@@ -130,6 +219,7 @@
     "error": "Error",
     "success": "Success",
     "companyLocation": "Kharkiv, Ukraine",
-    "offHoursNotice": "Ask your question and our manager will contact you during business hours"
+    "offHoursNotice": "Ask your question and our manager will contact you during business hours",
+    "call": "Call"
   }
 }

@@ -307,14 +307,14 @@ a:focus-visible {
   }
 }
 
-/* Dark Mode Support */
-@media (prefers-color-scheme: dark) {
+/* Dark Mode Support - Disabled since we don't have theme switching */
+/* @media (prefers-color-scheme: dark) {
   body {
     background-color: #1a1a1a;
-    color: #e0e0e0;
+    color: #ffffff;
   }
 
   .container {
     background-color: #1a1a1a;
   }
-}
+} */

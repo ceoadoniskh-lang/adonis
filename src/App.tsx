@@ -1,5 +1,10 @@
-import React from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import React, { useEffect } from "react";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
@@ -8,15 +13,23 @@ import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import SEO from "./components/SEO/SEO";
 
-// Pages
 import Home from "./pages/Home/Home";
 import Contacts from "./pages/Contacts/Contacts";
 import History from "./pages/History/History";
 import Services from "./pages/Services/Services";
 import Catalog from "./pages/Catalog/Catalog";
 
-// Global Styles
 import "./App.css";
+
+const ScrollToTop: React.FC = () => {
+  const { pathname } = useLocation();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
+
+  return null;
+};
 
 const App: React.FC = () => {
   const { t } = useTranslation();
@@ -24,6 +37,7 @@ const App: React.FC = () => {
   return (
     <HelmetProvider>
       <Router>
+        <ScrollToTop />
         <div className="App">
           <SEO
             title={t("home.title")}

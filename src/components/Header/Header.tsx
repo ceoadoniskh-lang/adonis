@@ -15,8 +15,6 @@ import {
 } from "./Header.styles";
 import LogoImg from "../../img/Logo/Black/PNG/5.png";
 
-// styles are imported from Header.styles
-
 const Header: React.FC = () => {
   const { t, i18n } = useTranslation();
   const location = useLocation();
@@ -46,12 +44,12 @@ const Header: React.FC = () => {
           <LogoImage src={LogoImg} alt={t("header.logo")} />
         </Logo>
 
-        <Nav isOpen={isMenuOpen}>
+        <Nav $isOpen={isMenuOpen}>
           {navItems.map((item) => (
             <NavLink
               key={item.key}
               to={item.path}
-              isActive={location.pathname === item.path}
+              $isActive={location.pathname === item.path}
               onClick={() => setIsMenuOpen(false)}
             >
               {t(`nav.${item.key}`)}
@@ -81,9 +79,9 @@ const Header: React.FC = () => {
         </Nav>
 
         <MobileMenuButton onClick={toggleMenu}>
-          <MenuLine isOpen={isMenuOpen} index={0} />
-          <MenuLine isOpen={isMenuOpen} index={1} />
-          <MenuLine isOpen={isMenuOpen} index={2} />
+          <MenuLine $isOpen={isMenuOpen} $index={0} />
+          <MenuLine $isOpen={isMenuOpen} $index={1} />
+          <MenuLine $isOpen={isMenuOpen} $index={2} />
         </MobileMenuButton>
       </HeaderContent>
     </HeaderContainer>
