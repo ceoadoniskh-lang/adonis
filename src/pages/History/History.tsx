@@ -15,9 +15,6 @@ import {
   StatsSection,
   StatsGrid,
   StatItem,
-  TeamSection,
-  TeamGrid,
-  TeamMember,
   HeroBackground,
 } from "./History.styles";
 
@@ -60,7 +57,7 @@ const History: React.FC = () => {
   ];
 
   const currentYear = new Date().getFullYear();
-  const yearsOfExperience = currentYear - 2002;
+  const yearsOfExperience = currentYear - 1988;
 
   const stats = [
     { number: `${yearsOfExperience}+`, label: t("history.stats.experience") },
@@ -69,12 +66,12 @@ const History: React.FC = () => {
     { number: "1000+", label: t("history.stats.orders") },
   ];
 
-  const team = [
-    { name: "Олександр Петренко", position: "Директор виробництва" },
-    { name: "Марія Коваленко", position: "Головний дизайнер" },
-    { name: "Іван Сидоренко", position: "Майстер-кравчик" },
-    { name: "Анна Мельник", position: "Контролер якості" },
-  ];
+  // const team = [
+  //   { name: "Олександр Петренко", position: "Директор виробництва" },
+  //   { name: "Марія Коваленко", position: "Головний дизайнер" },
+  //   { name: "Іван Сидоренко", position: "Майстер-кравчик" },
+  //   { name: "Анна Мельник", position: "Контролер якості" },
+  // ];
 
   return (
     <HistoryContainer>
@@ -98,7 +95,11 @@ const History: React.FC = () => {
         <Container>
           <HistoryIntro>
             <h2>{t("history.introTitle")}</h2>
-            <p>{t("history.introText")}</p>
+            {t("history.introText")
+              .split("\n\n")
+              .map((paragraph: string, index: number) =>
+                paragraph.trim() ? <p key={index}>{paragraph.trim()}</p> : null
+              )}
             <p>{t("history.cooperationText")}</p>
           </HistoryIntro>
 
@@ -129,7 +130,7 @@ const History: React.FC = () => {
         </Container>
       </StatsSection>
 
-      <TeamSection>
+      {/* <TeamSection>
         <Container>
           <h2
             style={{
@@ -162,7 +163,7 @@ const History: React.FC = () => {
             ))}
           </TeamGrid>
         </Container>
-      </TeamSection>
+      </TeamSection> */}
     </HistoryContainer>
   );
 };

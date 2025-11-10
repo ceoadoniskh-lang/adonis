@@ -1,14 +1,16 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
 import AdonisCollectionImage from "../../img/imgs/catalog/2021_08_12_adonis66066.jpg";
-import BrandProductionImage from "../../img/imgs/catalog/DLR_4871.jpg";
-import GerberCuttingImage from "../../img/imgs/catalog/DLR_4974.jpg";
-import QuiltingImage from "../../img/imgs/catalog/DLR_5113.jpg";
-import EmbroideryImage from "../../img/imgs/catalog/DLR_5579.jpg";
+import BrandProductionImage from "../../img/imgs/service/logo/service-logo.jpg";
+import GerberCuttingImage from "../../img/imgs/service/herber/herber.jpg";
+import QuiltingImage from "../../img/imgs/service/coupler/coupler.jpg";
+import EmbroideryImage from "../../img/imgs/service/embroidery/sewing.jpg";
+import BagsImage from "../../img/imgs/service/bugs/60AFE0F2-47BF-48A9-8AC9-24AC94A63D58.jpg";
 import * as S from "./Home.styles";
 import BottomCta from "../../components/CTA/BottomCta";
 
-const HERO_VIDEO_ID = process.env.REACT_APP_HERO_VIDEO_ID || "wY1_bzKV8bM";
+const HERO_VIDEO_URL =
+  process.env.REACT_APP_HERO_VIDEO_URL || "/video/hero-video.mp4";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -17,30 +19,16 @@ const Home: React.FC = () => {
     <S.HomeContainer>
       <S.HeroSection>
         <S.VideoContainer>
-          {HERO_VIDEO_ID ? (
-            <>
-              <iframe
-                src={`https://www.youtube.com/embed/${HERO_VIDEO_ID}?autoplay=1&mute=1&loop=1&controls=0&playlist=${HERO_VIDEO_ID}&modestbranding=1&rel=0&disablekb=1&playsinline=1&iv_load_policy=3&fs=0&cc_load_policy=0&showinfo=0`}
-                title="Hero video"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowFullScreen
-              />
-              <S.VideoLoadingOverlay />
-            </>
-          ) : (
-            <div
-              style={{
-                width: "100%",
-                height: "100%",
-                background: "#000",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                color: "#fff",
-              }}
-            ></div>
-          )}
+          <S.HeroVideo
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="auto"
+            src={HERO_VIDEO_URL}
+          >
+            {t("home.videoNotSupported")}
+          </S.HeroVideo>
         </S.VideoContainer>
         <S.HeroContent>
           <h1>{t("home.title")}</h1>
@@ -102,6 +90,11 @@ const Home: React.FC = () => {
               <img src={EmbroideryImage} alt={t("home.service5Title")} />
               <h3>{t("home.service5Title")}</h3>
               <p>{t("home.service5Description")}</p>
+            </S.ServiceCard>
+            <S.ServiceCard to="/services">
+              <img src={BagsImage} alt={t("home.service6Title")} />
+              <h3>{t("home.service6Title")}</h3>
+              <p>{t("home.service6Description")}</p>
             </S.ServiceCard>
           </S.ServicesGrid>
         </S.Container>

@@ -4,10 +4,11 @@ import * as S from "./Services.styles";
 import { HeroBackground } from "./Services.styles";
 import BottomCta from "../../components/CTA/BottomCta";
 import AdonisCollectionImage from "../../img/imgs/catalog/2021_08_12_adonis66066.jpg";
-import BrandProductionImage from "../../img/imgs/catalog/DLR_4871.jpg";
-import GerberCuttingImage from "../../img/imgs/catalog/DLR_4974.jpg";
-import QuiltingImage from "../../img/imgs/catalog/DLR_5113.jpg";
-import EmbroideryImage from "../../img/imgs/catalog/DLR_5579.jpg";
+import BrandProductionImage from "../../img/imgs/service/logo/service-logo.jpg";
+import GerberCuttingImage from "../../img/imgs/service/herber/herber.jpg";
+import QuiltingImage from "../../img/imgs/service/coupler/coupler.jpg";
+import EmbroideryImage from "../../img/imgs/service/embroidery/sewing.jpg";
+import BagsImage from "../../img/imgs/service/bugs/60AFE0F2-47BF-48A9-8AC9-24AC94A63D58.jpg";
 
 const Services: React.FC = () => {
   const { t } = useTranslation();
@@ -32,6 +33,10 @@ const Services: React.FC = () => {
     {
       key: "embroidery",
       image: EmbroideryImage,
+    },
+    {
+      key: "bags",
+      image: BagsImage,
     },
   ];
 

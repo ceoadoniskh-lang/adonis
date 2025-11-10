@@ -44,6 +44,8 @@
     "service4Description": "We perform artistic and technological quilting on modern equipment. We develop individual patterns and textures.",
     "service5Title": "Embroidery",
     "service5Description": "We create embroidery that emphasizes your brand's individuality: logos, names, brand details and even designer elements.",
+    "service6Title": "Accessories from Fabric Recycling",
+    "service6Description": "We use leftover materials after sewing main collections to create stylish and practical accessories — bags, cosmetic cases and protective cases.",
     "cta": {
       "title": "Ready to Start Cooperation?",
       "subtitle": "Contact us to discuss your project and get a personalized offer"
@@ -76,7 +78,7 @@
     "title": "Our History",
     "subtitle": "The development path of our production",
     "introTitle": "About Our Enterprise",
-    "introText": "Adonis is a Ukrainian sewing factory that since 2002 has been creating women's outerwear that combines comfort, elegance and impeccable fit. We know how important it is for every woman — regardless of size — to feel confident and beautiful. That's why our collections cover a wide size range — from 42 to 80. Our main qualification is the production of women's outerwear. At the same time, we have experience in developing men's collections and children's models, which allows us to flexibly implement various partner requests. For rational use of resources and minimization of production waste, we give fabrics a second life. We use leftover materials after sewing main Adonis collections to create stylish and practical accessories — bags, cosmetic cases and protective cases for beauty master tools. This approach allows us not only to care for the environment, but also to create useful products with unique design. We work with love for details: from cutting to finishing, from fabric selection to hardware. Our jackets, coats and vests are the result of experience, craftsmanship and modern technologies, including our own embroidery and quilting services. Adonis is more than just production. It's a team that understands that every product is a story that combines style, quality and care.",
+    "introText": "The history of our enterprise began in 1988. It all started with a small shoe workshop.\n\nIn 1992, the ADONIS brand officially appeared.\n\nSince then, production has developed, technologies have improved, volumes have increased, and we were first presented on the international market. That is why the brand symbol remains unchanged — boots with the Adonis flower, which still reminds us of the company's footwear origins today.\n\nSince 2002, the enterprise began a new chapter in its history — the production of women's outerwear.\n\nOur main principles remain unchanged: experience, quality, professionalism.\n\nWe know how important it is for every woman — regardless of size — to feel confident and beautiful. That is why our collections cover a wide size range — from 42 to 80.\n\nOur main qualification now is the production of women's outerwear. At the same time, we have experience in developing men's collections and children's models, which allows us to flexibly implement various partner requests.\n\nFor rational use of resources and minimization of production waste, we give fabrics a second life. We use leftover materials after sewing main Adonis collections to create stylish and practical accessories — bags, cosmetic cases and protective cases for beauty master tools. This approach allows us not only to care for the environment, but also to create useful products with unique design.\n\nWe work with love for details: from cutting to finishing, from fabric selection to hardware. Our jackets, coats and vests are the result of experience, craftsmanship and modern technologies, including our own embroidery and quilting services.\n\nAdonis is more than just production. It's a team that understands that every product is a story that combines style, quality and care.",
     "cooperationText": "TM Adonis invites wholesale buyers to cooperate and offers them to replenish their assortment with goods that invariably enjoy increased demand from customers!",
     "stats": {
       "experience": "years of experience",
@@ -86,24 +88,24 @@
     },
     "timeline": {
       "founded": {
-        "year": "2002",
-        "title": "Foundation",
-        "description": "Foundation of TM Adonis and start of work in the field of sewing production"
+        "year": "1988",
+        "title": "Beginning",
+        "description": "The history of our enterprise began with a small shoe workshop"
       },
       "expansion": {
-        "year": "2005",
-        "title": "Development",
-        "description": "Expansion of production capacities and entry into the international market"
+        "year": "1992",
+        "title": "Brand Birth",
+        "description": "The ADONIS brand officially appeared. Production developed, technologies improved, volumes increased, and we were first presented on the international market"
       },
       "modernization": {
-        "year": "2015",
-        "title": "Modernization",
-        "description": "Implementation of modern equipment and production technologies"
+        "year": "2002",
+        "title": "New Chapter",
+        "description": "The enterprise began a new chapter in its history — the production of women's outerwear"
       },
       "present": {
         "year": "2025",
         "title": "Present",
-        "description": "Leading production in the region with a wide range of services and export"
+        "description": "Leading production of women's outerwear with a wide size range and our own embroidery and quilting services"
       }
     }
   },
@@ -165,6 +167,18 @@
           "Maximum working field 60×70 cm",
           "Impeccable quality execution",
           "Any types of fabrics"
+        ]
+      },
+      "bags": {
+        "title": "Accessories from Fabric Recycling",
+        "description": "For rational use of resources and minimization of production waste, we give fabrics a second life. We use leftover materials after sewing main Adonis collections to create stylish and practical accessories — bags, cosmetic cases and protective cases for beauty master tools. This approach allows us not only to care for the environment, but also to create useful products with unique design.",
+        "features": [
+          "Bags from recycled fabrics",
+          "Cosmetic cases and accessories",
+          "Protective cases for tools",
+          "Eco-friendly approach",
+          "Unique design",
+          "Practicality and style"
         ]
       }
     },
