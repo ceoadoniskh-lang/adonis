@@ -73,14 +73,23 @@ export const ServiceCard = styled.div`
   }
 `;
 
-export const ServiceImage = styled.div`
-  height: 250px;
+export const ServiceImage = styled.div<{ $isFirstThree?: boolean }>`
+  height: 400px;
   background: #f5f5f5;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #999;
   font-size: 1.1rem;
+  overflow: hidden;
+  width: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+  }
 `;
 
 export const ServiceContent = styled.div`

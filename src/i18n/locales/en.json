@@ -28,12 +28,12 @@
     "subtitle": "Quality clothing and textile products made to order",
     "videoTitle": "Our Production",
     "about": "About Us",
-    "aboutText": "We are a professional sewing production with many years of experience. We specialize in manufacturing quality clothing and textile products for various areas of life.",
+    "aboutText": "We are a professional outerwear production with many years of experience.\n\nWe specialize in sewing quality women's and men's clothing, as well as textile products for various fields.\n\nWe fulfill wholesale orders, private label and individual projects for brands and stores.",
     "services": "Our Services",
     "catalog": "Our Works",
     "qualityTitle": "Quality and Professionalism",
-    "qualityText1": "Our production is equipped with modern equipment and works with experienced craftsmen. We guarantee high quality execution and adherence to production deadlines.",
-    "qualityText2": "Each product undergoes quality control at all stages of production, ensuring excellent results for our clients.",
+    "qualityText1": "Our production is equipped with modern equipment, and experienced craftsmen work on each project.\n\nWe guarantee high quality execution, pattern accuracy and adherence to deadlines.",
+    "qualityText2": "Each product undergoes step-by-step quality control — from cutting to finished product.\n\nThis ensures stable, impeccable results for our clients.",
     "service1Title": "ADONIS Own Collection",
     "service1Description": "Every season we develop new collections of women's outerwear that meet global trends and comfort requirements.",
     "service2Title": "Production Under Your Brand",
@@ -105,7 +105,7 @@
       "present": {
         "year": "2025",
         "title": "Present",
-        "description": "Leading production of women's outerwear with a wide size range and our own embroidery and quilting services"
+        "description": "Modern production of women's and men's outerwear with a wide size range 42–78. We work with a full cycle: own embroidery, quilting, pattern development, individual orders and private label."
       }
     }
   },
@@ -183,28 +183,36 @@
       }
     },
     "process": {
-      "title": "How We Work",
-      "subtitle": "How we work with our clients",
+      "title": "Work Stages",
+      "subtitle": "Briefly and clearly",
       "steps": {
-        "consultation": {
-          "title": "Consultation",
-          "description": "We discuss your needs, select materials and calculate costs"
+        "request": {
+          "title": "Request",
+          "description": "We discuss the model and order volume."
         },
-        "measurement": {
-          "title": "Taking Measurements",
-          "description": "Precise measurements and creation of individual patterns"
+        "patterns": {
+          "title": "Patterns",
+          "description": "We develop or use yours."
+        },
+        "sample": {
+          "title": "Sample",
+          "description": "We produce a sample for approval."
         },
         "production": {
           "title": "Production",
-          "description": "Sewing with adherence to all technologies and standards"
+          "description": "We launch serial sewing."
         },
-        "fitting": {
-          "title": "Fitting",
-          "description": "We check the finished product and perform final adjustments"
+        "qualityControl": {
+          "title": "Quality Control",
+          "description": "We check each stage."
+        },
+        "packaging": {
+          "title": "Packaging",
+          "description": "We prepare products for shipment."
         },
         "delivery": {
           "title": "Delivery",
-          "description": "We deliver finished clothing or organize pickup"
+          "description": "We send orders within Ukraine or abroad."
         }
       }
     },

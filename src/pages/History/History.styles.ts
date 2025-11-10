@@ -96,7 +96,7 @@ export const Timeline = styled.div`
   }
 `;
 
-export const TimelineItem = styled.div<{ isEven: boolean }>`
+export const TimelineItem = styled.div<{ $isEven: boolean }>`
   position: relative;
   margin-bottom: 60px;
   display: flex;
@@ -104,7 +104,7 @@ export const TimelineItem = styled.div<{ isEven: boolean }>`
   width: 100%;
 
   ${(props) =>
-    props.isEven
+    props.$isEven
       ? `
     justify-content: flex-start;
   `
@@ -124,7 +124,7 @@ export const TimelineItem = styled.div<{ isEven: boolean }>`
   }
 `;
 
-export const TimelineContent = styled.div<{ isEven: boolean }>`
+export const TimelineContent = styled.div<{ $isEven: boolean }>`
   flex: 0 0 100%;
   min-width: 0;
   max-width: 400px;
@@ -136,7 +136,7 @@ export const TimelineContent = styled.div<{ isEven: boolean }>`
   position: relative;
 
   ${(props) =>
-    props.isEven
+    props.$isEven
       ? `
     margin-right: 0;
     margin-left: -80px;
@@ -169,7 +169,7 @@ export const TimelineContent = styled.div<{ isEven: boolean }>`
     border: 15px solid transparent;
 
     ${(props) =>
-      props.isEven
+      props.$isEven
         ? `
       right: -30px;
       border-left-color: white;

@@ -8,7 +8,7 @@ import BrandProductionImage from "../../img/imgs/service/logo/service-logo.jpg";
 import GerberCuttingImage from "../../img/imgs/service/herber/herber.jpg";
 import QuiltingImage from "../../img/imgs/service/coupler/coupler.jpg";
 import EmbroideryImage from "../../img/imgs/service/embroidery/sewing.jpg";
-import BagsImage from "../../img/imgs/service/bugs/60AFE0F2-47BF-48A9-8AC9-24AC94A63D58.jpg";
+import BagsImage from "../../img/imgs/service/bugs/20200219_124249.jpg";
 
 const Services: React.FC = () => {
   const { t } = useTranslation();
@@ -17,6 +17,10 @@ const Services: React.FC = () => {
     {
       key: "adonisCollection",
       image: AdonisCollectionImage,
+    },
+    {
+      key: "bags",
+      image: BagsImage,
     },
     {
       key: "brandProduction",
@@ -34,31 +38,35 @@ const Services: React.FC = () => {
       key: "embroidery",
       image: EmbroideryImage,
     },
-    {
-      key: "bags",
-      image: BagsImage,
-    },
   ];
 
   const processSteps = [
     {
-      number: "1",
-      key: "consultation",
+      number: "01",
+      key: "request",
     },
     {
-      number: "2",
-      key: "measurement",
+      number: "02",
+      key: "patterns",
     },
     {
-      number: "3",
+      number: "03",
+      key: "sample",
+    },
+    {
+      number: "04",
       key: "production",
     },
     {
-      number: "4",
-      key: "fitting",
+      number: "05",
+      key: "qualityControl",
     },
     {
-      number: "5",
+      number: "06",
+      key: "packaging",
+    },
+    {
+      number: "07",
       key: "delivery",
     },
   ];
@@ -96,9 +104,9 @@ const Services: React.FC = () => {
       <S.ServicesSection>
         <S.Container>
           <S.ServicesGrid>
-            {services.map((service) => (
+            {services.map((service, index) => (
               <S.ServiceCard key={service.key}>
-                <S.ServiceImage>
+                <S.ServiceImage $isFirstThree={index < 3}>
                   {service.image ? (
                     <img
                       src={service.image}
@@ -107,6 +115,7 @@ const Services: React.FC = () => {
                         width: "100%",
                         height: "100%",
                         objectFit: "cover",
+                        objectPosition: "center",
                       }}
                     />
                   ) : (

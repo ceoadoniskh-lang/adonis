@@ -187,7 +187,7 @@ export const SectionTitle = styled.h2`
   }
 `;
 
-export const SectionSubtitle = styled.p`
+export const SectionSubtitle = styled.div`
   text-align: center;
   font-size: 1.2rem;
   color: #666;
@@ -196,6 +196,13 @@ export const SectionSubtitle = styled.p`
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+
+  p {
+    margin-bottom: 1rem;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 `;
 
 export const ServicesGrid = styled.div`
@@ -224,10 +231,13 @@ export const ServiceCard = styled(Link)`
 
   img {
     width: 100%;
-    height: 200px;
+    height: 400px;
     object-fit: cover;
+    object-position: center;
     border-radius: 10px;
     margin-bottom: 1.5rem;
+    background: #f8f9fa;
+    display: block;
   }
 
   h3 {

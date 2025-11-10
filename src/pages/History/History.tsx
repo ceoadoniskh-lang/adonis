@@ -105,8 +105,8 @@ const History: React.FC = () => {
 
           <Timeline>
             {timelineData.map((item, index) => (
-              <TimelineItem key={index} isEven={index % 2 === 0}>
-                <TimelineContent isEven={index % 2 === 0}>
+              <TimelineItem key={index} $isEven={index % 2 === 0}>
+                <TimelineContent $isEven={index % 2 === 0}>
                   <h3>{item.title}</h3>
                   <p>{item.description}</p>
                 </TimelineContent>

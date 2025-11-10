@@ -5,7 +5,8 @@ import BrandProductionImage from "../../img/imgs/service/logo/service-logo.jpg";
 import GerberCuttingImage from "../../img/imgs/service/herber/herber.jpg";
 import QuiltingImage from "../../img/imgs/service/coupler/coupler.jpg";
 import EmbroideryImage from "../../img/imgs/service/embroidery/sewing.jpg";
-import BagsImage from "../../img/imgs/service/bugs/60AFE0F2-47BF-48A9-8AC9-24AC94A63D58.jpg";
+import BagsImage from "../../img/imgs/service/bugs/20200219_124249.jpg";
+import ManufactureImage from "../../img/imgs/manufacture/IMG_1314.JPG";
 import * as S from "./Home.styles";
 import BottomCta from "../../components/CTA/BottomCta";
 
@@ -40,16 +41,34 @@ const Home: React.FC = () => {
       <S.ContentSection>
         <S.Container>
           <S.SectionTitle>{t("home.about")}</S.SectionTitle>
-          <S.SectionSubtitle>{t("home.aboutText")}</S.SectionSubtitle>
+          <S.SectionSubtitle>
+            {t("home.aboutText")
+              .split("\n\n")
+              .map((paragraph: string, index: number) =>
+                paragraph.trim() ? <p key={index}>{paragraph.trim()}</p> : null
+              )}
+          </S.SectionSubtitle>
           <S.AboutGrid>
             <S.AboutText>
               <h3>{t("home.qualityTitle")}</h3>
-              <p>{t("home.qualityText1")}</p>
-              <p>{t("home.qualityText2")}</p>
+              {t("home.qualityText1")
+                .split("\n\n")
+                .map((paragraph: string, index: number) =>
+                  paragraph.trim() ? (
+                    <p key={index}>{paragraph.trim()}</p>
+                  ) : null
+                )}
+              {t("home.qualityText2")
+                .split("\n\n")
+                .map((paragraph: string, index: number) =>
+                  paragraph.trim() ? (
+                    <p key={index}>{paragraph.trim()}</p>
+                  ) : null
+                )}
             </S.AboutText>
             <S.AboutImage>
               <img
-                src="/LDV_0265.jpg"
+                src={ManufactureImage}
                 alt={t("home.productionImage")}
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
@@ -66,12 +85,17 @@ const Home: React.FC = () => {
           <S.SectionTitle>{t("home.services")}</S.SectionTitle>
           <S.SectionSubtitle>{t("home.cta.subtitle")}</S.SectionSubtitle>
           <S.ServicesGrid>
-            <S.ServiceCard to="/services">
+            <S.ServiceCard to="/services" className="first-three">
               <img src={AdonisCollectionImage} alt={t("home.service1Title")} />
               <h3>{t("home.service1Title")}</h3>
               <p>{t("home.service1Description")}</p>
             </S.ServiceCard>
-            <S.ServiceCard to="/services">
+            <S.ServiceCard to="/services" className="first-three">
+              <img src={BagsImage} alt={t("home.service6Title")} />
+              <h3>{t("home.service6Title")}</h3>
+              <p>{t("home.service6Description")}</p>
+            </S.ServiceCard>
+            <S.ServiceCard to="/services" className="first-three">
               <img src={BrandProductionImage} alt={t("home.service2Title")} />
               <h3>{t("home.service2Title")}</h3>
               <p>{t("home.service2Description")}</p>
@@ -90,11 +114,6 @@ const Home: React.FC = () => {
               <img src={EmbroideryImage} alt={t("home.service5Title")} />
               <h3>{t("home.service5Title")}</h3>
               <p>{t("home.service5Description")}</p>
-            </S.ServiceCard>
-            <S.ServiceCard to="/services">
-              <img src={BagsImage} alt={t("home.service6Title")} />
-              <h3>{t("home.service6Title")}</h3>
-              <p>{t("home.service6Description")}</p>
             </S.ServiceCard>
           </S.ServicesGrid>
         </S.Container>
