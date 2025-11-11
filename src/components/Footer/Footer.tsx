@@ -190,8 +190,7 @@ const Footer: React.FC = () => {
             </a>
           </Copyright>
           <FooterLinks>
-            <a href="/public-offer">{t("footer.publicOffer")}</a>
-            <a href="/privacy-policy">{t("footer.privacyPolicy")}</a>
+            <Link to="/privacy-policy">{t("footer.privacyPolicy")}</Link>
           </FooterLinks>
         </FooterBottom>
       </FooterContent>

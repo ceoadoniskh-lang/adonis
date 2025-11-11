@@ -18,6 +18,7 @@ import Contacts from "./pages/Contacts/Contacts";
 import History from "./pages/History/History";
 import Services from "./pages/Services/Services";
 import Catalog from "./pages/Catalog/Catalog";
+import Privacy from "./pages/Privacy/Privacy";
 
 import "./App.css";
 
@@ -54,6 +55,7 @@ const App: React.FC = () => {
               <Route path="/history" element={<History />} />
               <Route path="/services" element={<Services />} />
               <Route path="/catalog" element={<Catalog />} />
+              <Route path="/privacy-policy" element={<Privacy />} />
             </Routes>
           </main>
 
