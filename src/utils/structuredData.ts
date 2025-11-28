@@ -33,7 +33,7 @@ export const generateOrganizationSchema = () => {
       areaServed: "UA",
     },
     sameAs: [
-      "https://www.instagram.com/adonis_sewing",
+      "https://www.instagram.com/adonis.factory",
       "https://www.facebook.com/adonis_sewing",
       "https://www.youtube.com/adonis_sewing",
     ],

@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import AdonisCollectionImage from "../../img/imgs/catalog/2021_08_12_adonis66066.jpg";
+import AdonisCollectionImage from "../../img/imgs/catalog/IMG_1453.JPEG";
 import BrandProductionImage from "../../img/imgs/service/logo/service-logo.jpg";
 import GerberCuttingImage from "../../img/imgs/service/herber/herber.jpg";
 import QuiltingImage from "../../img/imgs/service/coupler/coupler.jpg";

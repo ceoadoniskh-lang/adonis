@@ -50,7 +50,7 @@ const Footer: React.FC = () => {
                 </svg>
               </SocialLink>
               <SocialLink
-                href="https://instagram.com/adonis_market"
+                href="https://instagram.com/adonis.factory"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -151,24 +151,25 @@ const Footer: React.FC = () => {
           </FooterSection>
 
           <FooterSection>
-            <h3>Каталог</h3>
+            <h3>{t("footer.navigation")}</h3>
             <ul>
-              {navItems.map((item) => (
-                <li key={item.key}>
-                  <Link to={item.path}>{t(`nav.${item.key}`)}</Link>
-                </li>
-              ))}
+              <li>
+                <Link to="/">{t("nav.home")}</Link>
+              </li>
+              <li>
+                <Link to="/catalog">{t("nav.catalog")}</Link>
+              </li>
+              <li>
+                <Link to="/services">{t("nav.services")}</Link>
+              </li>
             </ul>
           </FooterSection>
 
           <FooterSection>
-            <h3>Інформація</h3>
+            <h3>{t("footer.information")}</h3>
             <ul>
               <li>
                 <Link to="/history">{t("nav.history")}</Link>
-              </li>
-              <li>
-                <Link to="/services">{t("nav.services")}</Link>
               </li>
               <li>
                 <Link to="/contacts">{t("nav.contacts")}</Link>

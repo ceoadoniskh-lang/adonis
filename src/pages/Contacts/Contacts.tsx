@@ -180,7 +180,7 @@ const Contacts: React.FC = () => {
                     <span>Telegram</span>
                   </ActionButton>
                   <ActionButton
-                    href="https://instagram.com/adonis_market"
+                    href="https://instagram.com/adonis.factory"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Instagram"
