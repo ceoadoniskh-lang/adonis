@@ -66,13 +66,6 @@ const History: React.FC = () => {
     { number: "1000+", label: t("history.stats.orders") },
   ];
 
-  // const team = [
-  //   { name: "Олександр Петренко", position: "Директор виробництва" },
-  //   { name: "Марія Коваленко", position: "Головний дизайнер" },
-  //   { name: "Іван Сидоренко", position: "Майстер-кравчик" },
-  //   { name: "Анна Мельник", position: "Контролер якості" },
-  // ];
-
   return (
     <HistoryContainer>
       <HeroSection>

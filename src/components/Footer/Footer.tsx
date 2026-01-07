@@ -18,14 +18,6 @@ import {
 const Footer: React.FC = () => {
   const { t } = useTranslation();
 
-  const navItems = [
-    { key: "home", path: "/" },
-    { key: "contacts", path: "/contacts" },
-    { key: "history", path: "/history" },
-    { key: "services", path: "/services" },
-    { key: "catalog", path: "/catalog" },
-  ];
-
   return (
     <FooterContainer>
       <FooterContent>

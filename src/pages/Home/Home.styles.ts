@@ -188,14 +188,19 @@ export const SectionTitle = styled.h2`
 `;
 
 export const SectionSubtitle = styled.div`
-  text-align: center;
+  text-align: justify;
   font-size: 1.2rem;
   color: #666;
   margin-bottom: 3rem;
-  max-width: 600px;
+  max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
   line-height: 1.6;
+
+  @media (max-width: 768px) {
+    text-align: left;
+    max-width: 100%;
+  }
 
   p {
     margin-bottom: 1rem;
@@ -254,12 +259,25 @@ export const ServiceCard = styled(Link)`
   }
 `;
 
+export const QualityTitle = styled.h3`
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 2rem;
+  color: #333;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    font-size: 1.75rem;
+    margin-bottom: 1.5rem;
+  }
+`;
+
 export const AboutGrid = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.2fr 0.8fr;
   gap: 3rem;
-  align-items: center;
-  margin-top: 3rem;
+  align-items: stretch;
+  margin-top: 0;
 
   @media (max-width: 768px) {
     grid-template-columns: 1fr;
@@ -268,12 +286,9 @@ export const AboutGrid = styled.div`
 `;
 
 export const AboutText = styled.div`
-  h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    color: #333;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
 
   p {
     font-size: 1.1rem;
@@ -288,9 +303,13 @@ export const AboutText = styled.div`
 `;
 
 export const AboutImage = styled.div`
+  display: flex;
+  align-items: flex-start;
+
   img {
     width: 100%;
-    height: 400px;
+    height: 100%;
+    max-height: 350px;
     object-fit: cover;
     border-radius: 15px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);

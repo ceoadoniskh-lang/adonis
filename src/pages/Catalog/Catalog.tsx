@@ -1,6 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
+import { CatalogItem, getItemsByCategories } from "../../data/catalogItems";
+import { catalogCategories } from "../../data/catalogCategories";
+import Lightbox from "../../components/Lightbox/Lightbox";
+import PriceModal from "../../components/PriceModal/PriceModal";
 
 const CatalogContainer = styled.div`
   padding-top: 65px;
@@ -50,43 +55,236 @@ const HeroSubtitle = styled.p`
 `;
 
 const CatalogSection = styled.section`
-  padding: 100px 0;
+  padding: 40px 0;
   background: white;
 `;
 
-const CategoryTabs = styled.div`
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 60px;
-  flex-wrap: wrap;
+const CategoryFilters = styled.div`
+  margin-bottom: 30px;
 
-  @media (max-width: 768px) {
-    gap: 10px;
+  @media (max-width: 1024px) {
+    display: none;
   }
 `;
 
-const CategoryTab = styled.button<{ active: boolean }>`
-  padding: 12px 24px;
-  border: 2px solid ${(props) => (props.active ? "#000" : "#ddd")};
-  background: ${(props) => (props.active ? "#000" : "white")};
-  color: ${(props) => (props.active ? "white" : "#333")};
+const CategoryFiltersTitle = styled.h3`
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+`;
+
+const CategoryCheckboxes = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  justify-content: center;
+  margin-bottom: 30px;
+`;
+
+const FiltersButton = styled.button`
+  display: none;
+  width: 100%;
+  padding: 15px 20px;
+  background: #000;
+  color: white;
+  border: none;
   border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #333;
+  }
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+`;
+
+const FiltersModal = styled.div<{ $isOpen: boolean }>`
+  display: ${(props) => (props.$isOpen ? "flex" : "none")};
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 80px;
+
+  @media (min-width: 1025px) {
+    display: none;
+  }
+
+  @media (max-width: 768px) {
+    padding-top: 70px;
+  }
+`;
+
+const FiltersModalContent = styled.div`
+  background: white;
+  border-radius: 8px;
+  padding: 30px;
+  max-width: 500px;
+  width: 100%;
+  max-height: calc(90vh - 100px);
+  overflow-y: auto;
+  position: relative;
+  margin-top: 0;
+
+  @media (max-width: 768px) {
+    padding: 20px;
+    max-height: calc(90vh - 90px);
+  }
+`;
+
+const FiltersModalHeader = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+`;
+
+const FiltersModalTitle = styled.h3`
+  font-size: 1.5rem;
+  margin: 0;
+  color: #000;
+`;
+
+const CloseFiltersButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 28px;
+  line-height: 1;
+  cursor: pointer;
+  color: #333;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #000;
+  }
+`;
+
+const MobileCategoryCheckboxes = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 25px;
+`;
+
+const MobileCategoryCheckbox = styled.label<{ $checked: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  border: 2px solid ${(props) => (props.$checked ? "#FF6B9D" : "#FF6B9D")};
+  background: ${(props) => (props.$checked ? "#FF6B9D" : "white")};
+  color: ${(props) => (props.$checked ? "white" : "#333")};
+  border-radius: 6px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
+  user-select: none;
+  position: relative;
 
   &:hover {
-    border-color: #000;
-    background: ${(props) => (props.active ? "#000" : "#f5f5f5")};
+    border-color: #FF6B9D;
+    background: ${(props) => (props.$checked ? "#FF6B9D" : "#fff0f5")};
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.3);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+  }
+
+  span {
+    position: relative;
+  }
+`;
+
+const ApplyFiltersButton = styled.button`
+  width: 100%;
+  padding: 15px 20px;
+  background: #000;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+
+  &:hover {
+    background: #333;
+  }
+
+  &:active {
+    background: #000;
+  }
+`;
+
+const CategoryCheckbox = styled.label<{ $checked: boolean }>`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  border: 2px solid ${(props) => (props.$checked ? "#FF6B9D" : "#FF6B9D")};
+  background: ${(props) => (props.$checked ? "#FF6B9D" : "white")};
+  color: ${(props) => (props.$checked ? "white" : "#333")};
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+  position: relative;
+
+  &:hover {
+    border-color: #FF6B9D;
+    background: ${(props) => (props.$checked ? "#FF6B9D" : "#fff0f5")};
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.3);
+  }
+
+  input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    width: 0;
+    height: 0;
+  }
+
+  span {
+    position: relative;
   }
 `;
 
 const ItemsGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 40px;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 30px;
   margin-bottom: 60px;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 20px;
+  }
 `;
 
 const ItemCard = styled.div`
@@ -94,127 +292,133 @@ const ItemCard = styled.div`
   border-radius: 8px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 
   &:hover {
     transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
   }
 `;
 
-const ItemImage = styled.div`
-  height: 250px;
+const ItemImageWrapper = styled.div`
+  position: relative;
+  width: 100%;
+  padding-top: 100%;
+  overflow: hidden;
   background: #f5f5f5;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #999;
-  font-size: 1rem;
 `;
 
-const ItemContent = styled.div`
-  padding: 30px;
+const ItemImage = styled.img`
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
 
-  h3 {
-    font-size: 1.5rem;
-    font-weight: 600;
-    margin-bottom: 15px;
-    color: #000;
-  }
-
-  p {
-    color: #333;
-    line-height: 1.6;
-    margin-bottom: 20px;
+  ${ItemCard}:hover & {
+    transform: scale(1.05);
   }
 `;
 
-const ItemTags = styled.div`
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-  margin-bottom: 20px;
+const ItemInfo = styled.div`
+  padding: 20px;
 `;
 
-const Tag = styled.span`
-  background: #f0f0f0;
-  color: #333;
-  padding: 4px 12px;
-  border-radius: 20px;
-  font-size: 0.9rem;
-  font-weight: 500;
-`;
-
-const ItemStats = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 20px;
-`;
-
-const StatItem = styled.div`
-  text-align: center;
-
-  .number {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #000;
-    display: block;
-  }
-
-  p {
-    color: #333;
-    font-size: 0.9rem;
-    margin: 0;
-  }
-`;
-
-const ItemActions = styled.div`
-  display: flex;
-  gap: 15px;
-`;
-
-const ActionButton = styled.button`
-  flex: 1;
-  padding: 12px 20px;
-  border: 2px solid #000;
-  background: white;
+const ItemName = styled.h3`
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 10px;
   color: #000;
+  line-height: 1.4;
+`;
+
+const ItemDetails = styled.div`
+  font-size: 0.9rem;
+  color: #666;
+  line-height: 1.6;
+
+  p {
+    margin: 4px 0;
+  }
+`;
+
+const Pagination = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+`;
+
+const PaginationButton = styled.button<{ $active?: boolean }>`
+  padding: 10px 16px;
+  border: 2px solid ${(props) => (props.$active ? "#000" : "#ddd")};
+  background: ${(props) => (props.$active ? "#000" : "white")};
+  color: ${(props) => (props.$active ? "white" : "#333")};
   border-radius: 4px;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.2s ease;
 
-  &:hover {
-    background: #000;
-    color: white;
+  &:hover:not(:disabled) {
+    border-color: #000;
+    background: ${(props) => (props.$active ? "#000" : "#f5f5f5")};
   }
 
-  &.primary {
-    background: #000;
-    color: white;
-
-    &:hover {
-      background: #333;
-    }
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
   }
 `;
 
-const LoadMoreButton = styled.button`
-  display: block;
+const SEOSection = styled.section`
+  padding: 60px 20px;
+  background: #f9f9f9;
+  max-width: 1200px;
   margin: 0 auto;
-  background: #000;
-  color: white;
-  border: none;
-  padding: 15px 30px;
-  border-radius: 4px;
-  font-weight: 600;
-  font-size: 16px;
-  cursor: pointer;
-  transition: background 0.2s ease, transform 0.2s ease;
+`;
 
-  &:hover {
-    background: #333;
-    transform: translateY(-1px);
+const SEOTitle = styled.h2`
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000;
+  text-align: center;
+`;
+
+const SEOText = styled.div`
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 900px;
+  margin: 0 auto;
+
+  h3 {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    margin-bottom: 15px;
+    color: #000;
+  }
+
+  ul {
+    margin: 15px 0;
+    padding-left: 30px;
+
+    li {
+      margin: 10px 0;
+    }
+  }
+
+  p {
+    margin: 15px 0;
+  }
+
+  @media (max-width: 768px) {
+    font-size: 1rem;
   }
 `;
 
@@ -235,78 +439,90 @@ const EmptyState = styled.div`
   }
 `;
 
+const ITEMS_PER_PAGE = 12;
+
 const Catalog: React.FC = () => {
-  const { t } = useTranslation();
-  const [activeCategory, setActiveCategory] = useState("all");
-  const [itemsToShow, setItemsToShow] = useState(6);
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const [selectedCategories, setSelectedCategories] = useState<string[]>([]);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [lightboxItem, setLightboxItem] = useState<CatalogItem | null>(null);
+  const [isFiltersModalOpen, setIsFiltersModalOpen] = useState(false);
+  const [tempSelectedCategories, setTempSelectedCategories] = useState<
+    string[]
+  >([]);
 
-  const categories = [
-    { key: "all", label: t("catalog.categories.all") },
-    { key: "clothing", label: t("catalog.categories.clothing") },
-    { key: "corporate", label: t("catalog.categories.corporate") },
-    { key: "accessories", label: t("catalog.categories.accessories") },
-  ];
-
-  const catalogItems = [
-    {
-      id: 1,
-      title: "Класичний костюм",
-      description: "Елегантний бізнес-костюм з натуральної вовни",
-      category: "clothing",
-      tags: ["бізнес", "класика", "вовна"],
-      stats: { price: "₴2500", time: "7 днів", rating: "4.9" },
-    },
-    {
-      id: 2,
-      title: "Корпоративна форма",
-      description: "Уніформа для персоналу ресторану",
-      category: "corporate",
-      tags: ["корпоратив", "уніформа", "ресторан"],
-      stats: { price: "₴800", time: "5 днів", rating: "4.8" },
-    },
-    {
-      id: 3,
-      title: "Вечірня сукня",
-      description: "Розкішна сукня для особливих випадків",
-      category: "clothing",
-      tags: ["вечірня", "розкіш", "особливі випадки"],
-      stats: { price: "₴3200", time: "10 днів", rating: "5.0" },
-    },
-    {
-      id: 4,
-      title: "Дитячий костюм",
-      description: "Стильний костюм для дитини",
-      category: "clothing",
-      tags: ["дитячий", "стильний", "шкільний"],
-      stats: { price: "₴1200", time: "4 дні", rating: "4.7" },
-    },
-    {
-      id: 5,
-      title: "Робочий одяг",
-      description: "Міцний робочий одяг для будівництва",
-      category: "corporate",
-      tags: ["робочий", "міцний", "будівництво"],
-      stats: { price: "₴600", time: "3 дні", rating: "4.6" },
-    },
-    {
-      id: 6,
-      title: "Спортивний костюм",
-      description: "Зручний спортивний костюм",
-      category: "clothing",
-      tags: ["спортивний", "зручний", "активний"],
-      stats: { price: "₴1500", time: "6 днів", rating: "4.8" },
-    },
-  ];
-
-  const filteredItems = catalogItems.filter(
-    (item) => activeCategory === "all" || item.category === activeCategory
+  const currentLanguage = i18n.language || "uk";
+  const filteredItems = getItemsByCategories(
+    selectedCategories.length === 0 ? ["all"] : selectedCategories
   );
 
-  const displayedItems = filteredItems.slice(0, itemsToShow);
+  const totalPages = Math.ceil(filteredItems.length / ITEMS_PER_PAGE);
+  const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
+  const displayedItems = filteredItems.slice(
+    startIndex,
+    startIndex + ITEMS_PER_PAGE
+  );
 
-  const handleLoadMore = () => {
-    setItemsToShow((prev) => prev + 6);
+  const handleCategoryToggle = (categoryKey: string) => {
+    setSelectedCategories((prev) => {
+      if (prev.includes(categoryKey)) {
+        return prev.filter((key) => key !== categoryKey);
+      } else {
+        return [...prev, categoryKey];
+      }
+    });
+    setCurrentPage(1);
   };
+
+  const handleMobileCategoryToggle = (categoryKey: string) => {
+    setTempSelectedCategories((prev) => {
+      if (prev.includes(categoryKey)) {
+        return prev.filter((key) => key !== categoryKey);
+      } else {
+        return [...prev, categoryKey];
+      }
+    });
+  };
+
+  const handleOpenFilters = () => {
+    setTempSelectedCategories([...selectedCategories]);
+    setIsFiltersModalOpen(true);
+  };
+
+  const handleCloseFilters = () => {
+    setIsFiltersModalOpen(false);
+  };
+
+  const handleApplyFilters = () => {
+    setSelectedCategories([...tempSelectedCategories]);
+    setCurrentPage(1);
+    setIsFiltersModalOpen(false);
+  };
+
+  const handleImageClick = (item: CatalogItem) => {
+    setLightboxItem(item);
+  };
+
+  const handleLightboxNavigate = (index: number) => {
+    if (filteredItems[index]) {
+      setLightboxItem(filteredItems[index]);
+    }
+  };
+
+  const currentLightboxIndex = lightboxItem
+    ? filteredItems.findIndex((item) => item.id === lightboxItem.id)
+    : -1;
+
+  const handleContactClick = () => {
+    navigate("/contacts");
+  };
+
+  useEffect(() => {
+    if (currentPage > totalPages && totalPages > 0) {
+      setCurrentPage(1);
+    }
+  }, [totalPages, currentPage]);
 
   useEffect(() => {
     const scriptId = "dotlottie-wc-script";
@@ -319,6 +535,24 @@ const Catalog: React.FC = () => {
       document.body.appendChild(s);
     }
   }, []);
+
+  useEffect(() => {
+    const handleEscape = (e: KeyboardEvent) => {
+      if (e.key === "Escape" && isFiltersModalOpen) {
+        handleCloseFilters();
+      }
+    };
+
+    if (isFiltersModalOpen) {
+      document.addEventListener("keydown", handleEscape);
+      document.body.style.overflow = "hidden";
+    }
+
+    return () => {
+      document.removeEventListener("keydown", handleEscape);
+      document.body.style.overflow = "unset";
+    };
+  }, [isFiltersModalOpen]);
 
   return (
     <CatalogContainer>
@@ -340,71 +574,243 @@ const Catalog: React.FC = () => {
 
       <CatalogSection>
         <Container>
-          <CategoryTabs>
-            {categories.map((category) => (
-              <CategoryTab
+          <FiltersButton onClick={handleOpenFilters}>
+            {t("catalog.filters", "Фільтри")}{" "}
+            {selectedCategories.length > 0 && `(${selectedCategories.length})`}
+          </FiltersButton>
+
+          <CategoryFilters>
+            <CategoryFiltersTitle>
+              {t("catalog.filterByCategory") || "Фільтр по категоріях"}
+            </CategoryFiltersTitle>
+            <CategoryCheckboxes>
+              {catalogCategories.map((category) => {
+                const isChecked = selectedCategories.includes(category.key);
+                return (
+                  <CategoryCheckbox key={category.key} $checked={isChecked}>
+                    <input
+                      type="checkbox"
+                      checked={isChecked}
+                      onChange={() => handleCategoryToggle(category.key)}
+                    />
+                    <span>
+                      {category.label[currentLanguage as "uk" | "en" | "ru"] ||
+                        category.label.uk}
+                    </span>
+                  </CategoryCheckbox>
+                );
+              })}
+            </CategoryCheckboxes>
+          </CategoryFilters>
+
+          <FiltersModal
+            $isOpen={isFiltersModalOpen}
+            onClick={handleCloseFilters}
+          >
+            <FiltersModalContent onClick={(e) => e.stopPropagation()}>
+              <FiltersModalHeader>
+                <FiltersModalTitle>
+                  {t("catalog.filterByCategory") || "Фільтр по категоріях"}
+                </FiltersModalTitle>
+                <CloseFiltersButton onClick={handleCloseFilters}>
+                  ×
+                </CloseFiltersButton>
+              </FiltersModalHeader>
+
+              <MobileCategoryCheckboxes>
+                {catalogCategories.map((category) => {
+                  const isChecked = tempSelectedCategories.includes(
+                    category.key
+                  );
+                  return (
+                    <MobileCategoryCheckbox
                 key={category.key}
-                active={activeCategory === category.key}
-                onClick={() => setActiveCategory(category.key)}
-              >
-                {category.label}
-              </CategoryTab>
-            ))}
-          </CategoryTabs>
+                      $checked={isChecked}
+                    >
+                      <input
+                        type="checkbox"
+                        checked={isChecked}
+                        onChange={() =>
+                          handleMobileCategoryToggle(category.key)
+                        }
+                      />
+                      <span>
+                        {category.label[
+                          currentLanguage as "uk" | "en" | "ru"
+                        ] || category.label.uk}
+                      </span>
+                    </MobileCategoryCheckbox>
+                  );
+                })}
+              </MobileCategoryCheckboxes>
+
+              <ApplyFiltersButton onClick={handleApplyFilters}>
+                {t("catalog.applyFilters", "Застосувати")}
+              </ApplyFiltersButton>
+            </FiltersModalContent>
+          </FiltersModal>
 
           {displayedItems.length > 0 ? (
             <>
               <ItemsGrid>
                 {displayedItems.map((item) => (
-                  <ItemCard key={item.id}>
-                    <ItemImage>[Зображення виробу]</ItemImage>
-                    <ItemContent>
-                      <h3>{item.title}</h3>
-                      <p>{item.description}</p>
-                      <ItemTags>
-                        {item.tags.map((tag, index) => (
-                          <Tag key={index}>{tag}</Tag>
-                        ))}
-                      </ItemTags>
-                      <ItemStats>
-                        <StatItem>
-                          <span className="number">{item.stats.price}</span>
-                          <p>Вартість</p>
-                        </StatItem>
-                        <StatItem>
-                          <span className="number">{item.stats.time}</span>
-                          <p>Термін</p>
-                        </StatItem>
-                        <StatItem>
-                          <span className="number">{item.stats.rating}</span>
-                          <p>Рейтинг</p>
-                        </StatItem>
-                      </ItemStats>
-                      <ItemActions>
-                        <ActionButton>Детальніше</ActionButton>
-                        <ActionButton className="primary">
-                          Замовити
-                        </ActionButton>
-                      </ItemActions>
-                    </ItemContent>
+                  <ItemCard
+                    key={item.id}
+                    onClick={() => handleImageClick(item)}
+                  >
+                    <ItemImageWrapper>
+                      <ItemImage
+                        src={item.imagePath}
+                        alt={t(
+                          `catalog.items.${item.id}.altText`,
+                          item.altText
+                        )}
+                        loading="lazy"
+                      />
+                    </ItemImageWrapper>
+                    <ItemInfo>
+                      <ItemName>
+                        {t(`catalog.items.${item.id}.name`, item.name)}
+                      </ItemName>
+                      <ItemDetails>
+                        {item.season && (
+                          <p>
+                            {t("catalog.season", "Сезон")}:{" "}
+                            {t(`catalog.items.${item.id}.season`, item.season)}
+                          </p>
+                        )}
+                        {item.silhouette && (
+                          <p>
+                            {t("catalog.silhouette", "Силует")}:{" "}
+                            {t(
+                              `catalog.items.${item.id}.silhouette`,
+                              item.silhouette
+                            )}
+                          </p>
+                        )}
+                        {item.material && (
+                          <p>
+                            {t("catalog.material", "Матеріал")}:{" "}
+                            {t(
+                              `catalog.items.${item.id}.material`,
+                              item.material
+                            )}
+                          </p>
+                        )}
+                      </ItemDetails>
+                    </ItemInfo>
                   </ItemCard>
                 ))}
               </ItemsGrid>
 
-              {itemsToShow < filteredItems.length && (
-                <LoadMoreButton onClick={handleLoadMore}>
-                  {t("catalog.loadMore")}
-                </LoadMoreButton>
+              {totalPages > 1 && (
+                <Pagination>
+                  <PaginationButton
+                    onClick={() =>
+                      setCurrentPage((prev) => Math.max(1, prev - 1))
+                    }
+                    disabled={currentPage === 1}
+                  >
+                    ←
+                  </PaginationButton>
+                  {Array.from({ length: totalPages }, (_, i) => i + 1).map(
+                    (page) => (
+                      <PaginationButton
+                        key={page}
+                        $active={currentPage === page}
+                        onClick={() => setCurrentPage(page)}
+                      >
+                        {page}
+                      </PaginationButton>
+                    )
+                  )}
+                  <PaginationButton
+                    onClick={() =>
+                      setCurrentPage((prev) => Math.min(totalPages, prev + 1))
+                    }
+                    disabled={currentPage === totalPages}
+                  >
+                    →
+                  </PaginationButton>
+                </Pagination>
               )}
             </>
           ) : (
             <EmptyState>
-              <h3>{t("catalog.noItems")}</h3>
-              <p>{t("catalog.noItemsDescription")}</p>
+              <h3>{t("catalog.noItems") || "Товари не знайдено"}</h3>
+              <p>
+                {t("catalog.noItemsDescription") ||
+                  "Спробуйте змінити фільтри категорій"}
+              </p>
             </EmptyState>
           )}
         </Container>
       </CatalogSection>
+
+      <SEOSection>
+        <Container>
+          <SEOTitle>{t("catalog.seo.title")}</SEOTitle>
+          <SEOText>
+            <p>{t("catalog.seo.intro")}</p>
+
+            {t("catalog.seo.advantagesTitle") && (
+              <h3>{t("catalog.seo.advantagesTitle")}</h3>
+            )}
+            {t("catalog.seo.advantage1Text") && (
+              <p>{t("catalog.seo.advantage1Text")}</p>
+            )}
+            {t("catalog.seo.advantage2Text") && (
+              <p>{t("catalog.seo.advantage2Text")}</p>
+            )}
+            {t("catalog.seo.advantage3Text") && (
+              <p>{t("catalog.seo.advantage3Text")}</p>
+            )}
+            {t("catalog.seo.advantage4Text") && (
+              <p>{t("catalog.seo.advantage4Text")}</p>
+            )}
+            {t("catalog.seo.advantage5Text") && (
+              <p>{t("catalog.seo.advantage5Text")}</p>
+            )}
+
+            {t("catalog.seo.cooperationTitle") && (
+              <h3>{t("catalog.seo.cooperationTitle")}</h3>
+            )}
+            <ul>
+              {t("catalog.seo.cooperation1Title") && (
+                <li>
+                  <strong>{t("catalog.seo.cooperation1Title")}</strong>{" "}
+                  {t("catalog.seo.cooperation1Text")}
+                </li>
+              )}
+              {t("catalog.seo.cooperation2Title") && (
+                <li>
+                  <strong>{t("catalog.seo.cooperation2Title")}</strong>{" "}
+                  {t("catalog.seo.cooperation2Text")}
+                </li>
+              )}
+              {t("catalog.seo.cooperation3Title") && (
+                <li>
+                  <strong>{t("catalog.seo.cooperation3Title")}</strong>{" "}
+                  {t("catalog.seo.cooperation3Text")}
+                </li>
+              )}
+            </ul>
+
+            <p>{t("catalog.seo.conclusion")}</p>
+          </SEOText>
+        </Container>
+      </SEOSection>
+
+      <Lightbox
+        item={lightboxItem}
+        isOpen={lightboxItem !== null}
+        onClose={() => setLightboxItem(null)}
+        allItems={filteredItems}
+        currentIndex={currentLightboxIndex}
+        onNavigate={handleLightboxNavigate}
+      />
+
+      <PriceModal onContactClick={handleContactClick} />
     </CatalogContainer>
   );
 };

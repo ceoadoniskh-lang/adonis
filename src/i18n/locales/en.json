@@ -232,7 +232,787 @@
       "uniforms": "Uniform Clothing",
       "textiles": "Textile Products"
     },
-    "viewAll": "View All"
+    "viewAll": "View All",
+    "model": "Model",
+    "brand": "Brand",
+    "showMore": "Show more",
+    "showLess": "Show less",
+    "filters": "Filters",
+    "applyFilters": "Apply",
+    "previousItem": "Previous item",
+    "nextItem": "Next item",
+    "seo": {
+      "title": "Production and Sale of Women's Outerwear Wholesale from Manufacturer",
+      "intro": "Looking for a reliable partner to scale your business? Our company is a leading Ukrainian manufacturer of women's outerwear, specializing in sewing modern collections with perfect fit. We offer favorable conditions for those interested in women's outerwear wholesale directly from the manufacturer.",
+      "advantagesTitle": "",
+      "advantage1Title": "",
+      "advantage1Text": "Our hallmark is inclusivity: we manufacture clothing in a wide size range from 42 to 72. Specialization in Plus Size direction and professional pattern development allow us to create models that have high demand among end consumers.",
+      "advantage2Title": "",
+      "advantage2Text": "",
+      "advantage3Title": "",
+      "advantage3Text": "",
+      "advantage4Title": "",
+      "advantage4Text": "",
+      "advantage5Title": "",
+      "advantage5Text": "",
+      "cooperationTitle": "We offer flexible cooperation formats:",
+      "cooperation1Title": "wholesale and bulk wholesale at direct production prices;",
+      "cooperation1Text": "",
+      "cooperation2Title": "sewing outsourcing (Private Label) — manufacturing collections under your own brand.",
+      "cooperation2Text": "",
+      "cooperation3Title": "",
+      "cooperation3Text": "",
+      "conclusion": "Thanks to our own production cycle, we guarantee strict quality control and supply stability.\n\nContact our manager to get detailed information about the assortment and discuss individual cooperation terms."
+    },
+    "items": {
+      "bomber-boomer-womens-adonis": {
+        "name": "Boomer",
+        "altText": "Women's Bomber Blue, Quilted Textured Fabric with Adonis Longstitch Boomer Plus Size",
+        "userText": "Model: Boomer Brand: ADONIS Season: Spring Material: Textured raincoat fabric (quilted) Silhouette: Loose\nLight spring windbreaker in sporty style with unique fine fabric texture. The model fastens with a central zipper and is complemented by classic knit cuffs with contrasting stripes on the collar, sleeves and bottom edge. Vertical slash pockets with zippers are integrated into the design for convenience and storage. We specialize in creating clothing that emphasizes the advantages of any figure, so this bomber is available in a wide size range. Our own pattern development guarantees a loose fit in the shoulders and chest, which is especially important for comfort in the plus size series.",
+        "season": "Spring",
+        "silhouette": "Loose",
+        "material": "Textured raincoat fabric (quilted)"
+      },
+      "bomber-muskat-womens-adonis": {
+        "name": "Muscat",
+        "altText": "Black Adonis Muscat Contrast Threaded Female Bomber, Plus Size",
+        "userText": "Model: Muscat Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Even\nDemi-season shirt jacket \"Muscat\" from the factory \"Adonis\" is a stylish combination of quilted raincoat fabric and cozy binding on the collar, cuffs and belt. Even silhouette with deep cuts in the side seams provides freedom of movement, and the central zipper with buttons adds practicality. Our own patterns allow us to produce this model in a wide size range from 42 to 72. Purchasing in bulk directly from the manufacturer guarantees high quality tailoring and a current design, which will make the \"Muscat\" model a favorite in your retail network.",
+        "season": "Demi-season",
+        "silhouette": "Even",
+        "material": "Individually as desired"
+      },
+      "bomber-tota-woomens-adonis": {
+        "name": "Tota",
+        "altText": "Adonis Tota Spring Womens Bomber Jacket Large Size Range, Black Lacquered",
+        "userText": "Model: Tota Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nWomen's demi-season bomber jacket with a straight silhouette from the ADONIS factory is an ideal model for wholesale purchases and distribution. The elastic waistband provides a comfortable fit, raglan sleeves with cuffs and a flat elastic collar add convenience and a modern look. The central zipper and side pockets in the seams with magnets increase the functionality of the product. The model is made using the factory's own patterns and is available in a wide size range of 42–72, which makes it optimal for wholesale sales of women's demi-season outerwear.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "windbreaker-womens-safo-vitrovka-adonis": {
+        "name": "Sappho",
+        "altText": "Light summer lilac-colored windbreaker with a hood Adonis Sappho, sizes 48-56",
+        "userText": "Model: Sappho Brand: ADONIS Season: Windbreaker Material: Raincoat fabric, 100% polyester Silhouette: Straight\nWomen's windbreaker of a straight silhouette from the ADONIS factory, without lining, with sewn-in sleeves and a lapel. The central zipper and patch \"kangaroo\" pockets ensure practicality and comfort in wearing. The fixed hood and adjustable hem on the back guarantee comfort and protection from the wind. The model is made on the factory's own patterns, available in a wide size range of 42–72, which makes it the optimal choice for wholesale purchases of women's windbreakers and distribution of domestic outerwear.",
+        "season": "Windbreaker",
+        "silhouette": "Straight",
+        "material": "Raincoat fabric, 100% polyester"
+      },
+      "windbreaker-womens-sinai-vitrovka-adonis-grey": {
+        "name": "Sinai.",
+        "altText": "Urban-style reflective windbreaker with orange zipper Adonis Sinai, large size range",
+        "userText": "Model: Sinai Brand: ADONIS Season: Spring Silhouette: Straight\nThis modern windbreaker is made of reflective raincoat fabric, which ensures visibility in the dark and a stylish look. The model has an original cut with a detachable yoke and a sewn-in knitted belt. The functionality of the product is thought out to the smallest detail: the stand-up collar and waistline are equipped with drawstrings for volume adjustment, and the central zipper is securely hidden under the placket. Special attention is drawn to the sleeves with figured lines, patch pockets and elastic cuffs with Velcro for fixation. The main pockets are made in a patch style with flaps. Brand ADONIS specializes in creating high-quality outerwear, so this windbreaker is presented in a large size grid from 42 to 72. We have developed patterns so that every woman feels confident and free, regardless of the chosen size.",
+        "season": "Spring",
+        "silhouette": "Straight"
+      },
+      "demisezonna-alba-chocolate-womens-adonis-jacket": {
+        "name": "Alba",
+        "altText": "Demi-seasonна жіноча куртка прямого трапецевидного силуету батальних розмірів від Адоніс",
+        "userText": "Model: Alba Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nWomen's demi-season jacket of a straight silhouette from the ADONIS factory with patch pockets is a practical solution for wholesale purchases and sales in large batches. The geometric stitch on the back adds a modern look, and the straight cut makes the model universal for different body types, including large and battle sizes. The product is made on the factory's own patterns and is available in a wide size range of 42–72, which makes it attractive for wholesale purchases of women's demi-season outerwear.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "demisezonna-kurtka-black-montana-womens-adonis-jacket": {
+        "name": "Montana",
+        "altText": "Montana Women's Black Demi-Season Jacket, Adonis Factory, Enlarged Size Range",
+        "userText": "Model: Montana Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nWomen's demi-season jacket of a straight silhouette from the ADONIS factory with set-in sleeves, a central zipper and buttons. Pockets in the seams with zippers and a removable hood with buttons with a working drawstring increase practicality and comfort in wearing. The figured stitch and internal drawstring with fasteners at the bottom provide a comfortable fit and a modern look. The model is available in a wide size range, including large and battle sizes 42–72, which makes it ideal for wholesale purchases of women's demi-season outerwear, groups and large batches.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "demisezonna-kurtka-chocolate-womens-rimini-adonis-jacket": {
+        "name": "Rimini",
+        "altText": "Rimini Women's Chocolate Quilted Jacket Adonis, Oversize, Plus Size",
+        "userText": "Model: Rimini Brand: ADONIS Season: Demi-season Silhouette: Oversize\nThis light and stylish jacket in a modern oversized style is designed for maximum comfort and experiments with looks. The main feature of the model is the functional buttons on the sides, which can be unfastened for greater freedom of movement. The bottom of the product is equipped with separate drawstrings for the front and back - this allows you to independently adjust the tightness, easily changing the shape and silhouette of the jacket to your mood.\nWe made sure that the ADONIS brand quality was available to everyone, so we adapted this trendy model to a wide size grid from 42 to 72 sizes.",
+        "season": "Demi-season",
+        "silhouette": "Oversize"
+      },
+      "demisezonna-kurtka-daisy-womens-adonis-jacket": {
+        "name": "Daisy",
+        "altText": "Daisy Women's Gray Printed Transformer Jacket, Plus Size Sewing Factory Adonis",
+        "userText": "Model: Daisy Brand: ADONIS Season: Demi-season Material: Raincoat fabric (insulated) Silhouette: Straight\nThe reversible demi-season jacket \"Dezzi\" is a practical transformer model with insulation, which allows you to easily change looks. The product has a convenient central zipper and a thoughtful cut for everyday comfort. Thanks to its own production, the model is available in a wide range of sizes from 42 to 72.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Raincoat fabric (insulated)"
+      },
+      "demisezonna-kurtka-grammy-green-womens-adonis-jacket": {
+        "name": "Grammy",
+        "altText": "Green Quilted Spring/Autumn Women's Grammy Jacket, Hood Removed, Sewing Adonis",
+        "userText": "Model: Grammy Brand: ADONIS Season: Demi-season Silhouette: Straight\nDemi-season jacket \"Grammy\" of a straight cut with a lowered shoulder line. The model is combined from two types of stitching and is equipped with a removable hood. Main features: wide turn-down collar, central zipper and inset pockets. The sleeves, collar and bottom of the product have drawstrings with latches for volume adjustment. Own production ensures a perfect fit and a full size grid. A profitable offer for a large group from the manufacturer.",
+        "season": "Demi-season",
+        "silhouette": "Straight"
+      },
+      "demisezonna-kurtka-gray-malinka-womens-adonis-jacket": {
+        "name": "Malinka",
+        "altText": "Gray women's spring and autumn jacket with a hood Malinka, From the Kharkiv factory Adonis, large sizes wholesale",
+        "userText": "Model: Malinka Brand: ADONIS Season: Demi-season Silhouette: Loose\nElegant demi-season jacket with a combined stitch and a sewn-in comfortable hood. The upper part of the product is decorated with an elegant figured pattern, contrasting with the horizontal stitch in the lower part. The model is equipped with a central zipper and a thoughtful cut that provides freedom of movement and reliable protection from the weather.",
+        "season": "Demi-season",
+        "silhouette": "Loose"
+      },
+      "demisezonna-kurtka-green-grace-womens-adonis-jacket": {
+        "name": "Grace.",
+        "altText": "Women's salad jacket Grace Adonis with voluminous sleeves and high collar wholesale, wide size grid",
+        "userText": "Model: Grace Brand: ADONIS Season: Demi-season Silhouette: Straight\nDemi-season jacket \"Gracie\" straight cut with a lowered shoulder line. Made of two types of decorative stitching. The model has a removable hood and a wide turn-down collar. The central fastener and pockets are with zippers. The bottom of the product, collar and sleeves are equipped with drawstrings with latches for volume adjustment. Professional patterns ensure a fit on any figure in a wide size grid. Available for bulk orders.",
+        "season": "Demi-season",
+        "silhouette": "Straight"
+      },
+      "demisezonna-kurtka-green-womens-montana-adonis-jacket": {
+        "name": "Montana",
+        "altText": "Khaki Montana Brand Adonis Women's Spring or Autumn Large Hooded Demi-Season Short Jacket",
+        "userText": "Model: Montana Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nElegant demi-season jacket. The model has a laconic stand-up collar and fastens with a central zipper, which is additionally hidden by a placket on the buttons. The straight cut and the absence of unnecessary decor make the product universal for business and everyday looks. As a manufacturer, we have developed special patterns for the battle group, which provide a perfect fit on curvy shapes without weighing down the silhouette. A wide size grid allows you to choose a comfortable option for any type of figure, while maintaining lightness and freedom of movement.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "demisezonna-kurtka-ivy-womens-adonis-jacket": {
+        "name": "Evie",
+        "altText": "Demi-seasonна куртка жіноча з трикотажними рукавами і каптуром бежевого колору з вишивкою позаду Іві, швейна фабрика Адоніс, великі розміри",
+        "userText": "Model: Ivi Brand: ADONIS Season: Demi-season Material: Mays coat fabric Silhouette: Straight\nLightweight demi-season women's jacket with a straight silhouette made of pleasant-to-the-touch Mays coat fabric. The bottom of the product and the hood are adjustable with a rep tape, which ensures a comfortable fit, and the slider with a decorative element adds a stylish accent. The model is available in a wide range of sizes, including large and battle sizes, and is suitable for orders in large batches, which makes it convenient for wholesale customers and wholesale suppliers of women's demi-season outerwear.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Mays Coat Fabric"
+      },
+      "demisezonna-kurtka-laguna-womens-adonis-jacket": {
+        "name": "Laguna",
+        "altText": "Lagoon Quilted Long Demi-Season Hooded Cuffed Jacket for Women, Sizes 42-72, from the Adonis Factory",
+        "userText": "Model: Laguna Brand: ADONIS Season: Demi-season Silhouette: Semi-fitted\nThe reversible demi-season coat has a sewn-in hood, a two-way central zipper and sleeves with detachable cuffs. The design is complemented by patch pockets: with a flap on the button on the front side and classic patch pockets on the inside. Thanks to ADONIS's own production, the model is presented in a wide size grid from 42 to 72 sizes, which guarantees an excellent fit and comfort.",
+        "season": "Demi-season",
+        "silhouette": "Semi-fitted"
+      },
+      "demisezonna-kurtka-lego-adonis-womens-jacket": {
+        "name": "Lego",
+        "altText": "Jacket for autumn and spring women's short white Lego with a logo, plus a siz from Adonis",
+        "userText": "Model: Lego Brand: ADONIS Season: Spring Material: Individually upon request Silhouette: Straight\nSpring women's jacket with a straight silhouette with a dropped shoulder line from the ADONIS factory. The product is quilted with a decorative pattern, and the left yoke of the shelf is decorated with elegant embroidery. The central zipper is covered with a decorative trim, flap pockets and a stand-up collar add practicality and a modern look. The bottom of the jacket is adjustable with a drawstring with an elastic drawstring and latches for a comfortable fit. The model is available in a wide range of sizes, including large and battle sizes, and is suitable for wholesale orders in large batches.",
+        "season": "Spring",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "demisezonna-kurtka-malva-womens-adonis-jacket": {
+        "name": "Malva",
+        "altText": "Double-sided demi-season jacket  for women with a hood of yellow-turquoise Malva, large size, Adonis factory",
+        "userText": "Model: Malva Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Semi-fitted\nThe \"Malva\" model is a practical 2-in-1 solution for your wardrobe. The double-sided design allows you to instantly change your look: from a discreet quilted design to a version with an accent print. The jacket is equipped with a deep hood and functional pockets on both sides. Since we are manufacturers, special attention is paid to the development of patterns for large sizes - the product does not just hide flaws, but creates a harmonious silhouette. Our wide size range allows you to choose the perfect model for any physique, guaranteeing the impeccable quality of each seam.",
+        "season": "Demi-season",
+        "silhouette": "Semi-adjacent",
+        "material": "Individually as desired"
+      },
+      "demisezonna-kurtka-malva-womens-adonis": {
+        "name": "Malva",
+        "altText": "Jacket for spring or autumn double-sided women's, large size grid, mallow from Adonis with embroidery",
+        "userText": "Model: Malva Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Semi-fitted\nA 2-in-1 functional jacket with an emphasis on contrasting details. The model has a double-sided design: one side is smooth with a graphic print on the chest, the other is completely quilted with horizontal seams. A feature of the cut is a deep non-removable hood with wide decorative ribbons-ties in the color of the inner side. The central zipper is protected from blowing, and the zippered pockets are integrated into the relief seams. We specialize in sewing battle sizes, so the patterns are designed taking into account the features of a curvaceous figure for a free fit without tightening. A large size grid allows you to choose the product exactly according to the parameters.",
+        "season": "Demi-season",
+        "silhouette": "Semi-adjacent",
+        "material": "Individually as desired"
+      },
+      "demisezonna-kurtka-ritcie-womens-adonis-jacket-black": {
+        "name": "Ricci",
+        "altText": "Ricci Adonis quilted black short demi-season jacket for girls with elastic band, large size range",
+        "userText": "Model: Richie Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe demi-season jacket \"Richie\" from the Adonis factory is a model of technological design and comfort. The straight silhouette model with a lowered shoulder line is made of a \"sandwich\" stitch with a decorative pattern. A feature of the product is the combined patch pockets and a shirt sleeve with a drawstring for volume adjustment. A stand-up collar, a central zipper under the placket and internal seam finishing with decorative piping emphasize the premium quality of workmanship. Thanks to our own patterns, we produce this model in a full size range from 42 to 72. A large bulk order from the manufacturer will provide your business with a current model that combines functionality and an elegant look.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "demisezonna-kurtka-ritcie-womens-adonis-jacket-khaki": {
+        "name": "Ricci",
+        "altText": "Ricci in khaki color, short jacket for women with quilted patch pockets from the manufacturer Adonis, sizes 42-72",
+        "userText": "Model: Richie Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe Richie jacket from the manufacturer ADONIS combines practicality and modern demi-season fashion trends. The straight-cut product with a soft shoulder line is made of a multilayer sandwich stitch with an original pattern. The functional accent of the model is the patch pockets of a complex design and shirt sleeves, complemented by convenient drawstrings with fasteners. The high stand-up collar and a zipper hidden under the placket provide excellent protection from the wind, and the internal seam finishing with a lining indicates a high standard of tailoring. The presence of our own patterns allows us to offer this product in an expanded size grid from 42 to 72. This is a profitable solution for a large group, which will allow your retail chain to present high-quality and sought-after outerwear.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "demisezonna-kurtka-safina-womens-adonis-jacket": {
+        "name": "Safina",
+        "altText": "Quilted women's green jacket with a white hood short, Safina from the Adonis sewing factory for sizes plus sizes",
+        "userText": "Model: Sofina Brand: ADONIS Season: Spring Material: Lacquer Silhouette: Straight\nThe spring jacket \"Sofina\" from the ADONIS factory is an elegant model that combines a play of textures and colors. The product is decorated with two types of rhombus stitch, which adds special dynamics to the silhouette. The central button fastener is complemented by an inner strip of printed striped fabric with decorative embroidery. Our own pattern database allows us to produce this model in a wide size range from 42 to 72. Ordering in bulk directly from the manufacturer guarantees you an up-to-date design and impeccable quality of workmanship.",
+        "season": "Spring",
+        "silhouette": "Straight",
+        "material": "Lacke"
+      },
+      "demisezonna-kurtka-tiffany-solomia-womens-adonis-jacket": {
+        "name": "Solomiia:",
+        "altText": "Lightweight spring jacket Solomia oversize for women, bat style with a large size next to Adonis",
+        "userText": "Model: Solomiya Brand: ADONIS Season: Demi-season Silhouette: Straight\nA stylish demi-season jacket that combines two types of textures: a voluminous geometric stitch on the front and back with smooth inserts on the sleeves and sides. The model is complemented by a cozy sewn-in hood on the wings, a central zipper and practical slit pockets. The use of modern Gloria and Jenki fabrics provides the product with wear resistance and an attractive appearance. We strive for every woman to find her ideal option, so at ADONIS this model is presented in battle sizes.",
+        "season": "Demi-season",
+        "silhouette": "Straight"
+      },
+      "demisezonna-kurtka-womens-malinka-adonis-jacket": {
+        "name": "Malinka",
+        "altText": "Women's demi-season jacket decorated with faux fur with large pockets and hood, for large women, Adonis",
+        "userText": "Model: Malinka Brand: ADONIS Season: Demi-season Silhouette: Semi-fitted\nCombined demi-season jacket, made of a combination of quilted raincoat and thick faux mink fur. The classic-length model has a comfortable semi-fitted silhouette that provides freedom of movement. The jacket is equipped with a cozy hood, a central zipper and two roomy patch pockets. Own patterns allow us to offer the product in a wide size grid (up to size 72). A practical and warm option for large bulk orders directly from the manufacturer.",
+        "season": "Demi-season",
+        "silhouette": "Semi-fitted"
+      },
+      "demisezonna-kurtka-womens-prado-adonis-jacket": {
+        "name": "Prada",
+        "altText": "Turquoise jacket with print and yellow lining Prado model from the manufacturer Adonis with a large size range",
+        "userText": "Model: Prada Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nA stylish demi-season jacket with a straight silhouette from the Adonis factory is created for those who value minimalism and comfort. The lack of a hood and a laconic design make the model a universal base, and the drawstring at the bottom allows you to independently adjust the volume of the product. Thanks to our own patterns, we have achieved a perfect fit that does not restrict movement. The model is presented in the full size range - from 42 to 72, which is our advantage in the manufacture of women's clothing. The offer is relevant for wholesale customers who are looking for a quality product in large quantities directly from the manufacturer.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "kurtka-serenade-womens-adonis-jacket": {
+        "name": "Serenade",
+        "altText": "Women's elongated jacket for spring shirt cut in blue color with buttons, Serenade model from the Adonis brand, sizes from 42 to 72",
+        "userText": "Model: Serenade Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe demi-season shirt jacket \"Serenade\" from the ADONIS factory is a stylish combination of classic cut and modern comfort. The straight silhouette model is made with an elegant diamond-shaped stitch. The stand-up shirt collar and central button fastening emphasize the trendy design, and the figured hem with rounded edges adds lightness to the image. The jacket is equipped with practical slit pockets with a zipper and chest patch pockets. Thanks to our own patterns, we provide a full size range from 42 to 72. High quality workmanship and the possibility of ordering in bulk make this model an ideal choice for your business.",
+        "season": "Demi-season",
+        "silhouette": "Even",
+        "material": "Individually as desired"
+      },
+      "podovjena-kurtka-fyror-womens-adonis": {
+        "name": "Furor",
+        "altText": "Women's Elongated Transformer Jacket Furor of Battle Sizes, Adonis Factory",
+        "userText": "Model: Furor Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe transformer jacket from the Adonis factory is a functional item that easily turns into a vest thanks to removable sleeves and a hood. Such versatility makes the product commercially attractive for a large group, as it covers the needs of buyers in two different wardrobe elements at the same time. The lightweight construction and laconic design are based on our author's patterns, which guarantees a perfect fit in the entire size range - from 42 to 72. We provide direct deliveries from the manufacturer, offering favorable conditions for bulk orders. This model is aimed at a wide target audience: from youth lines to women's collections of large sizes. Cooperation with our company allows you to purchase quality clothing in bulk without intermediaries, receiving consistently high quality tailoring for your business.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "sheepskin-eco-womens-alika-adonis-jacket": {
+        "name": "Alika",
+        "altText": "Eco sheepskin coat for women of mocha color with imitation of fur length to the middle of the thigh, Alika model, large sizes, Adonis factory",
+        "userText": "Model: Alika Brand: ADONIS Season: Demi-season Material: Eco-dubbing with impregnation, lamb fur Silhouette: Fitted\nThis stylish eco-dubbing jacket is the perfect combination of elegance and practicality for the cold season. The model is made in a basic shade and complemented by soft contrasting fur on the collar and cuffs, which adds coziness to the image. We made sure that every woman felt confident, so we offer an expanded size range, including perfectly designed battle sizes. The thoughtful cut ensures a perfect fit for any figure, without restricting movements and retaining warmth. High-quality tailoring and modern materials guarantee the comfort and durability of your stylish demi-season wardrobe.",
+        "season": "Demi-season",
+        "silhouette": "Fitted",
+        "material": "Eco-dubbing with impregnation, lamb fur"
+      },
+      "sheepskin-eco-womens-lady-adonis-jacket": {
+        "name": "Lady",
+        "altText": "Short Eco Sheepskin Sheepskin Leather Lady Beige Plus Fur Imitation Size for Women",
+        "userText": "Model: Lady Brand: ADONIS Season: Demi-season Material: Eco-dubbing with impregnation, lamb fur Silhouette: Fitted\nThis elegant fitted eco-dubbing jacket from the Adonis factory was created for retail chains that focus on stylish and high-quality women's clothing. The model with an oblique zipper favorably emphasizes the silhouette, combining modern trends and classic femininity. Thanks to our branded patterns, the product has a perfect fit that remains comfortable in any size. We manufacture this model in a wide range from 42 to 72, allowing customers to cover both standard and battle groups of buyers. Direct deliveries in large batches directly from the manufacturer guarantee favorable conditions for your business. By ordering this outerwear in bulk, you get proven sewing quality from a Ukrainian enterprise, which ensures stable demand in retail.",
+        "season": "Demi-season",
+        "silhouette": "Fitted",
+        "material": "Eco-dubbing with impregnation, lamb fur"
+      },
+      "eco-fur-coat-womens-adonis": {
+        "name": "Fur coat",
+        "altText": "The eco coat mimics the fur of an eggplant-colored doodle from the Adonis brand with a large size range",
+        "userText": "Model: Fur coat Brand: ADONIS Season: Autumn / Winter Material: Premium eco-fur Silhouette: Loose\nThis stylish short eco-fur coat is an ideal choice for those who value comfort and modern trends. The model has a textured \"sheepskin\" surface and a deep cozy hood that reliably protects from the wind. We develop patterns ourselves, so we offer a wide size range, including battle sizes, which provide a perfect fit without excess volume. Thanks to the loose cut and convenient zipper, the model fits perfectly into everyday looks, giving a feeling of lightness and warmth in any weather.",
+        "season": "Fall / Winter",
+        "silhouette": "Loose",
+        "material": "Premium Eco-fur"
+      },
+      "eco-fur-coat-womens-golden-adonis-black": {
+        "name": "Goldie",
+        "altText": "Black short coat with imitation mink fur for women and girls Goldie from the Adonis garment factory with a large size range, has a decorative white upholstery in front",
+        "userText": "Model: Goldi Brand: ADONIS Season: Demi-season Silhouette: Straight Material: Eco-mink\nThe black bomber coat from the Adonis factory is the embodiment of classic elegance in eco-mink fur. The deep black color combined with contrasting textured stripes gives the model a special style, making it a universal choice for any wardrobe. The straight cut and elegant collar are designed according to our original patterns, which guarantees a perfect fit for figures from 42 to 72 sizes. The offer is designed for large groups and retail chains that are looking for high-quality outerwear directly from the manufacturer. By ordering this model in large batches, you get a sought-after product that combines the practicality of a dark color and the luxurious look of faux fur.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Eco-nork"
+      },
+      "eco-fur-coat-womens-golden-white-adonis": {
+        "name": "Goldie",
+        "altText": "Eco fur coat with imitation of mink fur of white color with a beige strip in front, with a hood, large size range, Goldie model by Adonis",
+        "userText": "Model: Goldi Brand: ADONIS Season: Demi-season Material: Eco-mink Silhouette: Straight\nThe bomber coat from the Adonis factory is made of high-quality imitation mink fur, which meets modern eco-trends. The design with contrasting eco-mink stripes and the classic straight cut with an elegant collar make the model universal for a demi-season wardrobe. Thanks to professional patterns, the product has a perfect fit in the entire size range from 42 to 72, covering both standard and battle series. We offer direct deliveries from the manufacturer in large batches, which provides favorable conditions for wholesale customers. Purchasing such outerwear in bulk directly from a Ukrainian company guarantees high quality tailoring and stable interest from retail buyers.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Eco-nork"
+      },
+      "eco-fur-coat-womens-monro-black-adonis": {
+        "name": "Monroe",
+        "altText": "Short coat for women in black with imitation of mink fur, model Monroe Adonis, has a large size range",
+        "userText": "Model: Monroe Brand: ADONIS Season: Winter Material: Premium eco-fur (mink) Silhouette: Straight\nThe elegant short eco-fur coat \"Monroe\" is the embodiment of luxury and an ethical approach to fashion. The product is made of thick, incredibly soft fur with a noble shine, which visually does not differ from natural fur. The model fastens with a reliable central zipper and is complemented by a voluminous stand-up collar that reliably protects against the cold. We understand the needs of women with different body types, so we create this outerwear in a full-fledged dimensional grid, including combat positions. Our own production allows us to control the accuracy of the cut, so the fur coat provides a comfortable fit and freedom of movement, emphasizing style in the winter period.",
+        "season": "Zyma",
+        "silhouette": "Straight",
+        "material": "Еко-хутро преміумкласу (під норку) Silhouette:Straight"
+      },
+      "eco-fur-coat-womens-paula-yellow-adonis": {
+        "name": "Paula",
+        "altText": "Paula Adonis Bright Yellow Hooded Collar Short Coat for Girls & Women Plus Size",
+        "userText": "Model: Paula Brand: ADONIS Season: Winter / Cold Autumn Material: Premium eco-fur Silhouette: Loose\nA bright accent of your winter wardrobe is the short eco-fur coat \"Paula\" in a juicy lemon shade. The main feature of the model is a voluminous horizontal stitch, which gives the product a modern dynamic, and a high stand-up collar, which replaces a scarf. The bottom of the product and cuffs are finished with an elastic fur elastic band for protection from the wind. As a manufacturer, we have developed special patterns that allow this model to look great in large sizes: the cut does not create excess volume, providing freedom and lightness. Our wide size range guarantees that every customer will find their comfortable fit without compromising on style.",
+        "season": "Winter / Cold Autumn",
+        "silhouette": "Loose",
+        "material": "Premium eco-fur"
+      },
+      "versailles-jacket-womens-white-adonis": {
+        "name": "Versailles",
+        "altText": "White Women's Slim Quilted Jacket Versailles Adonis Battle Sizes",
+        "userText": "Model: Versailles Brand: ADONIS Season: Spring/Summer Material: Individually upon request Silhouette: Fitted\nA universal modern jacket that successfully combines urban elegance and sporty style. Thanks to the thoughtful cut, the model has a perfect fit, providing comfort in any situation. This design makes it easy to combine the product with both a classic look and leisure clothing. We offer a large selection of sizes.",
+        "season": "Spring/Літо",
+        "silhouette": "Fitted",
+        "material": "Individually as desired"
+      },
+      "viola-jacket-womens-yellow-adonis": {
+        "name": "Viola",
+        "altText": "Womens silhouette jacket fitted yellow hundredfucked plus size Viola Adonis",
+        "userText": "Model: Viola Brand: ADONIS Season: Spring/Summer Material: Individually upon request Silhouette: Fitted\nA light seasonal jacket made of quilted fabric. This is a sophisticated and elegant model with a tight-fitting cut that clearly emphasizes the figure. The well-thought-out design and textured stitching create a modern feminine look. The model is available in a wide size grid.",
+        "season": "Spring/Літо",
+        "silhouette": "Fitted",
+        "material": "Individually as desired"
+      },
+      "quilted-vest-anis-womens-adonis": {
+        "name": "Anise",
+        "altText": "Adonis Anis washed women's marsala vest in a large size range, has a hood",
+        "userText": "Model: Anis Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe Anis vest is a practical demi-season model, complemented by a deep non-removable hood for protection from the wind. The product has a convenient central zipper closure and an additional bar on the buttons. Thanks to the free cut and thoughtful length, the vest does not restrict movement and is easily combined with voluminous hoodies or sweaters. We develop the design of the products ourselves, paying special attention to the battle group. This allows us to create models in a large size grid that have a harmonious appearance and provide a perfect fit for any figure, while maintaining the modern style of the brand.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "quilted-vest-green-mango-womens-adonis": {
+        "name": "Mango",
+        "altText": "Green Hooded Quilted Womens Vest Elongated Mango Adonis Plus Size Size",
+        "userText": "Model: Mango Brand: ADONIS Season: Demi-season Silhouette: Loose\nThe reversible vest \"Mango\" is a functional novelty that allows you to change the color of your look in seconds. The main accent of the model is the back with a bow pleat and adjustable drawstring, which allows you to vary the volume of the product. The vest has horizontal stitching, a deep non-removable hood and side slits for maximum comfort while walking. The special style is emphasized by the fittings: metal rings on the pockets and textured rep ribbons. We develop clothes taking into account different body types, so this model is presented in an expanded size range, which ensures a perfect fit even in combat conditions.",
+        "season": "Demi-season",
+        "silhouette": "Loose"
+      },
+      "quilted-vest-kira-womens-adonis": {
+        "name": "KIRA",
+        "altText": "Girls' & Women's Lilac Textured Vest Size 42-72, Kira Adonis, Trend 2026",
+        "userText": "Model: Kira Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe quilted demi-season vest is a practical solution for multi-layered looks. The straight-cut model is made of moisture-resistant raincoat with a horizontal stitch and insulation, which is ideal for changeable weather. The high stand-up collar and convenient zippered pockets provide comfort. Our production specializes in combat sizes, so the vest is available in a wide size grid from 42 to 72. Thoughtful patterns guarantee a comfortable fit, which makes this model a universal element of a women's wardrobe.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "quilted-vest-long-black-anis-womens-adonis": {
+        "name": "Anise",
+        "altText": "Adonis quilted black quilted vest for women, without hood and black backpack",
+        "userText": "Model: Anis Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe Anis vest is a combination of functionality and modern street style. The model is equipped with a one-piece hood and a double line of zippers and metal buttons, which provides reliable thermoregulation. The side pockets are located at a convenient angle, adding practicality to the product in everyday use. We use our own methods of constructing patterns for non-standard figures, thanks to which Batal products do not constrain movements and look proportional. Availability in a wide range of sizes allows every woman to find her own option with guaranteed quality from the manufacturer.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "quilted-vest-long-tandem-womens-adonis-black": {
+        "name": "Tandem",
+        "altText": "Model Тандем від Адоніс, подовжений чорний стьобаний жилет з коміром для жінок",
+        "userText": "Model: Tandem Brand: ADONIS\nSeason: Demi-season\nMaterial: Coat - nylon + varnish; vest - Tota fabric\nSilhouette: Straight\nThe \"Tandem\" set from the \"Adonis\" factory is a functional 2-in-1 solution that combines a coat and a vest into a single look. The products can be worn separately or combined, which increases the commercial appeal of the model for retail chains. The coat with a horizontal stitch and a double-stitched sleeve provides a clear fit, and the vest with a diamond-shaped pattern adds a stylish accent. Thanks to its own patterns, the set fits perfectly on figures from 42 to 72 sizes. We offer direct deliveries from the manufacturer in large batches, providing the opportunity to order a high-quality group at a favorable price. Cooperation with our company allows your business to offer customers universal outerwear that covers the needs of several seasons at once.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Coat - nylon + varnish; vest - Tota fabric"
+      },
+      "quilted-vest-long-tandem-wom-ens-adonis": {
+        "name": "Tandem",
+        "altText": "Adonis Long Tandem Vest Model With Large Size Row, For Women, Color Watchful Rose",
+        "userText": "Model: Tandem vest Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe \"Tandem\" vest in trendy beige color (camel) from the \"Adonis\" factory will become a stylish base for any demi-season wardrobe. The diamond-shaped stitch combined with a warm sand shade gives the product an elegant look, and functional buttons ensure convenience in everyday use. We develop patterns ourselves, which guarantees an excellent fit for sizes from 42 to 72, including women's batal models. This position is extremely popular among customers who buy outerwear in bulk for retail chains. Direct deliveries in large quantities from the manufacturer allow you to get the current model in camel color at the best price, ensuring high margins for your business.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "quilted-vest-long-tatin-womens-adonis": {
+        "name": "Tatin",
+        "altText": "Camel quilted long vest for women with a black belt without a hood, model Tatin Adonis, trend 2026, sizes 42 to 72",
+        "userText": "Model: Tatin Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nThe quilted elongated vest \"Tatin\" of a straight cut is a universal model for demi-season. The product has a stand-up collar and a central button closure. The main details: a belt made of rep ribbon with a buckle to accentuate the waist and convenient pockets with lapels. Our own production allows us to offer this model in sizes from 42 to 72. Available for large groups and individual orders under your brand.",
+        "season": "Demi-season",
+        "silhouette": "Even",
+        "material": "Individually as desired"
+      },
+      "quilted-vest-mango-womens-adonis": {
+        "name": "Mango",
+        "altText": "Bright green quilted vest for women with a hood, large size wholesale, Mango Adonis",
+        "userText": "Model: Mango Brand: ADONIS Season: Demi-season Silhouette: Loose\nWomen's reversible vest with horizontal stitching and contrasting inner side. The model is equipped with a sewn-in stand-up hood, a central two-way zipper and an original bow pleat with a drawstring on the back. Decorative rep ribbons, pocket rings and side slits add a modern style to the product. Traditionally for ADONIS production, the model is available in a wide size grid.",
+        "season": "Demi-season",
+        "silhouette": "Loose"
+      },
+      "quilted-vest-red-ruta-womens-adonis": {
+        "name": "Ruta",
+        "altText": "Red vest Ruta Adonis short, quilted satin fabric, for women and girls plus siz",
+        "userText": "Model: Ruta Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Semi-fitted\nThe stylish demi-season vest \"Ruta\" is a combination of comfort and accent details. The model is distinguished by a high stand-up collar and a wide elastic band along the lower edge, which provides a secure fit and protection from the cold. The product is equipped with functional pockets with zippers and a central snake in the tone of the fabric. An important feature of our production is flexibility in design: decorative stitches on the model can be made in any variations, which allows you to update the look of the product to current trends. Thanks to our own development of patterns, we offer a perfect fit for large sizes, emphasizing the advantages of the figure and guaranteeing the quality of each seam.",
+        "season": "Demi-season",
+        "silhouette": "Semi-adjacent",
+        "material": "Individually as desired"
+      },
+      "quilted-vest-short-mega-womens-adonis": {
+        "name": "Mega",
+        "altText": "Short cream-colored quilted vest with a decorative element on the back of the Adonis with a wide size range of wholesale",
+        "userText": "Model: Mega Brand: ADONIS Season: Spring Material: Individually upon request Silhouette: Straight\nThe demi-season vest \"Mega\" from ADONIS is distinguished by its original stitch pattern and thoughtful comfort. The straight silhouette is complemented by a slit along the lower edge for convenient adjustment of the fit. The model features a stand-up collar with a zipper at the back and a central fastener protected by a decorative trim. Pockets with a leaf provide practicality, and branded accessories emphasize style. Our own patterns allow us to produce this product in a wide size range from 42 to 72. This is a profitable offer for a large group, combining quality and modern design from the manufacturer.",
+        "season": "Spring",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "quilted-vest-mega-womens-adonis": {
+        "name": "Mega",
+        "altText": "Women's Frosted Short Vest Trend 2026, Spring Adonis Collection",
+        "userText": "Model: Mega Brand: ADONIS Season: Spring Material: Individually upon request Silhouette: Straight\nThe \"Mega\" vest from the ADONIS factory is a combination of functionality and current style. The model attracts attention with an interesting stitch texture and a laconic straight cut. The lower edge of the product is equipped with a sash with fasteners, which allows you to easily change the silhouette and protect from the wind. The design is complemented by a stand-up collar with a decorative fastener on the back of the head and convenient pockets. Thanks to our own design bureau, we offer this model in a full size range from 42 to 72. High quality workmanship and the possibility of ordering in bulk make this vest a reliable choice for developing your assortment.",
+        "season": "Spring",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "winter-jacket-ajolina-womens-adonis": {
+        "name": "Adjolina",
+        "altText": "Adjolina Adonis winter jacket in powder color with fur on the hood of a raisin belt for women plus siz",
+        "userText": "Model: Ajolina Brand: ADONIS Season: Winter Material: Individually upon request Silhouette: Fitted\nThe elegant winter coat \"Ajolina\" is created for those who appreciate the combination of classic style and maximum warmth. The model is distinguished by a combined design: the upper part is decorated with elegant figured embroidery, and the lower part and sleeves have classic horizontal stitching. The main accent is the luxurious voluminous fur on the hood, which reliably protects against the weather. The waist is emphasized by a wide belt with a decorative metal buckle, which creates a feminine silhouette even in outerwear. As a manufacturer, we develop patterns that take into account the features of different types of figures, so the model fits perfectly in large sizes, without restricting movements.",
+        "season": "Zyma",
+        "silhouette": "Fitted",
+        "material": "Individually as desired"
+      },
+      "winter-jacket-california-womens-adonis": {
+        "name": "California",
+        "altText": "Lacquer wine-colored winter jacket with mink fur on the edge, fitted, has a belt, women's large sizes, California model by Adonis",
+        "userText": "California Bag\nA stylish and roomy shopper bag is an ideal choice for an active city life. The model is distinguished by a combined design with a large flap and accent vertical zippers on the sides. The central brand logo on the textile strap gives the accessory recognizable sporty chic and status. Thanks to the long comfortable handles and practical shape, this bag will become a reliable companion for work, study or travel, harmoniously complementing any everyday look.",
+        "season": "Zyma",
+        "silhouette": "Fitted",
+        "material": "Індивідуально за бажанням Silhouette:Приталений"
+      },
+      "winter-jacket-daniela-fur-womens-adonis": {
+        "name": "Daniela",
+        "altText": "Winter Elongated Women's Jacket by Adonis Daniela in chocolate color with raccoon fur fitted under the waist",
+        "userText": "Model: Daniela Brand: ADONIS Season: Winter / Demi-season Silhouette: Fitted\nA fitted silhouette product made of stylish quilted lacquer fabric. The combined stand-up collar is complemented by a turn-down collar made of natural fur, which adds a special luxury to the look. The model has sewn-in double-stitched sleeves and functional slit pockets with a leaf. The central side zipper is protected by a button placket, and the waistline is favorably emphasized by a belt. Thanks to ADONIS' own patterns, this model provides a perfect fit and is available in a wide size range from 42 to 72 sizes.",
+        "season": "Зима / Demi-season",
+        "silhouette": "Fitted"
+      },
+      "winter-jacket-dzhem-fur-womens-adonis": {
+        "name": "Fruit preserves",
+        "altText": "Printed jacket with white and dark color, fitted with a belt, fox fur on the hood, women's plus size Adonis Duet",
+        "userText": "Model: Jam Brand: ADONIS Season: Winter Silhouette: Fitted (with belt)\nThe Jam winter jacket with a hood trimmed with natural fur combines warmth and expressive style. The model has an original design made of three types of materials, which creates an interesting play of textures and colors. The jacket is equipped with sewn-in double-stitched sleeves with zippers and a central side fastener. The waistline is emphasized by a belt, and functional zippered pockets add convenience. ADONIS offers this model in a wide size range from 42 to 72 sizes, ensuring impeccable quality and comfort for every client.",
+        "season": "Zyma",
+        "silhouette": "Fitted (with belt)"
+      },
+      "winter-jacket-fiji-womens-adonis": {
+        "name": "Fiji",
+        "altText": "Pink Short Winter Women's Quilted Jacket with Polar Fox Fur, Girdle, Sizes 42-72 Fiji Adonis",
+        "userText": "Model: Fiji Brand: ADONIS Season: Winter Silhouette: Semi-fitted\nA mid-length winter jacket made of two types of quilted raincoat. The highlight of the model is a decorative insert in the center, which creates a spectacular 3D volume. The hood is decorated with luxurious natural black fox fur, and the central button closure adds classic elegance to the look. The waistline is accented with a belt, which allows you to adjust the silhouette. Like all outerwear of our production, the \"Fiji\" model is available in a wide size grid from 42 to 72 sizes, ensuring a perfect fit for any figure.",
+        "season": "Zyma",
+        "silhouette": "Semi-adjacent"
+      },
+      "winter-jacket-hortenziya-down-green-womens-adonis": {
+        "name": "Hortensia",
+        "altText": "Emerald lacquered down jacket for women with belt and hood oversize Hydrangea Adonis",
+        "userText": "Model: Hortensia Brand: ADONIS Season: Winter Material: Individually upon request Silhouette: Straight\nA winter jacket from the Adonis factory with a sewn-in hood is the perfect combination of protection from the cold and elegant style. The model is complemented by accent central zippers and a belt with a buckle, which allows you to emphasize the silhouette and give the image femininity. Our company's own patterns provide a comfortable fit in the entire size range from 42 to 72, which makes the product in demand in both the standard and combat groups. We sell outerwear in large batches, offering favorable conditions for bulk purchases directly from the manufacturer. This jacket will become a reliable element of the assortment of retail chains, guaranteeing high quality tailoring and a modern look for the end consumer.",
+        "season": "Zyma",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "winter-jacket-hortenziya-down-yellow-womens-adonis": {
+        "name": "Hortensia",
+        "altText": "Yellow bright short down jacket for girls and women, has a belt, with a black zipper Hydrangea Adonis, large sizes wholesale",
+        "userText": "Model: Hortensia Brand: ADONIS Season: Winter Material: Individually upon request Silhouette: Straight\nA bright yellow down jacket from the Adonis factory is a stylish solution for a winter wardrobe, combining energetic color and reliable protection from frost. The model with a sewn-in hood and belt with a buckle allows you to create a feminine silhouette, and accent zippers give the product a modern look. Thanks to professionally designed patterns, our down jacket provides freedom of movement in every size - from 42 to 72. The offer is focused on large wholesalers and retail chains that seek to diversify the assortment with bright and high-quality models from the manufacturer. By ordering outerwear in large batches directly from our company, you get a competitive product that attracts the attention of buyers and guarantees high quality workmanship.",
+        "season": "Zyma",
+        "silhouette": "Straight",
+        "material": "Individually as desired"
+      },
+      "winter-jacket-janet-long-woomen-adonis": {
+        "name": "Janet",
+        "altText": "Long winter coat without a hood of green color for women quilted, large size range Janet Adonis",
+        "userText": "Model: Janet Brand: ADONIS Season: Winter Material: Individually upon request Silhouette: Semi-fitted\nThe winter coat \"Janet\" is a combination of elegance and practicality for the urban rhythm of life. The model is distinguished by an asymmetrical zipper and a high voluminous collar that reliably protects from the wind. Diagonal stitching visually stretches the silhouette, adding slimness to it. We independently develop patterns, paying special attention to the battle group, so the coat provides a perfect fit for curvaceous shapes, guaranteeing comfort and free movement at every step.",
+        "season": "Zyma",
+        "silhouette": "Semi-fitted",
+        "material": "Individually as desired"
+      },
+      "winter-jacket-kare-long-fur-womens-adonis": {
+        "name": "Four of a Kind",
+        "altText": "Adonis Chocolate Winter Women's Long Coat with Fur Hood, Caret, Plus Size",
+        "userText": "Model: Kare Brand: ADONIS Season: Winter Silhouette: Semi-fitted\nWinter quilted coat made of memory oil fabric with modern Thinsulate insulation. The model is distinguished by an original offset zipper, which is fixed with a decorative buckle. The hood is complemented by a removable fringe made of natural dyed raccoon fur. Our ADONIS production takes care of every woman, so it offers this product in a wide range of sizes from 42 to 72. Thanks to professional patterns, the coat fits perfectly on the figure, providing warmth and comfort in the most severe frosts.",
+        "season": "Zyma",
+        "silhouette": "Semi-fitted"
+      },
+      "winter-jacket-ketlin-fur-womens-adonis": {
+        "name": "Kathleen",
+        "altText": "Kathleen Big Size Red Fur Women's Winter Short Jacket by Adonis",
+        "userText": "Model: Kathleen Brand: ADONIS Season: Winter Material: Combined raincoat fabric Silhouette: Fitted\nThe Kathleen winter jacket is a model that attracts attention with a complex combination of textures: the combination of matte and glossy materials creates an interesting visual effect. The jacket is trimmed with luxurious voluminous fur on the hood, and the central zipper and accessories on the pockets are made in a contrasting metallic shade. Horizontal stitching of different widths adds dynamics to the product and emphasizes the silhouette. We independently develop patterns, which guarantees a perfect fit for any figure. A wide size grid allows you to choose a comfortable option, providing freedom of movement and reliable protection from the cold in winter.",
+        "season": "Zyma",
+        "silhouette": "Adjacent",
+        "material": "Combined raincoat fabric"
+      },
+      "winter-jacket-kreatyv-down-womens-adonis": {
+        "name": "Creativity",
+        "altText": "Oversize down jacket women's black lacquer for girls and women, model Creative from the sewing factory Adonis",
+        "userText": "Model: Creative Brand: ADONIS Season: Eurowinter Material: Nylon Silhouette: Trapezoid\nThe youth oversized down jacket from the Adonis factory has a trendy trapezoidal silhouette, which provides maximum comfort and freedom of movement. The lightweight and stylish model is designed according to our original patterns for a perfect fit in sizes 42–72. This is a profitable position for bulk purchases, since oversized remains the main trend in retail sales. As a manufacturer, we offer direct deliveries in batches, guaranteeing high quality tailoring and a modern look of the product. Cooperation with our company allows chains to receive popular outerwear in bulk at the best price.",
+        "season": "Eurowinter",
+        "silhouette": "Trapezoid",
+        "material": "Nylon"
+      },
+      "winter-jacket-kreatyv-womens-adonis-down": {
+        "name": "Creativity",
+        "altText": "Oversize Women's Big Size Blue Down Jacket with Adonis Hood",
+        "userText": "Model: Creative Brand: ADONIS Season: Eurowinter Material: Nylon Silhouette: Trapezium\nA voluminous trapezoidal-cut down jacket from the Adonis factory is an ideal choice for creating a trendy youth look. The oversized model combines lightness and reliable heat retention thanks to high-quality materials and proven patterns. We manufacture this product in a wide size grid (42–72), which allows it to be successfully sold in retail chains. Ordering outerwear in large batches directly from the manufacturer guarantees stable supplies and competitive prices. This model is available for bulk purchase, offering your business a combination of current design and high standards of a Ukrainian enterprise.",
+        "season": "Eurowinter",
+        "silhouette": "Trapezium",
+        "material": "Nylon"
+      },
+      "winter-jacket-lana-womens-adonis": {
+        "name": "Lana",
+        "altText": "Lana Adonis Large Size Women's Blue Winter Jacket",
+        "userText": "Model: Lana Brand: ADONIS Season: Winter Material: Individually upon request Silhouette: Straight\nThe winter jacket \"Lana\" is a combination of comfort and creative design. The main feature of the model is the combined texture: the main part is made of voluminous \"bubble\" material, which contrasts with smooth quilted inserts in the shape of a cross on the chest and back. The hood-collar and wide cuffs are trimmed with thick eco-fur in the tone of the product, which provides additional warmth. We emphasize that at your request, the decorative stitches on this model can be any, which allows you to adapt the design to your preferences. Thanks to its own patterns, the jacket has an excellent fit in the battle group, giving a feeling of lightness and comfort even in severe frosts.",
+        "season": "Winter",
+        "silhouette": "Straight",
+        "material": "Individually upon request"
+      },
+      "winter-jacket-lido-long-womens-adonis": {
+        "name": "Lido",
+        "altText": "Batal, women's winter khaki long coat with decorative elements, lido adonis model",
+        "userText": "Model: Lido Brand: ADONIS Season: Winter Material: Individually upon request Silhouette: Straight\nThe women's winter coat \"Lido\" with warm insulation provides reliable protection from frost. The model fastens with a central zipper, which is complemented by a windproof strip on the inside. A functional feature of the product is the zippers in the side seams, which allow you to adjust the comfort when walking and give the design a modern look. Like all outerwear of our production, the \"Lido\" model is available in a wide size grid from 42 to 72 sizes, guaranteeing a comfortable fit for any figure.",
+        "season": "Winter",
+        "silhouette": "Straight",
+        "material": "Individually upon request"
+      },
+      "winter-jacket-lota-womens-adonis-fur": {
+        "name": "Lota",
+        "altText": "Women's Winter Raspberry Fur Hooded Jacket, Lota Adonis Model, Battle Sizes",
+        "userText": "Model: Lota Brand: ADONIS Season: Winter Material: Textured raincoat fabric Silhouette: Straight\nThe winter jacket \"Lota\" is a bold solution for those who want to stand out. The main feature of the model is the unique volumetric texture of the fabric, which creates a unique visual effect and an additional thermal layer. The product is equipped with a deep hood with luxurious natural fur. The cuffs and the lower part of the model are complemented by a wide elastic band, which provides a tight fit and protection from the wind. We emphasize that, at your request, the decorative stitches on this model can be any, which allows you to personalize the design. Thanks to its own patterns, the jacket fits perfectly on the figure of the batal, guaranteeing freedom of movement and a stylish look in any weather.",
+        "season": "Winter",
+        "silhouette": "Straight",
+        "material": "Textured raincoat fabric"
+      },
+      "winter-jacket-paris-down-long-womens-adonis": {
+        "name": "Paris",
+        "altText": "Long fig-colored winter coat for women, Adonis paris model, large wholesale",
+        "userText": "Model: Paris Brand: ADONIS Season: Winter Material: Gloria fabric / nylon (individually upon request) Silhouette: Straight\nA quilted coat of a straight silhouette from the Adonis factory combines classic elegance and functionality. The model with a stand-up collar and a removable hood is trimmed with stylish faux sheepskin, which gives the product a premium look. Thoughtful details, such as a button placket and side slits with zippers, guarantee comfort and freedom of movement in any size from 42 to 72. As a manufacturer, we offer this outerwear in large batches for retail chains and wholesale customers. Purchasing in bulk directly from our company provides access to high-quality patterns and current models that are in high demand in the women's and combat segments.",
+        "season": "Winter",
+        "silhouette": "Straight",
+        "material": "Gloria fabric / nylon (individually upon request)"
+      },
+      "winter-jacket-raphael-womens-adonis-fur-jeans": {
+        "name": "Raphael",
+        "altText": "Women's winter denim jacket with red fur battle sizes, model Raphael Adonis",
+        "userText": "Model: Rafael Brand: ADONIS Season: Winter Material: Denim Silhouette: Straight\nThe winter coat \"Rafael\" is a stylish interpretation of classic denim in a warm version. The model is made of thick denim with accent red stitching, which emphasizes the constructive lines of the product. The main decoration is lush natural fur on the collar and hood, which harmoniously contrasts with the deep blue color of the base. The coat has a convenient central zipper and functional pockets with decorative flaps. We independently develop patterns for each model, paying special attention to comfort in the combat group. This allows us to create clothes in large sizes that fit perfectly on the figure, maintaining a current look and providing reliable warmth in winter.",
+        "season": "Winter",
+        "silhouette": "Straight",
+        "material": "Denim"
+      },
+      "winter-jacket-salma-dvostoronnya-womens-adonis": {
+        "name": "Salma",
+        "altText": "Salma Fur Side Khaki Plus Size Adonis Reversible Short Winter Jacket for Women",
+        "userText": "Model: Salma Brand: ADONIS Season: Winter Material: Raincoat / eco-fur Silhouette: Loose\nThe Salma reversible winter jacket from the ADONIS brand combines the functionality of a quilted jacket and the comfort of a fur bomber. The model has a loose shortened silhouette with elastic elastic along the bottom edge and on the cuffs, which provides a comfortable fit and reliable protection from the wind. One side of the product is made of moisture-resistant glossy raincoat fabric with an elegant diamond-shaped stitch, while the other side is completely made of thick soft eco-fur that imitates a natural texture. The deep, non-removable hood is also reversible, allowing you to instantly change the accents in the image. Thanks to the use of original patterns developed specifically for the battle group, the jacket fits perfectly on curvy figures, while maintaining lightness and freedom of movement.",
+        "season": "Winter",
+        "silhouette": "Loose",
+        "material": "Raincoat / eco-fur"
+      },
+      "winter-jacket-salma-haki-dvostoronnya-womens-adonis": {
+        "name": "Salma",
+        "altText": "Salma jacket by Adonis double-sided in khaki women's short battle sizes",
+        "userText": "Model: Salma Brand: ADONIS Season: Winter Material: Raincoat / eco-fur Silhouette: Loose\nThe Salma reversible winter jacket from the manufacturer ADONIS offers a universal solution for the cold season, combining a practical raincoat and soft eco-fur in one product. The model is made in the style of a voluminous bomber with elastic cuffs and hem, which guarantees excellent thermoregulation and comfort in everyday wear. The outer side attracts attention with the shine of glossy material with a geometric stitch in the shape of diamonds, while the inner side with imitation of natural fur adds a special coziness to the image. The large one-piece hood easily turns out on both sides, providing reliable protection from the weather. Specially designed patterns for large sizes allow the model to harmoniously emphasize the advantages of the figure, giving a feeling of confidence and complete freedom of movement for battle category clients.",
+        "season": "Winter",
+        "silhouette": "Loose",
+        "material": "Raincoat / eco-fur"
+      },
+      "winter-jacket-selin-womens-adonis": {
+        "name": "Celline",
+        "altText": "Blue Printed Winter Womens Down Jacket Short Adonis Model  Sorento Plus Size",
+        "userText": "Model: Celine Brand: ADONIS Season: Winter Material: ZARA-Memory raincoat Silhouette: Straight\nElongated winter coat made of durable ZARA-Memory raincoat, which has a memory effect and protection against moisture. The product is fastened with a zipper with a solid-cut placket to protect against the cold. The deep hood is trimmed with soft eco-fur under the sheepskin. The model is distinguished by its functionality: in addition to reliable inset pockets, accent patch pockets with fur decor have been added. A full size range from the manufacturer ADONIS makes this model a profitable addition to your assortment.",
+        "season": "Winter",
+        "silhouette": "Straight",
+        "material": "ZARA-Memory raincoat"
+      },
+      "winter-jacket-vega-womens-adonis": {
+        "name": "Veggy",
+        "altText": "Winter jacket of chocolate color with faux fur quilted female from adonis, vega model, battalion",
+        "userText": "Model: Vega Brand: ADONIS Season: Winter / Demi-season Silhouette: Straight\nA product of a straight silhouette, made of practical quilted lacquer fabric. The model is equipped with a hood with a faux fur trim and convenient slit pockets with a decorative leaf. The sewn-in double-stitched sleeves are complemented by stylish decorative cuffs, which add completeness to the look. The central side zipper is protected by a decorative button placket. Thanks to the professional approach of ADONIS production, the model is presented in a wide size grid, which guarantees a comfortable and free fit.",
+        "season": "Winter / Demi-season",
+        "silhouette": "Straight"
+      },
+      "winter-jacket-womens-adonis-ulrika": {
+        "name": "Ulrika",
+        "altText": "Short fitted winter women's jacket with fur printed with inserts with a large size range from the brand Adnis",
+        "userText": "Model: Ulrika Brand: ADONIS Season: Winter Silhouette: Semi-fitted\nThe winter jacket \"Ulrika\" combines comfort and original design, made of three types of quilted raincoat in two shades. The main color with a \"jeans\" print creates a modern look, and decorative inserts on the sleeves and front of the product favorably emphasize the shape. The model is equipped with a sewn-in hood with luxurious natural fox fur and a central zipper.\nFor additional protection from the cold, the sleeves are complemented by a soft knitted cuff. Thanks to the thoughtful patterns of ADONIS production, the jacket provides an excellent fit and is available in a wide size grid from 42 to 72 sizes.",
+        "season": "Winter",
+        "silhouette": "Semi-fitted"
+      },
+      "plashch-amina-womens-adonis": {
+        "name": "Amyna",
+        "altText": "Autumn raincoat for women with a hundred padded black long with a contrast collar Adonis amina, sizes 42-72",
+        "userText": "Model: Amina Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nA double-breasted demi-season raincoat from the Adonis factory is the embodiment of a classic style with an emphasis on protection from the weather. The straight cut, complemented by a belt and cuffs on the sleeves, favorably emphasizes the silhouette, and the functional yoke and high collar ensure practicality in rainy weather. Thanks to its own patterns, the model has a perfect fit in the entire size range from 42 to 72. We offer this outerwear in large batches directly from the manufacturer, which is an ideal solution for retail chains. Ordering raincoats in bulk from our company guarantees your business a sought-after model that combines elegance and high quality tailoring.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually upon request"
+      },
+      "plashch-deya-beige-womens-adonis": {
+        "name": "Dey",
+        "altText": "Beige Nylon Cloak for Women Fall Battle Sizes by Adonis with Belt",
+        "userText": "Model: Deja Brand: ADONIS Season: Demi-season Silhouette: Fitted\nElegant demi-season coat with a fitted silhouette, made with a horizontal sandwich stitch. The model has a single-breasted fastener, a turn-down collar on the stand and a decorative yoke on the back. Design features: shoulder straps, pockets in the seams with a button flap and double-stitched sleeves with buckled cuffs. Thanks to its own production, the coat is available in large sizes. High-quality fittings and nylon fabric make this model a reliable choice for wholesale orders.",
+        "season": "Demi-season",
+        "silhouette": "Fitted"
+      },
+      "plashch-deya-womens-adonis": {
+        "name": "Dey",
+        "altText": "Black Long Honeydew Cloak for Women with Day Collar by Adonis, Battle Sizes Trend 2026",
+        "userText": "Model: Deja Brand: ADONIS Season: Demi-season Silhouette: Fitted\nDemi-season coat with a fitted cut and a horizontal sandwich stitch. Single-breasted model with a turn-down collar, shoulder straps and a flying yoke on the back. The sleeves are complemented by decorative buckled studs, and the pockets are equipped with button flaps. Strong nylon and high-quality fittings ensure the durability of the product. Available for a large group in a full size grid directly from the manufacturer.",
+        "season": "Demi-season",
+        "silhouette": "Fitted"
+      },
+      "plashch-tandem-womens-adonis": {
+        "name": "Tandem",
+        "altText": "Cloak and vest tandem color watchful rose by Adonis for women of large size",
+        "userText": "Model: ТандемBrand: ADONIS\nSeason: Demi-season\nMaterial: Пальто — нейлон + лаке; жилет — тканина Tota\nSilhouette: StraightКомплект «Тандем» від фабрики «Адоніс» — це функціональне рішення 2-в-1, що об’єднує пальто та жилет у цілісний образ. Вироби можна носити окремо або комбінувати, що підвищує комерційну привабливість моделі для роздрібних мереж. Пальто з горизонтальною стібкою та двошовним рукавом забезпечує чітку посадку, а жилет із ромбоподібним візерунком додає стильного акценту. Завдяки власним лекалам комплект ідеально сідає на фігури від 42 до 72 розміру. Ми пропонуємо прямі поставки від виробника великими партіями, надаючи можливість замовити якісний гурт за вигідною ціною. Співпраця з нашим підприємством дозволяє вашому бізнесу пропонувати клієнтам універсальний верхній одяг, що закриває потреби кількох сезонів одночасно.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Coat — nylon + varnish; vest — Tota fabric"
+      },
+      "plashch-velar-beige-womens-adonis": {
+        "name": "Velar",
+        "altText": "Women's Beige Long Cotton Trench Trend 2026 Velar Adonis Oversize Plus Size",
+        "userText": "Model: Velar Brand: ADONIS Season: Spring Material: Cotton 80% / Polyester 20% Silhouette: Straight\nStylish trench coat with a loose cut and raglan sleeves, providing a comfortable fit. The model has a double-breasted fastener, is fixed with a sewn-in belt and a hidden magnet. The design is emphasized by classic details: a turn-down collar, shoulder straps and a functional slit. The product is presented in a full size range (from 42 to 72). Direct deliveries in large quantities from the manufacturer ADONIS guarantee high quality tailoring and relevance of the model.",
+        "season": "Spring",
+        "silhouette": "Straight",
+        "material": "Cotton 80% / Polyester 20%"
+      },
+      "plashch-velar-gray-womens-adonis": {
+        "name": "Velar",
+        "altText": "Adonis Velar Gray Cotton Women's Trench Coat Plus Size with Belt",
+        "userText": "Model: Velar Brand: ADONIS Season: Spring Material: Cotton 80% / Polyester 20% Silhouette: Straight\nClassic double-breasted trench coat with raglan sleeves on elastic and a fly-away yoke. The model is fixed with a sewn-in belt with a buckle and a hidden magnet at the waist for a perfect fit. The trench coat is complemented by shoulder straps, pockets with a flap and a slit at the back. Thanks to its own production, the model is available in a wide size grid (up to size 72). The optimal choice for wholesale purchases in the premium segment.",
+        "season": "Spring",
+        "silhouette": "Straight",
+        "material": "Cotton 80% / Polyester 20%"
+      },
+      "plashch-velar-womens-hat-adonis": {
+        "name": "Velar",
+        "altText": "Trend 2026 long beige trench coat with Adonis Velar belt for large size women cotton",
+        "userText": "Model: Velar Brand: ADONIS Season: Spring Material: Cotton 80% / Polyester 20% Silhouette: Straight\nThe double-breasted trench coat from the Adonis factory is a sophisticated designer model that combines classic elements with modern comfort. The product is equipped with a stand-up collar, a flying yoke and raglan sleeves with elastic for maximum convenience. The combination of a hidden magnet at the waist and a sewn-in belt with a buckle guarantees a perfect fit for any figure in the size grid 42–72. Thoughtful details - shoulder straps, pockets with a leaflet and a slit - make the model commercially attractive for the premium segment of retail chains. Ordering such trench coats in bulk directly from the manufacturer provides your business with an exclusive product with high quality workmanship.",
+        "season": "Spring",
+        "silhouette": "Straight",
+        "material": "Cotton 80% / Polyester 20%"
+      },
+      "plashch-vintage-womens-adonis": {
+        "name": "VINTAGE",
+        "altText": "Women's raincoat for spring or autumn made of brown nylon battle sizes factory Adonis Vintage",
+        "userText": "Model: Vintage Brand: ADONIS Season: Demi-season Material: Individually upon request Silhouette: Straight\nDemi-season women's coat with insulation, made using the multilayer sandwich stitch technology. The model is equipped with a sewn-in hood and a central zipper. A feature of the design is the functional buttons at the bottom of the side seams and high-quality finishing of the cuts with a decorative border. Our ADONIS production offers this model in a wide size grid from 42 to 72 sizes. The well-thought-out cut provides a comfortable fit, which makes the coat a universal choice for a demi-season wardrobe.",
+        "season": "Demi-season",
+        "silhouette": "Straight",
+        "material": "Individually upon request"
+      },
+      "sumka-alex": {
+        "name": "Alex's Bag",
+        "altText": "Alex Chocolate Adonis Fur Backpack",
+        "userText": "Alex Backpack\nA stylish backpack with natural fur is the perfect choice for a modern urban look. The model stands out with a spectacular fur flap and an accent vertical zipper, which gives the accessory a premium look. This practical and elegant backpack will become the main accent of your wardrobe, combining comfort and high fashion."
+      },
+      "sumka-asti-bag": {
+        "name": "Asti bag",
+        "altText": "Asti Small Beige Quilted Bag with Adonis Logo",
+        "userText": "Asti Bag\nAn elegant bag with an original flap top is created for those who appreciate style in details. The main feature of the model is a massive leather patch with a metal logo, which gives the product a recognizable brand character. Thanks to its laconic shape and comfortable strap, it will become an indispensable accessory for a dynamic city life."
+      },
+      "sumka-blanca-bag": {
+        "name": "Blanca Bag",
+        "altText": "Adonis Brand Blanca Large Honeycomb Textile Shopper",
+        "userText": "Blanca Bag\nA voluminous bag is the embodiment of femininity and comfort in an urban style. The model features a soft woven texture and a sophisticated geometric pattern of dark beads, which creates a unique visual effect. The roomy \"hobo\" shape and long, comfortable handle make this accessory an ideal companion for an active day, providing a combination of practicality and a sophisticated look."
+      },
+      "sumka-boy-bag": {
+        "name": "Backpack Battle",
+        "altText": "Beige Hemp Backpack Adonis Textile",
+        "userText": "Boy Backpack\nA versatile backpack is the perfect combination of lightness and functional urban style. The main feature of the model is the voluminous patch pockets with soft flaps and a contrasting vertical zipper, which gives the accessory a modern dynamic look. Thanks to its ergonomic shape and strong handle, this backpack provides maximum comfort while on the move, becoming a stylish and reliable companion for every day."
+      },
+      "sumka-california-bag": {
+        "name": "California Bag",
+        "altText": "Blue quilted California adonis fabric bag with gold hardware",
+        "userText": "Сумка КаліфорніяСтильна та містка сумка-шопер — ідеальний вибір для активного міського життя. Model вирізняється комбінованим дизайном із великим накладним клапаном та акцентними вертикальними блискавками з боків. Центральний фірмовий логотип на текстильній планці додає аксесуару впізнаваного спортивного шику та статусності. Завдяки довгим зручним ручкам та практичній формі, ця сумка стане надійним супутником для роботи, навчання чи подорожей, гармонійно доповнюючи будь-який повсякденний образ."
+      },
+      "sumka-elza-bag": {
+        "name": "Elsa Bag",
+        "altText": "Velour blue waist bag quilted elsa  with gold hardware and Adonis emblem",
+        "userText": "Elsa Bag\nA trendy banana bag is the embodiment of modern street style and practicality. The model is distinguished by a soft velvet texture and an ergonomic oval shape, which provides a comfortable fit on the belt or over the shoulder. Two parallel zippers and a recognizable metal logo give the accessory a stylish look, making it an ideal choice for active walks and creating bright everyday looks."
+      },
+      "sumka-elza-blue-bag": {
+        "name": "Elsa Bag",
+        "altText": "Malenka Womens Blue Adonis Velour Bag with Gold Elsa",
+        "userText": "Elsa Bag\nThis compact cross-body model combines a sophisticated velvet texture with a practical sporty design. The expressive quilted canvas and voluminous shape add a special charm to the accessory, and the double metal zipper provides quick access to things. Thanks to the adjustable strap and laconic round logo, it becomes a universal completion of both everyday and evening urban looks."
+      },
+      "sumka-gloria-bag": {
+        "name": "Gloria's Bag",
+        "altText": "Adonis Gloria Factory Large Black Quilted Duffle Bag",
+        "userText": "Gloria Bag\nThis roomy sports bag is designed for those who choose an active lifestyle and value functionality. The model is distinguished by its expressive woven texture and durable textile handles, which are designed for intensive daily use for going to the gym or traveling. A large front flap pocket and a reliable fastener allow you to conveniently organize sports equipment, combining the practicality of a training accessory with a concise modern design."
+      },
+      "sumka-greta-bag": {
+        "name": "Greta bag",
+        "altText": "White Greta bag in 100-coloured fabric with gold adonis elements",
+        "userText": "Greta Bag\nThe elegant hobo bag is distinguished by a sophisticated geometric stitch, which adds volume and characteristic softness to the accessory. The model is complemented by a laconic metal emblem and a comfortable wide strap, which allows you to comfortably carry the product on your shoulder throughout the day. Thanks to its spaciousness and versatile design, it will be an ideal choice for everyday affairs, harmoniously combining functionality with modern fashion trends."
+      },
+      "sumka-iva-bag": {
+        "name": "Yves' bag",
+        "altText": "Casual bag with gold hardware and quilted black fabric, Adonis logo",
+        "userText": "Iva Bag\nThis elegant model impresses with a complex woven texture, which creates a unique play of light and shadow on the surface. The classic silhouette is complemented by elegant double handles on metal fasteners and a golden brand emblem in the center, which emphasizes the status of the accessory. Thanks to the combination of exquisite design and spaciousness, the bag will be an ideal choice for both business meetings and everyday urban looks, adding a special charm to them."
+      },
+      "sumka-johnny-bag": {
+        "name": "Johnny's Bag",
+        "altText": "Adonis Women's Crossbody Bag in Two Kinds of Fabrics",
+        "userText": "Johnny Bag\nThis stylish cross-body bag impresses with a spectacular combination of textures and prints, making it an ideal choice for creating accent looks. The model has an original folding flap with a distinctive chevron stitch and a contrasting front panel in a classic \"glencheck\" check. The compact shape is complemented by a reliable metal clasp and a convenient top handle, which allows you to carry the accessory both in your hands and on your shoulder. This design combines business restraint and modern urban chic, adding a special sophistication to your look."
+      },
+      "sumka-julie-bag": {
+        "name": "Julia's Bag",
+        "altText": "Gold Adonis Logo Bag, Women's Black Quilted",
+        "userText": "Julie Bag\nThe emphasis on details and texture makes this model a real favorite. The product has a characteristic embossed pattern, which gives the accessory dynamism, and a convenient front pocket with a magnetic flap allows you to keep the necessary things at hand. Thanks to the rigid frame and reliable fittings, the bag holds its shape perfectly, becoming an elegant addition to any style - from business to casual."
+      },
+      "sumka-julie-pink-bag": {
+        "name": "Julia's Bag",
+        "altText": "Pink Adonis Frozen Bag. Female with black handles",
+        "userText": "Сумка ДжуліАкцент на деталях та фактурі робить цю модель справжнім фаворитом. Виріб має характерний рельєфний візерунок, що надає аксесуару динамічності, а зручна фронтальна кишеня з магнітним клапаном дозволяє тримати необхідні речі під рукою. Завдяки жорсткому каркасу та надійній фурнітурі, сумка чудово тримає форму, стаючи елегантним доповненням до будь-якого стилю — від ділового до кежуал."
+      },
+      "sumka-kelvin-bag": {
+        "name": "Kelvin Backpack",
+        "altText": "Velour black backpack with gold print in the form of eyes and moon with a pocket, adonis",
+        "userText": "Calvin Backpack\nThis stylish accessory captivates with its soft velvet texture and original design. The surface is decorated with a voluminous square stitch, which is complemented by elegant golden prints in the form of stars and the moon. The model is equipped with a roomy front pocket with a metal zipper, which provides quick access to small items. Thanks to the combination of exquisite materials and celestial motifs, this product will become a magical accent in your everyday look, adding individuality and comfort to it."
+      },
+      "sumka-kosmetychka-bag": {
+        "name": "Cosmetic Bag",
+        "altText": "Adonis Textile Cosmetic Bags, Multicolored, with Gold Hardware",
+        "userText": "Makeup bag\nThis practical accessory is designed for perfect order in beauty products both at home and while traveling. The model is made of durable moisture-resistant material with soft filler and voluminous stitching, which reliably protects the contents from external influences. The laconic rectangular shape is complemented by a high-quality metal zipper and a branded patch, and the variety of noble shades with a light satin sheen allows you to choose the option that best emphasizes your personal style."
+      },
+      "sumka-kristi-bag": {
+        "name": "Christie's Bag",
+        "altText": "Round Pink Gold Adonis Women's Crossbody Bag",
+        "userText": "Christie Bag\nThis elegant round cross-body model instantly attracts attention with its delicate fine stitching and harmonious lines. The accessory is decorated with a recognizable metal logo, which gives the product a premium look, and the thin adjustable strap ensures lightness and comfort when carrying. Thanks to its original shape and soft texture, the bag will be the perfect romantic accent that will emphasize the femininity of the image and give it a special mood."
+      },
+      "sumka-kruz-bag-ryukzak-backpack": {
+        "name": "Cruz Backpack",
+        "altText": "Black Honeydew Unisex Laptop Backpack with Silver Adonis Hardware",
+        "userText": "Christy Backpack\nThis stylish accessory is designed specifically for convenient and reliable transportation of your laptop. The model combines a graceful rounded shape with practicality, having a soft quilted texture, which provides additional protection for the gadget from mechanical damage. Adjustable shoulder straps allow you to evenly distribute the load, and the elegant metal emblem and delicate color scheme make the product an ideal choice for a modern girl who appreciates mobility and sophisticated style in everyday work."
+      },
+      "sumka-margo-bag": {
+        "name": "Margot's Bag",
+        "altText": "Adonis Black Velour Shoulder Bag for Women",
+        "userText": "Margo Bag\nThis roomy model in the shopper format is designed for those who value maximum space and laconic style. The main feature of the product is its soft, velvety to the touch surface with a thick quilted texture, which gives the accessory a cozy and modern look. Strong textile handles are securely fastened with wide pads, ensuring comfortable carrying even when fully loaded. Thanks to its universal shape and practical design, the bag will become an indispensable companion for daily chores, trips or shopping, easily adapting to your rhythm of life."
+      },
+      "sumka-mishel-bag-ryukzak-backpack": {
+        "name": "Michelle's Backpack",
+        "altText": "Small quilted textile backpack Adonis brown x natural fur",
+        "userText": "Bag-backpack-Michelle\nThis model is the embodiment of luxury and practicality for the winter season. The accessory attracts attention with its spectacular trim made of thick natural fur, which perfectly harmonizes with outerwear, creating a complete and cozy look. The backpack has a voluminous quilted texture and reliable fittings, and its thoughtful design with a top handle allows you to easily change the way you carry it. Thanks to its compact size and elegant design, the Michelle model will become the main accent of your wardrobe, adding special status and warmth to it."
+      },
+      "sumka-polunychka-bag": {
+        "name": "Strawberry Bag",
+        "altText": "Crossbody bag for women brand Adonis quilted beige",
+        "userText": "Strawberry Bag\nThis charming cross-body model got its name due to its appetizing rounded shape and voluminous quilted texture, reminiscent of the surface of a berry. The accessory is made of a pleasant-to-the-touch material with a light silky sheen that plays beautifully in daylight. The front panel is decorated with a large golden emblem, which adds sophistication to the product, and a double zipper provides convenient access to the main compartment. The contrasting black strap and laconic top handle allow you to carry the bag both in your hands and over your shoulder, making it the perfect romantic addition to your everyday or festive looks."
+      },
+      "sumka-richi-bag-ryukzak-backpack": {
+        "name": "Ritchie's backpack",
+        "altText": "Pale pink backpack for women by Adonis with gold accessories",
+        "userText": "Richie Backpack\nThis ergonomic backpack will become an indispensable companion in the dynamic urban rhythm. The model combines two types of quilted texture: classic diamonds on the main body and a smaller patch pocket, which creates an interesting visual volume. Thanks to the soft shoulder straps and an additional top handle, the accessory provides maximum comfort throughout the day, easily accommodating all the necessary gadgets and personal belongings."
+      },
+      "sumka-richi-black-bag-ryukzak-backpack": {
+        "name": "Ritchie's backpack",
+        "altText": "Black backpack by Adonis for women with gold and patch pocket",
+        "userText": "Richie Backpack\nA stylish backpack that successfully combines a sporty silhouette with exquisite decoration. The model's special charm is added by the noble satin sheen of the material and the shining metal emblem, which serves as the main decorative element. High-quality fittings with a smooth movement and a well-thought-out system of compartments make this accessory not only a fashionable accent of your image, but also a standard of practicality for everyday use."
+      },
+      "sumka-rivyera-bag": {
+        "name": "Riviera Bag",
+        "altText": "Adonis Gray Hundred Dollar Textile Bag for Women with Gold. Has two patch pockets",
+        "userText": "Riviera Bag\nThis roomy model in the format of a voluminous shopper is created for those who combine an active lifestyle with business affairs. The main advantage of the bag is its impressive functionality: the internal space allows you to freely place a laptop, documents and personal belongings necessary during the day. The expressive voluminous weaving gives the accessory a modern look, and reliable double handles guarantee comfort even when fully loaded."
+      },
+      "sumka-rivyera-blue-yellow-bag": {
+        "name": "Riviera Bag",
+        "altText": "Adonis bags blue and yellow, one hundred furry fabric, gold accessories",
+        "userText": "Riviera Bag\nA stylish and practical accessory that easily transforms from an everyday bag into a convenient work case thanks to the ability to place a laptop inside. The model is decorated with accent external zipper pockets that add dynamism to the design and allow you to keep small items in perfect order. The exquisite quilted texture combined with the brand's golden hardware makes this model a universal solution for the office, gym or short trips."
+      },
+      "sumka-ryukzak-backpack-bag": {
+        "name": "Teddy's Backpack",
+        "altText": "Yellow little adonis backpack with silver hardware and chains",
+        "userText": "Teddy Backpack\nAn elegant mini backpack that combines a laconic design and ergonomics. Geometric stitching creates a stylish visual effect, and the soft top handle and adjustable straps provide comfortable wearing in various ways. The model is equipped with high-quality zippers with metal pullers, which guarantee durability and ease of use. This accessory will become a basic element of your wardrobe, adding modern dynamics and completeness to the image."
+      },
+      "sumka-shynshyla-bag": {
+        "name": "Chinchilla Bag",
+        "altText": "Women's small bag with faux fur and quilted Adonis fabric, delicate powder color, gold accessories",
+        "userText": "Chinchilla Bag\nThis luxurious model is created for true connoisseurs of comfort and premium design in their winter wardrobe. The main feature of the bag is a massive flap, trimmed with extremely soft eco-fur, imitating the noble texture of chinchilla. The main part of the product is made of delicately quilted material with a light pearlescent sheen, and the exquisite golden kiss-lock adds the final touch of elegance to the image."
+      },
+      "sumka-tedi-bag-ryukzak-backpack": {
+        "name": "Teddy's Backpack",
+        "altText": "Brightly colored backpacks Adonis turquoise , orange, yellow with silver accessories",
+        "userText": "Teddy Backpack\nThis compact model impresses with its lightness and thoughtful silhouette, which is ideal for daily walks. The product is made of soft material with a classic small stitch, which gives it a characteristic volume and protects the contents. Despite its miniature appearance, the backpack has a convenient main compartment and an additional patch pocket for small items, which allows you to rationally organize the space. The exquisite metal emblem and reliable fittings emphasize the premium quality of the accessory."
+      },
+      "sumka-ukka-bag-poyasna-sumka": {
+        "name": "Yucca Bag",
+        "altText": "Adonis Faux Fur Waist Bag with Black Eco Leather Handle",
+        "userText": "Yukka Bag\nThis stylish and incredibly pleasant to the touch accessory will be the main accent of your winter or demi-season look. The model is made of thick eco-fur, which gives a feeling of warmth and comfort, and the contrasting eco-leather insert around the zipper adds structure and practicality to the design. Thanks to the ergonomic shape and adjustable strap, the bag is comfortable to wear both on the belt and over the shoulder, freeing your hands and keeping all the necessary little things under reliable protection."
+      },
+      "sumka-valeri-bag": {
+        "name": "Velari bag",
+        "altText": "The sotban bag is black  in combination with Adonis felt, has two handles and black fittings",
+        "userText": "Valerie Bag\nThis elegant model in the format of a shopper is the perfect choice for creating a sophisticated everyday look. The main feature of the bag is a harmonious combination of materials: smooth side inserts and a central panel with an expressive quilted texture in the form of a \"herringbone\". The trapezoidal shape provides incredible capacity, allowing you to keep everything you need at hand, and the laconic double handles guarantee comfort when carrying on the shoulder or in your hands. Thanks to the discreet design and emphasis on details, the Valerie model will become a reliable wardrobe base."
+      },
+      "sumka-viktoria-bag": {
+        "name": "Victoria bag",
+        "altText": "Small Cross Bodysuit Bag Women's Honeydew Adonis with Gold Hardware",
+        "userText": "Victoria Bag\nThis laconic rectangular cross-body model is created for connoisseurs of functional minimalism. The accessory is decorated with a thick quilted texture in the form of small diamonds, which gives it a refined volume and special softness. The compact size is ideal for the most necessary things, and the long adjustable strap allows you to comfortably carry the bag over your shoulder, freeing your hands for walks around the city. The central metal emblem gives the product a recognizable corporate style, making it a universal addition to any wardrobe."
+      }
+    },
+    "filterByCategory": "Filter by Category",
+    "loadMore": "Load More",
+    "noItems": "No Items Found",
+    "noItemsDescription": "Try changing category filters",
+    "season": "Season",
+    "silhouette": "Silhouette",
+    "material": "Material"
   },
   "common": {
     "learnMore": "Learn More",

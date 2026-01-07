@@ -48,9 +48,9 @@ const Home: React.FC = () => {
                 paragraph.trim() ? <p key={index}>{paragraph.trim()}</p> : null
               )}
           </S.SectionSubtitle>
+          <S.QualityTitle>{t("home.qualityTitle")}</S.QualityTitle>
           <S.AboutGrid>
             <S.AboutText>
-              <h3>{t("home.qualityTitle")}</h3>
               {t("home.qualityText1")
                 .split("\n\n")
                 .map((paragraph: string, index: number) =>
@@ -62,7 +62,7 @@ const Home: React.FC = () => {
                 .split("\n\n")
                 .map((paragraph: string, index: number) =>
                   paragraph.trim() ? (
-                    <p key={index}>{paragraph.trim()}</p>
+                    <p key={`text2-${index}`}>{paragraph.trim()}</p>
                   ) : null
                 )}
             </S.AboutText>
