@@ -20,3 +20,7 @@ pnpm-debug.log*
 .DS_Store
 coverage/
 src/img/video/LTVN.mp4
+
+# Firebase
+.firebase/
+*.cache

@@ -467,7 +467,7 @@ const Lightbox: React.FC<LightboxProps> = ({
           )}
 
           <LightboxImage
-            src={item.imagePath}
+            src={encodeURI(item.imagePath)}
             alt={translatedAltText}
             loading="lazy"
           />

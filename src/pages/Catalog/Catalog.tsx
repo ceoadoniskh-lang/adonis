@@ -660,7 +660,7 @@ const Catalog: React.FC = () => {
                   >
                     <ItemImageWrapper>
                       <ItemImage
-                        src={item.imagePath}
+                        src={encodeURI(item.imagePath)}
                         alt={t(
                           `catalog.items.${item.id}.altText`,
                           item.altText
