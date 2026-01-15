@@ -231,7 +231,7 @@ const Contacts: React.FC = () => {
                     <span>WhatsApp</span>
                   </ActionButton>
                   <ActionButton
-                    href="https://facebook.com/adonisbrand"
+                    href="https://www.facebook.com/profile.php?id=61586643953821"
                     target="_blank"
                     rel="noopener noreferrer"
                     aria-label="Facebook"

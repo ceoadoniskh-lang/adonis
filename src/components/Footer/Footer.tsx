@@ -87,7 +87,7 @@ const Footer: React.FC = () => {
                 </svg>
               </SocialLink>
               <SocialLink
-                href="https://facebook.com/adonisbrand"
+                href="https://www.facebook.com/profile.php?id=61586643953821"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"

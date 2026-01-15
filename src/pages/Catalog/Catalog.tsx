@@ -32,8 +32,6 @@ const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  position: relative;
-  z-index: 2;
 `;
 
 const HeroTitle = styled.h1`
@@ -106,42 +104,48 @@ const FiltersButton = styled.button`
 `;
 
 const FiltersModal = styled.div<{ $isOpen: boolean }>`
-  display: ${(props) => (props.$isOpen ? "flex" : "none")};
+  display: ${(props) => (props.$isOpen ? "block" : "none")};
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 1000;
-  align-items: flex-start;
-  justify-content: center;
-  padding: 20px;
-  padding-top: 80px;
+  z-index: 9999;
+  padding: 0;
+  overflow: hidden;
 
   @media (min-width: 1025px) {
     display: none;
-  }
-
-  @media (max-width: 768px) {
-    padding-top: 70px;
   }
 `;
 
 const FiltersModalContent = styled.div`
   background: white;
-  border-radius: 8px;
-  padding: 30px;
-  max-width: 500px;
+  border-radius: 0;
   width: 100%;
-  max-height: calc(90vh - 100px);
-  overflow-y: auto;
-  position: relative;
-  margin-top: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  z-index: 10000;
 
-  @media (max-width: 768px) {
-    padding: 20px;
-    max-height: calc(90vh - 90px);
+  @media (min-width: 481px) {
+    position: fixed;
+    left: 50%;
+    max-width: 500px;
+    border-radius: 8px;
+    height: auto;
+    min-height: auto;
+    max-height: 90vh;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    bottom: auto;
   }
 `;
 
@@ -149,13 +153,24 @@ const FiltersModalHeader = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  padding: 14px 20px;
+  border-bottom: 1px solid #f0f0f0;
+  flex-shrink: 0;
+  background: white;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+
+  @media (min-width: 481px) {
+    padding: 20px 30px;
+  }
 `;
 
 const FiltersModalTitle = styled.h3`
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   margin: 0;
-  color: #000;
+  color: #333;
+  font-weight: 600;
 `;
 
 const CloseFiltersButton = styled.button`
@@ -180,20 +195,29 @@ const CloseFiltersButton = styled.button`
 const MobileCategoryCheckboxes = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 12px;
-  margin-bottom: 25px;
+  gap: 8px;
+  padding: 16px 20px;
+  overflow-y: auto;
+  flex: 1;
+  -webkit-overflow-scrolling: touch;
+
+  @media (min-width: 481px) {
+    padding: 0 30px;
+    max-height: calc(90vh - 180px);
+  }
 `;
 
 const MobileCategoryCheckbox = styled.label<{ $checked: boolean }>`
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 15px;
-  border: 2px solid ${(props) => (props.$checked ? "#FF6B9D" : "#FF6B9D")};
+  padding: 10px 16px;
+  border: 1.5px solid ${(props) => (props.$checked ? "#FF6B9D" : "#e0e0e0")};
   background: ${(props) => (props.$checked ? "#FF6B9D" : "white")};
-  color: ${(props) => (props.$checked ? "white" : "#333")};
-  border-radius: 6px;
-  font-weight: 600;
+  color: ${(props) => (props.$checked ? "white" : "#555")};
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
   transition: all 0.2s ease;
   user-select: none;
@@ -201,9 +225,12 @@ const MobileCategoryCheckbox = styled.label<{ $checked: boolean }>`
 
   &:hover {
     border-color: #FF6B9D;
-    background: ${(props) => (props.$checked ? "#FF6B9D" : "#fff0f5")};
-    transform: translateY(-1px);
-    box-shadow: 0 2px 8px rgba(255, 107, 157, 0.3);
+    background: ${(props) => (props.$checked ? "#FF6B9D" : "#fff5f8")};
+    color: ${(props) => (props.$checked ? "white" : "#FF6B9D")};
+  }
+
+  &:active {
+    transform: scale(0.98);
   }
 
   input {
@@ -225,11 +252,21 @@ const ApplyFiltersButton = styled.button`
   background: #000;
   color: white;
   border: none;
-  border-radius: 4px;
+  border-radius: 0;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
+  flex-shrink: 0;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+  border-top: 1px solid #e0e0e0;
+
+  @media (min-width: 481px) {
+    border-radius: 0 0 8px 8px;
+    margin: 0;
+  }
 
   &:hover {
     background: #333;
@@ -316,6 +353,7 @@ const ItemImage = styled.img`
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.3s ease;
 
   ${ItemCard}:hover & {

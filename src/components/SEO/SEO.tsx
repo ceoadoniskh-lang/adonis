@@ -118,7 +118,7 @@ const SEO: React.FC<SEOProps> = ({
           },
           sameAs: [
             "https://www.instagram.com/adonis.factory",
-            "https://www.facebook.com/sewing_production",
+            "https://www.facebook.com/profile.php?id=61586643953821",
             "https://www.youtube.com/sewing_production",
           ],
         })}
