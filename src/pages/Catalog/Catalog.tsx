@@ -246,10 +246,19 @@ const MobileCategoryCheckbox = styled.label<{ $checked: boolean }>`
   }
 `;
 
+const ApplyFiltersButtonWrapper = styled.div`
+  background: white;
+  padding-bottom: calc(60px + env(safe-area-inset-bottom, 0px));
+  flex-shrink: 0;
+
+  @media (min-width: 481px) {
+    padding-bottom: 0;
+  }
+`;
+
 const ApplyFiltersButton = styled.button`
   width: 100%;
   padding: 15px 20px;
-  padding-bottom: calc(15px + env(safe-area-inset-bottom, 0px));
   background: #000;
   color: white;
   border: none;
@@ -258,16 +267,10 @@ const ApplyFiltersButton = styled.button`
   font-weight: 600;
   cursor: pointer;
   transition: background 0.2s ease;
-  flex-shrink: 0;
-  position: sticky;
-  bottom: 0;
-  z-index: 10;
   border-top: 1px solid #e0e0e0;
 
   @media (min-width: 481px) {
     border-radius: 0 0 8px 8px;
-    margin: 0;
-    padding-bottom: 15px;
   }
 
   &:hover {
@@ -684,9 +687,11 @@ const Catalog: React.FC = () => {
                 })}
               </MobileCategoryCheckboxes>
 
-              <ApplyFiltersButton onClick={handleApplyFilters}>
-                {t("catalog.applyFilters", "Застосувати")}
-              </ApplyFiltersButton>
+              <ApplyFiltersButtonWrapper>
+                <ApplyFiltersButton onClick={handleApplyFilters}>
+                  {t("catalog.applyFilters", "Застосувати")}
+                </ApplyFiltersButton>
+              </ApplyFiltersButtonWrapper>
             </FiltersModalContent>
           </FiltersModal>
 
