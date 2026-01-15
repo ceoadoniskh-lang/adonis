@@ -249,6 +249,7 @@ const MobileCategoryCheckbox = styled.label<{ $checked: boolean }>`
 const ApplyFiltersButton = styled.button`
   width: 100%;
   padding: 15px 20px;
+  padding-bottom: calc(15px + env(safe-area-inset-bottom, 0px));
   background: #000;
   color: white;
   border: none;
@@ -266,6 +267,7 @@ const ApplyFiltersButton = styled.button`
   @media (min-width: 481px) {
     border-radius: 0 0 8px 8px;
     margin: 0;
+    padding-bottom: 15px;
   }
 
   &:hover {
