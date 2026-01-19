@@ -1,12 +1,12 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import AdonisCollectionImage from "../../img/imgs/catalog/IMG_1453.JPEG";
-import BrandProductionImage from "../../img/imgs/service/logo/service-logo.jpg";
-import GerberCuttingImage from "../../img/imgs/service/herber/herber.jpg";
-import QuiltingImage from "../../img/imgs/service/coupler/coupler.jpg";
-import EmbroideryImage from "../../img/imgs/service/embroidery/sewing.jpg";
-import BagsImage from "../../img/imgs/service/bugs/20200219_124249.jpg";
-import ManufactureImage from "../../img/imgs/manufacture/IMG_1314.JPG";
+import AdonisCollectionImage from "../../img/imgs/catalog/IMG_1453.webp";
+import BrandProductionImage from "../../img/imgs/service/logo/service-logo.webp";
+import GerberCuttingImage from "../../img/imgs/service/herber/herber.webp";
+import QuiltingImage from "../../img/imgs/service/coupler/coupler.webp";
+import EmbroideryImage from "../../img/imgs/service/embroidery/sewing.webp";
+import BagsImage from "../../img/imgs/service/bugs/20200219_124249.webp";
+import ManufactureImage from "../../img/imgs/manufacture/IMG_1314.webp";
 import * as S from "./Home.styles";
 import BottomCta from "../../components/CTA/BottomCta";
 
