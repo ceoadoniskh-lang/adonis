@@ -12,6 +12,7 @@ import BottomCta from "../../components/CTA/BottomCta";
 
 const HERO_VIDEO_URL =
   process.env.REACT_APP_HERO_VIDEO_URL || "/video/hero-video.mp4";
+const HERO_VIDEO_POSTER = "/video/hero-video-screen.png";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -26,6 +27,7 @@ const Home: React.FC = () => {
             loop
             playsInline
             preload="auto"
+            poster={HERO_VIDEO_POSTER}
             src={HERO_VIDEO_URL}
           >
             {t("home.videoNotSupported")}
