@@ -3,12 +3,12 @@ import { useTranslation } from "react-i18next";
 import * as S from "./Services.styles";
 import { HeroBackground } from "./Services.styles";
 import BottomCta from "../../components/CTA/BottomCta";
-import AdonisCollectionImage from "../../img/imgs/catalog/IMG_1453.JPEG";
-import BrandProductionImage from "../../img/imgs/service/logo/service-logo.jpg";
-import GerberCuttingImage from "../../img/imgs/service/herber/herber.jpg";
-import QuiltingImage from "../../img/imgs/service/coupler/coupler.jpg";
-import EmbroideryImage from "../../img/imgs/service/embroidery/sewing.jpg";
-import BagsImage from "../../img/imgs/service/bugs/20200219_124249.jpg";
+import AdonisCollectionImage from "../../img/imgs/catalog/IMG_1453.webp";
+import BrandProductionImage from "../../img/imgs/service/logo/service-logo.webp";
+import GerberCuttingImage from "../../img/imgs/service/herber/herber.webp";
+import QuiltingImage from "../../img/imgs/service/coupler/coupler.webp";
+import EmbroideryImage from "../../img/imgs/service/embroidery/sewing.webp";
+import BagsImage from "../../img/imgs/service/bugs/20200219_124249.webp";
 
 const Services: React.FC = () => {
   const { t } = useTranslation();
@@ -111,6 +111,7 @@ const Services: React.FC = () => {
                     <img
                       src={service.image}
                       alt={t(`services.list.${service.key}.title`)}
+                      loading="lazy"
                       style={{
                         width: "100%",
                         height: "100%",
