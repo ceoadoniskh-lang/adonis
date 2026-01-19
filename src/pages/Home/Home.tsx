@@ -12,7 +12,7 @@ import BottomCta from "../../components/CTA/BottomCta";
 
 const HERO_VIDEO_URL =
   process.env.REACT_APP_HERO_VIDEO_URL || "/video/hero-video.mp4";
-const HERO_VIDEO_POSTER = "/video/hero-video-screen.png";
+const HERO_VIDEO_POSTER = "/video/hero-video-screen.webp";
 
 const Home: React.FC = () => {
   const { t } = useTranslation();
@@ -72,6 +72,7 @@ const Home: React.FC = () => {
               <img
                 src={ManufactureImage}
                 alt={t("home.productionImage")}
+                loading="lazy"
                 onError={(e) => {
                   const target = e.target as HTMLImageElement;
                   target.style.display = "none";
@@ -88,32 +89,32 @@ const Home: React.FC = () => {
           <S.SectionSubtitle>{t("home.cta.subtitle")}</S.SectionSubtitle>
           <S.ServicesGrid>
             <S.ServiceCard to="/services" className="first-three">
-              <img src={AdonisCollectionImage} alt={t("home.service1Title")} />
+              <img src={AdonisCollectionImage} alt={t("home.service1Title")} loading="lazy" />
               <h3>{t("home.service1Title")}</h3>
               <p>{t("home.service1Description")}</p>
             </S.ServiceCard>
             <S.ServiceCard to="/services" className="first-three">
-              <img src={BagsImage} alt={t("home.service6Title")} />
+              <img src={BagsImage} alt={t("home.service6Title")} loading="lazy" />
               <h3>{t("home.service6Title")}</h3>
               <p>{t("home.service6Description")}</p>
             </S.ServiceCard>
             <S.ServiceCard to="/services" className="first-three">
-              <img src={BrandProductionImage} alt={t("home.service2Title")} />
+              <img src={BrandProductionImage} alt={t("home.service2Title")} loading="lazy" />
               <h3>{t("home.service2Title")}</h3>
               <p>{t("home.service2Description")}</p>
             </S.ServiceCard>
             <S.ServiceCard to="/services">
-              <img src={GerberCuttingImage} alt={t("home.service3Title")} />
+              <img src={GerberCuttingImage} alt={t("home.service3Title")} loading="lazy" />
               <h3>{t("home.service3Title")}</h3>
               <p>{t("home.service3Description")}</p>
             </S.ServiceCard>
             <S.ServiceCard to="/services">
-              <img src={QuiltingImage} alt={t("home.service4Title")} />
+              <img src={QuiltingImage} alt={t("home.service4Title")} loading="lazy" />
               <h3>{t("home.service4Title")}</h3>
               <p>{t("home.service4Description")}</p>
             </S.ServiceCard>
             <S.ServiceCard to="/services">
-              <img src={EmbroideryImage} alt={t("home.service5Title")} />
+              <img src={EmbroideryImage} alt={t("home.service5Title")} loading="lazy" />
               <h3>{t("home.service5Title")}</h3>
               <p>{t("home.service5Description")}</p>
             </S.ServiceCard>
