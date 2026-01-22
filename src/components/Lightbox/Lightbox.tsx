@@ -463,16 +463,22 @@ const Lightbox: React.FC<LightboxProps> = ({
     }
   };
 
+  // Reset details panel when item changes
+  useEffect(() => {
+    setIsDetailsOpen(false);
+  }, [item?.id]);
+
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (!isOpen) return;
 
       if (e.key === "Escape") {
-        if (isDetailsOpen) {
-          setIsDetailsOpen(false);
-        } else {
+        setIsDetailsOpen((prev) => {
+          if (prev) return false;
           onClose();
-        }
+          return prev;
+        });
       } else if (e.key === "ArrowLeft" && currentIndex > 0 && onNavigate) {
         onNavigate(currentIndex - 1);
         setIsDetailsOpen(false);
@@ -489,14 +495,13 @@ const Lightbox: React.FC<LightboxProps> = ({
     if (isOpen) {
       document.addEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "hidden";
-      setIsDetailsOpen(false);
     }
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "unset";
     };
-  }, [isOpen, onClose, currentIndex, allItems.length, onNavigate, isDetailsOpen]);
+  }, [isOpen, onClose, currentIndex, allItems.length, onNavigate]);
 
   if (!item || !isOpen) return null;
 
@@ -584,6 +589,7 @@ const Lightbox: React.FC<LightboxProps> = ({
           {hasDetails && (
             <DetailsButton onClick={(e) => {
               e.stopPropagation();
+              e.preventDefault();
               setIsDetailsOpen(true);
             }}>
               {t("catalog.details", "Деталі")}
