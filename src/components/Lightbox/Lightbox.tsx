@@ -51,10 +51,18 @@ const LightboxOverlay = styled.div<{ $isOpen: boolean }>`
   animation: ${fadeIn} 0.2s ease;
 `;
 
+const ClickableBackground = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+`;
+
 const LightboxContent = styled.div`
   position: relative;
-  width: 100%;
-  height: 100%;
+  z-index: 5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -85,10 +93,10 @@ const CloseButton = styled.button`
   }
 `;
 
-const NavigationButton = styled.button<{ position: "left" | "right" }>`
+const NavigationButton = styled.button<{ $position: "left" | "right" }>`
   position: fixed;
   top: 50%;
-  ${(props) => (props.position === "left" ? "left: 20px;" : "right: 20px;")}
+  ${(props) => (props.$position === "left" ? "left: 20px;" : "right: 20px;")}
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(10px);
@@ -122,7 +130,7 @@ const NavigationButton = styled.button<{ position: "left" | "right" }>`
     width: 40px;
     height: 40px;
     font-size: 22px;
-    ${(props) => (props.position === "left" ? "left: 10px;" : "right: 10px;")}
+    ${(props) => (props.$position === "left" ? "left: 10px;" : "right: 10px;")}
   }
 `;
 
@@ -540,14 +548,15 @@ const Lightbox: React.FC<LightboxProps> = ({
   const hasDetails = brand || season || material || silhouette || description;
 
   return (
-    <LightboxOverlay $isOpen={isOpen} onClick={onClose}>
-      <LightboxContent onClick={(e) => e.stopPropagation()}>
+    <LightboxOverlay $isOpen={isOpen}>
+      <ClickableBackground onClick={onClose} />
+      <LightboxContent>
         <CloseButton onClick={onClose}>×</CloseButton>
 
         {allItems.length > 1 && (
           <>
             <NavigationButton
-              position="left"
+              $position="left"
               onClick={handlePrevious}
               disabled={!canGoPrevious}
               aria-label={t("catalog.previousItem", "Попередній товар")}
@@ -555,7 +564,7 @@ const Lightbox: React.FC<LightboxProps> = ({
               ‹
             </NavigationButton>
             <NavigationButton
-              position="right"
+              $position="right"
               onClick={handleNext}
               disabled={!canGoNext}
               aria-label={t("catalog.nextItem", "Наступний товар")}
