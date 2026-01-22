@@ -80,12 +80,14 @@ const CloseButton = styled.button`
   height: 44px;
   border-radius: 50%;
   font-size: 24px;
+  line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 20;
   transition: all 0.2s ease;
+  padding-bottom: 3px;
 
   &:hover {
     background: rgba(255, 255, 255, 0.25);
@@ -106,12 +108,14 @@ const NavigationButton = styled.button<{ $position: "left" | "right" }>`
   height: 50px;
   border-radius: 50%;
   font-size: 28px;
+  line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 20;
   transition: all 0.2s ease;
+  padding-bottom: 4px;
 
   &:hover {
     background: rgba(255, 255, 255, 0.25);
@@ -182,6 +186,7 @@ const DetailsButton = styled.button`
   padding: 8px 20px;
   border-radius: 25px;
   font-size: 0.9rem;
+  line-height: 1;
   cursor: pointer;
   transition: all 0.2s ease;
   display: flex;
@@ -189,6 +194,12 @@ const DetailsButton = styled.button`
   gap: 6px;
   position: relative;
   z-index: 20;
+
+  span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   &:hover {
     background: rgba(255, 255, 255, 0.3);
@@ -250,12 +261,14 @@ const CloseDetailsButton = styled.button`
   height: 36px;
   border-radius: 50%;
   font-size: 20px;
+  line-height: 1;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #666;
   transition: all 0.2s ease;
+  padding-bottom: 2px;
 
   &:hover {
     background: #e0e0e0;
