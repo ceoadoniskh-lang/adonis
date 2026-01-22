@@ -151,7 +151,7 @@ const BottomBar = styled.div`
   align-items: center;
   justify-content: center;
   gap: 16px;
-  z-index: 15;
+  z-index: 20;
 `;
 
 const ProductName = styled.h3`
@@ -179,6 +179,8 @@ const DetailsButton = styled.button`
   display: flex;
   align-items: center;
   gap: 6px;
+  position: relative;
+  z-index: 20;
 
   &:hover {
     background: rgba(255, 255, 255, 0.3);
@@ -568,19 +570,25 @@ const Lightbox: React.FC<LightboxProps> = ({
           alt={translatedAltText}
         />
 
-        <BottomBar>
+        <BottomBar onClick={(e) => e.stopPropagation()}>
           <ProductName>{translatedName}</ProductName>
           {hasDetails && (
-            <DetailsButton onClick={() => setIsDetailsOpen(true)}>
+            <DetailsButton onClick={(e) => {
+              e.stopPropagation();
+              setIsDetailsOpen(true);
+            }}>
               {t("catalog.details", "Деталі")}
               <span>↑</span>
             </DetailsButton>
           )}
         </BottomBar>
 
-        <Overlay $isVisible={isDetailsOpen} onClick={() => setIsDetailsOpen(false)} />
+        <Overlay $isVisible={isDetailsOpen} onClick={(e) => {
+          e.stopPropagation();
+          setIsDetailsOpen(false);
+        }} />
         
-        <DetailsPanel $isOpen={isDetailsOpen}>
+        <DetailsPanel $isOpen={isDetailsOpen} onClick={(e) => e.stopPropagation()}>
           <DetailsPanelHandle />
           <DetailsPanelHeader>
             <DetailsPanelTitle>{translatedName}</DetailsPanelTitle>
