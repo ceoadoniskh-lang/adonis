@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
 import { CatalogItem } from "../../data/catalogItems";
 
 interface LightboxProps {
@@ -21,218 +21,305 @@ interface ParsedUserText {
   description: string;
 }
 
+const fadeIn = keyframes`
+  from { opacity: 0; }
+  to { opacity: 1; }
+`;
+
+const slideUp = keyframes`
+  from { 
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+`;
+
 const LightboxOverlay = styled.div<{ $isOpen: boolean }>`
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background: rgba(0, 0, 0, 0.9);
+  background: rgba(0, 0, 0, 0.95);
   z-index: 1000;
   display: ${(props) => (props.$isOpen ? "flex" : "none")};
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  overflow-y: auto;
+  animation: ${fadeIn} 0.2s ease;
 `;
 
 const LightboxContent = styled.div`
   position: relative;
-  max-width: 95vw;
-  width: auto;
-  max-height: 95vh;
-  background: white;
-  border-radius: 8px;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-  overflow-y: auto;
-`;
-
-const LightboxImageWrapper = styled.div`
-  position: relative;
+  width: 100%;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f5f5f5;
 `;
 
 const CloseButton = styled.button`
-  position: absolute;
+  position: fixed;
   top: 20px;
   right: 20px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
   color: white;
   border: none;
-  width: 40px;
-  height: 40px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
-  font-size: 28px;
-  line-height: 1;
+  font-size: 24px;
   cursor: pointer;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
-  padding-top: 4px;
-  z-index: 10;
-  transition: background 0.2s ease;
+  z-index: 20;
+  transition: all 0.2s ease;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.05);
   }
 `;
 
 const NavigationButton = styled.button<{ position: "left" | "right" }>`
-  position: absolute;
+  position: fixed;
   top: 50%;
   ${(props) => (props.position === "left" ? "left: 20px;" : "right: 20px;")}
   transform: translateY(-50%);
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
   color: white;
   border: none;
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  font-size: 32px;
-  font-weight: 300;
+  font-size: 28px;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 10;
-  transition: background 0.2s ease;
-  padding: 0;
-  margin: 0;
-  line-height: 0;
-
-  & > span {
-    display: inline-block;
-    line-height: 1;
-    margin: 0;
-    padding: 0;
-    vertical-align: middle;
-    transform: translateY(-4px);
-  }
+  z-index: 20;
+  transition: all 0.2s ease;
 
   &:hover {
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(255, 255, 255, 0.25);
+    transform: translateY(-50%) scale(1.05);
   }
 
   &:disabled {
-    opacity: 0.3;
+    opacity: 0.2;
     cursor: not-allowed;
+    &:hover {
+      transform: translateY(-50%);
+    }
   }
 
   @media (max-width: 768px) {
     width: 40px;
     height: 40px;
-    font-size: 26px;
+    font-size: 22px;
     ${(props) => (props.position === "left" ? "left: 10px;" : "right: 10px;")}
   }
 `;
 
 const LightboxImage = styled.img`
-  width: auto;
-  height: auto;
   max-width: 90vw;
-  max-height: 75vh;
+  max-height: 85vh;
   object-fit: contain;
   display: block;
-  background: #f5f5f5;
-  flex-shrink: 0;
+  border-radius: 4px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
   
   @media (max-width: 768px) {
-    max-width: 100%;
-    max-height: 60vh;
+    max-width: 95vw;
+    max-height: 70vh;
   }
 `;
 
-const LightboxText = styled.div`
-  padding: 14px 20px 16px;
-  background: white;
-  color: #333;
-  line-height: 1.4;
-  font-size: 0.85rem;
-  overflow-y: auto;
-  min-width: 300px;
-  max-width: 700px;
+const BottomBar = styled.div`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 40px 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  z-index: 15;
+`;
 
+const ProductName = styled.h3`
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  
   @media (max-width: 768px) {
-    padding: 12px 14px 14px;
+    font-size: 1rem;
+  }
+`;
+
+const DetailsButton = styled.button`
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 8px 20px;
+  border-radius: 25px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.02);
+  }
+  
+  @media (max-width: 768px) {
+    padding: 6px 14px;
     font-size: 0.8rem;
-    min-width: auto;
   }
 `;
 
-const ProductTitle = styled.h3`
+const DetailsPanel = styled.div<{ $isOpen: boolean }>`
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  border-radius: 20px 20px 0 0;
+  max-height: 70vh;
+  overflow-y: auto;
+  z-index: 25;
+  transform: ${(props) => (props.$isOpen ? "translateY(0)" : "translateY(100%)")};
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
+`;
+
+const DetailsPanelHandle = styled.div`
+  width: 40px;
+  height: 4px;
+  background: #ddd;
+  border-radius: 2px;
+  margin: 12px auto 0;
+`;
+
+const DetailsPanelHeader = styled.div`
+  position: sticky;
+  top: 0;
+  background: white;
+  padding: 16px 20px;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 5;
+`;
+
+const DetailsPanelTitle = styled.h3`
   font-size: 1.3rem;
-  margin: 0 0 12px 0;
-  color: #000;
   font-weight: 600;
+  margin: 0;
+  color: #000;
+`;
 
-  @media (max-width: 768px) {
-    font-size: 1.15rem;
-    margin-bottom: 10px;
+const CloseDetailsButton = styled.button`
+  background: #f5f5f5;
+  border: none;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+  transition: all 0.2s ease;
+
+  &:hover {
+    background: #e0e0e0;
   }
 `;
 
-const ProductInfo = styled.div`
+const DetailsPanelContent = styled.div`
+  padding: 20px;
+`;
+
+const InfoGrid = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px 16px;
-  margin-bottom: 10px;
+  gap: 16px;
+  margin-bottom: 20px;
 
-  @media (max-width: 600px) {
+  @media (max-width: 500px) {
     grid-template-columns: 1fr;
-    gap: 4px;
+    gap: 12px;
   }
 `;
 
-const InfoRow = styled.div`
-  font-size: 0.85rem;
-  color: #333;
-  line-height: 1.5;
+const InfoItem = styled.div`
+  background: #f8f8f8;
+  padding: 12px 16px;
+  border-radius: 12px;
+`;
 
-  strong {
-    font-weight: 600;
-    color: #000;
-  }
+const InfoLabel = styled.div`
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 4px;
+`;
+
+const InfoValue = styled.div`
+  font-size: 0.95rem;
+  color: #333;
+  font-weight: 500;
 `;
 
 const DescriptionSection = styled.div`
-  margin-top: 10px;
-  padding-top: 10px;
-  border-top: 1px solid #e0e0e0;
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid #eee;
 `;
 
-const DescriptionText = styled.p<{ isExpanded: boolean }>`
+const DescriptionLabel = styled.div`
+  font-size: 0.75rem;
+  color: #888;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+`;
+
+const DescriptionText = styled.p`
   margin: 0;
-  color: #555;
-  font-size: 0.85rem;
-  line-height: 1.6;
-  display: ${(props) => (props.isExpanded ? "block" : "-webkit-box")};
-  -webkit-line-clamp: ${(props) => (props.isExpanded ? "none" : "3")};
-  -webkit-box-orient: vertical;
-  overflow: ${(props) => (props.isExpanded ? "visible" : "hidden")};
-  text-overflow: ellipsis;
+  color: #444;
+  font-size: 0.9rem;
+  line-height: 1.7;
 `;
 
-const ShowMoreButton = styled.button`
-  margin-top: 8px;
-  background: none;
-  border: none;
-  color: #e60076;
-  font-size: 0.85rem;
-  cursor: pointer;
-  padding: 0;
-  text-decoration: underline;
-  font-weight: 500;
-  transition: color 0.2s ease;
-
-  &:hover {
-    color: #c4005f;
-  }
+const Overlay = styled.div<{ $isVisible: boolean }>`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 24;
+  opacity: ${(props) => (props.$isVisible ? 1 : 0)};
+  pointer-events: ${(props) => (props.$isVisible ? "auto" : "none")};
+  transition: opacity 0.3s ease;
 `;
 
 const parseUserText = (userText: string): ParsedUserText => {
@@ -348,13 +435,13 @@ const Lightbox: React.FC<LightboxProps> = ({
   onNavigate,
 }) => {
   const { t } = useTranslation();
-  const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false);
+  const [isDetailsOpen, setIsDetailsOpen] = useState(false);
 
   const handlePrevious = (e: React.MouseEvent) => {
     e.stopPropagation();
     if (currentIndex > 0 && onNavigate) {
       onNavigate(currentIndex - 1);
-      setIsDescriptionExpanded(false);
+      setIsDetailsOpen(false);
     }
   };
 
@@ -362,7 +449,7 @@ const Lightbox: React.FC<LightboxProps> = ({
     e.stopPropagation();
     if (currentIndex < allItems.length - 1 && onNavigate) {
       onNavigate(currentIndex + 1);
-      setIsDescriptionExpanded(false);
+      setIsDetailsOpen(false);
     }
   };
 
@@ -371,31 +458,35 @@ const Lightbox: React.FC<LightboxProps> = ({
       if (!isOpen) return;
 
       if (e.key === "Escape") {
-        onClose();
+        if (isDetailsOpen) {
+          setIsDetailsOpen(false);
+        } else {
+          onClose();
+        }
       } else if (e.key === "ArrowLeft" && currentIndex > 0 && onNavigate) {
         onNavigate(currentIndex - 1);
-        setIsDescriptionExpanded(false);
+        setIsDetailsOpen(false);
       } else if (
         e.key === "ArrowRight" &&
         currentIndex < allItems.length - 1 &&
         onNavigate
       ) {
         onNavigate(currentIndex + 1);
-        setIsDescriptionExpanded(false);
+        setIsDetailsOpen(false);
       }
     };
 
     if (isOpen) {
       document.addEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "hidden";
-      setIsDescriptionExpanded(false);
+      setIsDetailsOpen(false);
     }
 
     return () => {
       document.removeEventListener("keydown", handleKeyDown);
       document.body.style.overflow = "unset";
     };
-  }, [isOpen, onClose, currentIndex, allItems.length, onNavigate]);
+  }, [isOpen, onClose, currentIndex, allItems.length, onNavigate, isDetailsOpen]);
 
   if (!item || !isOpen) return null;
 
@@ -441,91 +532,98 @@ const Lightbox: React.FC<LightboxProps> = ({
     }
   }
 
-  const needsExpandButton = description.length > 150;
-
   const canGoPrevious = currentIndex > 0;
   const canGoNext = currentIndex < allItems.length - 1;
+
+  const hasDetails = brand || season || material || silhouette || description;
 
   return (
     <LightboxOverlay $isOpen={isOpen} onClick={onClose}>
       <LightboxContent onClick={(e) => e.stopPropagation()}>
         <CloseButton onClick={onClose}>×</CloseButton>
 
-        <LightboxImageWrapper>
-          {allItems.length > 1 && (
-            <>
-              <NavigationButton
-                position="left"
-                onClick={handlePrevious}
-                disabled={!canGoPrevious}
-                aria-label={t("catalog.previousItem", "Попередній товар")}
-              >
-                <span>‹</span>
-              </NavigationButton>
-              <NavigationButton
-                position="right"
-                onClick={handleNext}
-                disabled={!canGoNext}
-                aria-label={t("catalog.nextItem", "Наступний товар")}
-              >
-                <span>›</span>
-              </NavigationButton>
-            </>
+        {allItems.length > 1 && (
+          <>
+            <NavigationButton
+              position="left"
+              onClick={handlePrevious}
+              disabled={!canGoPrevious}
+              aria-label={t("catalog.previousItem", "Попередній товар")}
+            >
+              ‹
+            </NavigationButton>
+            <NavigationButton
+              position="right"
+              onClick={handleNext}
+              disabled={!canGoNext}
+              aria-label={t("catalog.nextItem", "Наступний товар")}
+            >
+              ›
+            </NavigationButton>
+          </>
+        )}
+
+        <LightboxImage
+          src={encodeURI(item.imagePath)}
+          alt={translatedAltText}
+        />
+
+        <BottomBar>
+          <ProductName>{translatedName}</ProductName>
+          {hasDetails && (
+            <DetailsButton onClick={() => setIsDetailsOpen(true)}>
+              {t("catalog.details", "Деталі")}
+              <span>↑</span>
+            </DetailsButton>
           )}
+        </BottomBar>
 
-          <LightboxImage
-            src={encodeURI(item.imagePath)}
-            alt={translatedAltText}
-            loading="lazy"
-          />
-        </LightboxImageWrapper>
-        <LightboxText>
-          <ProductTitle>{translatedName}</ProductTitle>
-
-          <ProductInfo>
-            {brand && (
-              <InfoRow>
-                <strong>{t("catalog.brand", "Бренд")}:</strong> {brand}
-              </InfoRow>
-            )}
-            {season && (
-              <InfoRow>
-                <strong>{t("catalog.season", "Сезон")}:</strong> {season}
-              </InfoRow>
-            )}
-            {material && (
-              <InfoRow>
-                <strong>{t("catalog.material", "Матеріал")}:</strong> {material}
-              </InfoRow>
-            )}
-            {silhouette && (
-              <InfoRow>
-                <strong>{t("catalog.silhouette", "Силует")}:</strong>{" "}
-                {silhouette}
-              </InfoRow>
-            )}
-          </ProductInfo>
-
-          {description && description.length > 0 && (
-            <DescriptionSection>
-              <DescriptionText isExpanded={isDescriptionExpanded}>
-                {description}
-              </DescriptionText>
-              {needsExpandButton && (
-                <ShowMoreButton
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    setIsDescriptionExpanded(!isDescriptionExpanded);
-                  }}
-                >
-                  {isDescriptionExpanded
-                    ? t("catalog.showLess", "Показати менше")
-                    : t("catalog.showMore", "Показати більше")}
-                </ShowMoreButton>
+        <Overlay $isVisible={isDetailsOpen} onClick={() => setIsDetailsOpen(false)} />
+        
+        <DetailsPanel $isOpen={isDetailsOpen}>
+          <DetailsPanelHandle />
+          <DetailsPanelHeader>
+            <DetailsPanelTitle>{translatedName}</DetailsPanelTitle>
+            <CloseDetailsButton onClick={() => setIsDetailsOpen(false)}>
+              ×
+            </CloseDetailsButton>
+          </DetailsPanelHeader>
+          <DetailsPanelContent>
+            <InfoGrid>
+              {brand && (
+                <InfoItem>
+                  <InfoLabel>{t("catalog.brand", "Бренд")}</InfoLabel>
+                  <InfoValue>{brand}</InfoValue>
+                </InfoItem>
               )}
-            </DescriptionSection>
-          )}
-        </LightboxText>
+              {season && (
+                <InfoItem>
+                  <InfoLabel>{t("catalog.season", "Сезон")}</InfoLabel>
+                  <InfoValue>{season}</InfoValue>
+                </InfoItem>
+              )}
+              {material && (
+                <InfoItem>
+                  <InfoLabel>{t("catalog.material", "Матеріал")}</InfoLabel>
+                  <InfoValue>{material}</InfoValue>
+                </InfoItem>
+              )}
+              {silhouette && (
+                <InfoItem>
+                  <InfoLabel>{t("catalog.silhouette", "Силует")}</InfoLabel>
+                  <InfoValue>{silhouette}</InfoValue>
+                </InfoItem>
+              )}
+            </InfoGrid>
+
+            {description && (
+              <DescriptionSection>
+                <DescriptionLabel>{t("catalog.description", "Опис")}</DescriptionLabel>
+                <DescriptionText>{description}</DescriptionText>
+              </DescriptionSection>
+            )}
+          </DetailsPanelContent>
+        </DetailsPanel>
       </LightboxContent>
     </LightboxOverlay>
   );
