@@ -8,13 +8,13 @@ interface PriceModalProps {
   onContactClick: () => void;
 }
 
-const ModalOverlay = styled.div<{ isVisible: boolean }>`
+const ModalOverlay = styled.div<{ $isVisible: boolean }>`
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
-  opacity: ${(props) => (props.isVisible ? 1 : 0)};
-  visibility: ${(props) => (props.isVisible ? "visible" : "hidden")};
+  opacity: ${(props) => (props.$isVisible ? 1 : 0)};
+  visibility: ${(props) => (props.$isVisible ? "visible" : "hidden")};
   transition: opacity 0.3s ease, visibility 0.3s ease;
   max-width: 400px;
 
@@ -133,7 +133,7 @@ const PriceModal: React.FC<PriceModalProps> = ({ onContactClick }) => {
   if (!isVisible) return null;
 
   return (
-    <ModalOverlay isVisible={isVisible}>
+    <ModalOverlay $isVisible={isVisible}>
       <ModalContent>
         <CloseButton onClick={handleClose}>×</CloseButton>
         <ModalTitle>Бажаєте дізнатися вартість?</ModalTitle>

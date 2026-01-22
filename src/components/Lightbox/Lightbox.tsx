@@ -210,7 +210,7 @@ const DetailsPanel = styled.div<{ $isOpen: boolean }>`
   border-radius: 20px 20px 0 0;
   max-height: 70vh;
   overflow-y: auto;
-  z-index: 25;
+  z-index: 1200;
   transform: ${(props) => (props.$isOpen ? "translateY(0)" : "translateY(100%)")};
   transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 -10px 40px rgba(0, 0, 0, 0.3);
@@ -326,7 +326,7 @@ const Overlay = styled.div<{ $isVisible: boolean }>`
   right: 0;
   bottom: 0;
   background: rgba(0, 0, 0, 0.5);
-  z-index: 24;
+  z-index: 1100;
   opacity: ${(props) => (props.$isVisible ? 1 : 0)};
   pointer-events: ${(props) => (props.$isVisible ? "auto" : "none")};
   transition: opacity 0.3s ease;
@@ -591,57 +591,57 @@ const Lightbox: React.FC<LightboxProps> = ({
             </DetailsButton>
           )}
         </BottomBar>
-
-        <Overlay $isVisible={isDetailsOpen} onClick={(e) => {
-          e.stopPropagation();
-          setIsDetailsOpen(false);
-        }} />
-        
-        <DetailsPanel $isOpen={isDetailsOpen} onClick={(e) => e.stopPropagation()}>
-          <DetailsPanelHandle />
-          <DetailsPanelHeader>
-            <DetailsPanelTitle>{translatedName}</DetailsPanelTitle>
-            <CloseDetailsButton onClick={() => setIsDetailsOpen(false)}>
-              ×
-            </CloseDetailsButton>
-          </DetailsPanelHeader>
-          <DetailsPanelContent>
-            <InfoGrid>
-              {brand && (
-                <InfoItem>
-                  <InfoLabel>{t("catalog.brand", "Бренд")}</InfoLabel>
-                  <InfoValue>{brand}</InfoValue>
-                </InfoItem>
-              )}
-              {season && (
-                <InfoItem>
-                  <InfoLabel>{t("catalog.season", "Сезон")}</InfoLabel>
-                  <InfoValue>{season}</InfoValue>
-                </InfoItem>
-              )}
-              {material && (
-                <InfoItem>
-                  <InfoLabel>{t("catalog.material", "Матеріал")}</InfoLabel>
-                  <InfoValue>{material}</InfoValue>
-                </InfoItem>
-              )}
-              {silhouette && (
-                <InfoItem>
-                  <InfoLabel>{t("catalog.silhouette", "Силует")}</InfoLabel>
-                  <InfoValue>{silhouette}</InfoValue>
-                </InfoItem>
-              )}
-            </InfoGrid>
-
-            {description && (
-              <DescriptionSection>
-                <DescriptionLabel>{t("catalog.description", "Опис")}</DescriptionLabel>
-                <DescriptionText>{description}</DescriptionText>
-              </DescriptionSection>
-            )}
-          </DetailsPanelContent>
-        </DetailsPanel>
       </LightboxContent>
+
+      <Overlay $isVisible={isDetailsOpen} onClick={(e) => {
+        e.stopPropagation();
+        setIsDetailsOpen(false);
+      }} />
+      
+      <DetailsPanel $isOpen={isDetailsOpen} onClick={(e) => e.stopPropagation()}>
+        <DetailsPanelHandle />
+        <DetailsPanelHeader>
+          <DetailsPanelTitle>{translatedName}</DetailsPanelTitle>
+          <CloseDetailsButton onClick={() => setIsDetailsOpen(false)}>
+            ×
+          </CloseDetailsButton>
+        </DetailsPanelHeader>
+        <DetailsPanelContent>
+          <InfoGrid>
+            {brand && (
+              <InfoItem>
+                <InfoLabel>{t("catalog.brand", "Бренд")}</InfoLabel>
+                <InfoValue>{brand}</InfoValue>
+              </InfoItem>
+            )}
+            {season && (
+              <InfoItem>
+                <InfoLabel>{t("catalog.season", "Сезон")}</InfoLabel>
+                <InfoValue>{season}</InfoValue>
+              </InfoItem>
+            )}
+            {material && (
+              <InfoItem>
+                <InfoLabel>{t("catalog.material", "Матеріал")}</InfoLabel>
+                <InfoValue>{material}</InfoValue>
+              </InfoItem>
+            )}
+            {silhouette && (
+              <InfoItem>
+                <InfoLabel>{t("catalog.silhouette", "Силует")}</InfoLabel>
+                <InfoValue>{silhouette}</InfoValue>
+              </InfoItem>
+            )}
+          </InfoGrid>
+
+          {description && (
+            <DescriptionSection>
+              <DescriptionLabel>{t("catalog.description", "Опис")}</DescriptionLabel>
+              <DescriptionText>{description}</DescriptionText>
+            </DescriptionSection>
+          )}
+        </DetailsPanelContent>
+      </DetailsPanel>
     </LightboxOverlay>
   );
 };
