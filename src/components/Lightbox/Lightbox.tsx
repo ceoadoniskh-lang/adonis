@@ -154,41 +154,52 @@ const LightboxImage = styled.img`
 
 const BottomBar = styled.div`
   position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
-  padding: 40px 20px 20px;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(30, 30, 30, 0.85);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  padding: 12px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 16px;
   z-index: 20;
+  border-radius: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+  
+  @media (max-width: 768px) {
+    bottom: 16px;
+    padding: 10px 18px;
+    gap: 12px;
+  }
 `;
 
 const ProductName = styled.h3`
   color: white;
-  font-size: 1.2rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 400;
   margin: 0;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  letter-spacing: 0.02em;
   
   @media (max-width: 768px) {
-    font-size: 1rem;
+    font-size: 0.95rem;
   }
 `;
 
 const DetailsButton = styled.button`
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  padding: 8px 20px;
-  border-radius: 25px;
-  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.12);
+  color: rgba(255, 255, 255, 0.9);
+  border: none;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 400;
   line-height: 1;
   cursor: pointer;
-  transition: all 0.2s ease;
+  transition: all 0.25s ease;
   display: flex;
   align-items: center;
   gap: 6px;
@@ -199,15 +210,20 @@ const DetailsButton = styled.button`
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    font-size: 0.75rem;
+    transition: transform 0.25s ease;
   }
 
   &:hover {
-    background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.02);
+    background: rgba(255, 255, 255, 0.2);
+    
+    span {
+      transform: translateY(-2px);
+    }
   }
   
   @media (max-width: 768px) {
-    padding: 6px 14px;
+    padding: 6px 12px;
     font-size: 0.8rem;
   }
 `;
