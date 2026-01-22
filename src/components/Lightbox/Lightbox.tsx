@@ -39,15 +39,14 @@ const LightboxOverlay = styled.div<{ $isOpen: boolean }>`
 const LightboxContent = styled.div`
   position: relative;
   max-width: 90vw;
-  max-width: 900px;
-  max-height: 90vh;
+  width: 1000px;
+  max-height: 95vh;
   background: white;
   border-radius: 8px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-
   overflow-y: auto;
 `;
 
@@ -134,9 +133,9 @@ const NavigationButton = styled.button<{ position: "left" | "right" }>`
 
 const LightboxImage = styled.img`
   width: 100%;
-  max-width: 900px;
+  max-width: 1000px;
   height: auto;
-  max-height: 50vh;
+  max-height: 65vh;
   object-fit: contain;
   display: block;
   background: #f5f5f5;
@@ -144,41 +143,41 @@ const LightboxImage = styled.img`
 `;
 
 const LightboxText = styled.div`
-  padding: 30px;
+  padding: 16px 24px 20px;
   background: white;
   color: #333;
-  line-height: 1.5;
-  font-size: 0.95rem;
-  max-width: 900px;
+  line-height: 1.4;
+  font-size: 0.9rem;
+  max-width: 1000px;
   overflow-y: auto;
 
   @media (max-width: 768px) {
-    padding: 20px;
-    font-size: 0.9rem;
+    padding: 14px 16px 16px;
+    font-size: 0.85rem;
   }
 `;
 
 const ProductTitle = styled.h3`
-  font-size: 1.6rem;
-  margin: 0 0 20px 0;
+  font-size: 1.3rem;
+  margin: 0 0 12px 0;
   color: #000;
-  font-weight: 700;
+  font-weight: 600;
 
   @media (max-width: 768px) {
-    font-size: 1.4rem;
-    margin-bottom: 16px;
+    font-size: 1.15rem;
+    margin-bottom: 10px;
   }
 `;
 
 const ProductInfo = styled.div`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 8px 20px;
-  margin-bottom: 16px;
+  gap: 4px 16px;
+  margin-bottom: 10px;
 
   @media (max-width: 600px) {
     grid-template-columns: 1fr;
-    gap: 8px;
+    gap: 4px;
   }
 `;
 
@@ -194,8 +193,8 @@ const InfoRow = styled.div`
 `;
 
 const DescriptionSection = styled.div`
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 10px;
+  padding-top: 10px;
   border-top: 1px solid #e0e0e0;
 `;
 
@@ -212,11 +211,11 @@ const DescriptionText = styled.p<{ isExpanded: boolean }>`
 `;
 
 const ShowMoreButton = styled.button`
-  margin-top: 12px;
+  margin-top: 8px;
   background: none;
   border: none;
   color: #e60076;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   cursor: pointer;
   padding: 0;
   text-decoration: underline;
