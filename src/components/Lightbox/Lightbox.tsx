@@ -38,8 +38,8 @@ const LightboxOverlay = styled.div<{ $isOpen: boolean }>`
 
 const LightboxContent = styled.div`
   position: relative;
-  max-width: 90vw;
-  width: 1000px;
+  max-width: 95vw;
+  width: auto;
   max-height: 95vh;
   background: white;
   border-radius: 8px;
@@ -55,6 +55,7 @@ const LightboxImageWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  background: #f5f5f5;
 `;
 
 const CloseButton = styled.button`
@@ -132,28 +133,35 @@ const NavigationButton = styled.button<{ position: "left" | "right" }>`
 `;
 
 const LightboxImage = styled.img`
-  width: 100%;
-  max-width: 1000px;
+  width: auto;
   height: auto;
-  max-height: 65vh;
+  max-width: 90vw;
+  max-height: 75vh;
   object-fit: contain;
   display: block;
   background: #f5f5f5;
   flex-shrink: 0;
+  
+  @media (max-width: 768px) {
+    max-width: 100%;
+    max-height: 60vh;
+  }
 `;
 
 const LightboxText = styled.div`
-  padding: 16px 24px 20px;
+  padding: 14px 20px 16px;
   background: white;
   color: #333;
   line-height: 1.4;
-  font-size: 0.9rem;
-  max-width: 1000px;
+  font-size: 0.85rem;
   overflow-y: auto;
+  min-width: 300px;
+  max-width: 700px;
 
   @media (max-width: 768px) {
-    padding: 14px 16px 16px;
-    font-size: 0.85rem;
+    padding: 12px 14px 14px;
+    font-size: 0.8rem;
+    min-width: auto;
   }
 `;
 
