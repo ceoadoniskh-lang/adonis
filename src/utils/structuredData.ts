@@ -35,7 +35,7 @@ export const generateOrganizationSchema = () => {
     sameAs: [
       "https://www.instagram.com/adonis.factory",
       "https://www.facebook.com/profile.php?id=61586643953821",
-      "https://www.youtube.com/adonis_sewing",
+      "https://www.youtube.com/@ADONIS.FACTORY",
     ],
     foundingDate: "2010",
     numberOfEmployees: "50",
