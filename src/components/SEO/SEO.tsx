@@ -94,6 +94,8 @@ const SEO: React.FC<SEOProps> = ({
         href={fullUrl.replace(/\/[a-z]{2}\//, "/en/")}
       />
       <link rel="alternate" hrefLang="x-default" href={fullUrl} />
+      {/* Primary language hint for Google (Ukrainian) */}
+      <meta name="google" content="notranslate" />
 
       {/* Structured Data */}
       <script type="application/ld+json">
