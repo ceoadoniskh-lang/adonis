@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { useTranslation } from "react-i18next";
 
 interface SEOProps {
+  documentTitle?: string;
   title?: string;
   description?: string;
   keywords?: string;
@@ -12,6 +13,7 @@ interface SEOProps {
 }
 
 const SEO: React.FC<SEOProps> = ({
+  documentTitle,
   title,
   description,
   keywords,
@@ -23,13 +25,17 @@ const SEO: React.FC<SEOProps> = ({
 
   const siteName = "ADONIS";
   const defaultTitle =
-    "ADONIS - професійне швейне виробництво, якісний одяг на замовлення";
+    "ADONIS — виробництво верхнього одягу | Опт та пошив під замовлення";
   const defaultDescription =
-    "Професійне швейне виробництво з багаторічним досвідом. Пошив одягу, корпоративний одяг, ремонт та дизайн. Висока якість та індивідуальний підхід.";
+    "Українське виробництво верхнього одягу ADONIS. Оптові замовлення, пошив жіночих і чоловічих моделей, private label, розмірний ряд 42–78.";
   const defaultKeywords =
-    "швейне виробництво, пошив одягу, корпоративний одяг, ремонт одягу, дизайн одягу, якісний одяг, індивідуальний пошив";
+    "верхній одяг, виробництво одягу, опт, пошив на замовлення, private label, швейне виробництво, жіночий одяг, чоловічий одяг";
 
-  const fullTitle = title ? `${title} | ${siteName}` : defaultTitle;
+  const fullTitle = documentTitle
+    ? documentTitle
+    : title
+    ? `${title} | ${siteName}`
+    : defaultTitle;
   const fullDescription = description || defaultDescription;
   const fullKeywords = keywords || defaultKeywords;
   const fullUrl = url || window.location.href;

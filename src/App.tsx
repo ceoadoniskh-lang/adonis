@@ -41,9 +41,9 @@ const App: React.FC = () => {
         <ScrollToTop />
         <div className="App">
           <SEO
-            title={t("home.title")}
-            description={t("home.aboutText")}
-            keywords="швейне виробництво, пошив одягу, корпоративний одяг, ремонт одягу, дизайн одягу"
+            documentTitle={t("home.seoPageTitle")}
+            description={t("home.seoDescription")}
+            keywords="верхній одяг, виробництво одягу, опт, пошив на замовлення, private label, швейне виробництво"
           />
 
           <Header />

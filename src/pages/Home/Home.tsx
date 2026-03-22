@@ -35,7 +35,7 @@ const Home: React.FC = () => {
         </S.VideoContainer>
         <S.HeroContent>
           <h1>{t("home.title")}</h1>
-          <p>{t("home.subtitle")}</p>
+          <h2>{t("home.subtitle")}</h2>
           <S.CTAButton to="/contacts">{t("common.contactUs")}</S.CTAButton>
         </S.HeroContent>
       </S.HeroSection>

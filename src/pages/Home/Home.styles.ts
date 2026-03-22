@@ -118,8 +118,10 @@ export const HeroContent = styled.div`
     }
   }
 
-  p {
+  p,
+  h2 {
     font-size: 1.3rem;
+    font-weight: 400;
     margin-bottom: 2rem;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
     line-height: 1.6;
