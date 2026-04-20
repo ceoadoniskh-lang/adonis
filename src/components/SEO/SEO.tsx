@@ -107,21 +107,23 @@ const SEO: React.FC<SEOProps> = ({
       <script type="application/ld+json">
         {JSON.stringify({
           "@context": "https://schema.org",
-          "@type": "Organization",
+          "@type": ["Organization", "LocalBusiness", "ClothingStore"],
           name: siteName,
           description: fullDescription,
           url: fullUrl,
           logo: image,
           contactPoint: {
             "@type": "ContactPoint",
-            telephone: "+380-44-123-45-67",
+            telephone: "+380-99-222-55-29",
             contactType: "customer service",
             availableLanguage: ["Ukrainian", "Russian", "English"],
           },
           address: {
             "@type": "PostalAddress",
-            streetAddress: "вул. Прикладна, 123",
-            addressLocality: "Київ",
+            streetAddress: "вул. Слобожанська, 11",
+            addressLocality: "Харків",
+            addressRegion: "Харківська",
+            postalCode: "61000",
             addressCountry: "UA",
           },
           sameAs: [
